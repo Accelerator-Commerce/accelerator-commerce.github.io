@@ -25,3 +25,8 @@ footer{padding:45px 0;border-top:1px solid var(--line);color:#777;font-size:14px
 .tablewrap tbody th{font-weight:650;color:var(--ink)}
 .sidegroup{font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:#999;font-weight:750;margin:20px 0 2px}
 .sidebar a.on{color:var(--accent);font-weight:650}
+
+.linklist{list-style:none;margin:14px 0 0;padding:0}
+.linklist li{margin:0 0 8px}
+.linklist a{color:var(--accent);font-size:14px}
+.linklist a:hover{text-decoration:underline}
