@@ -1,7 +1,6 @@
-<<<<<<< HEAD
-# Accelerator Commerce website
+# Accelerator Commerce official website
 
-Lightweight static website concept for Accelerator Commerce.
+Lightweight static website for Accelerator Commerce.
 
 Structure:
 - `/` homepage
@@ -27,7 +26,4 @@ Before production:
 
 ## Blog
 The site now includes `/blog/` plus migrated/updated legacy topics and new app-focused articles targeting practical Shopify, accessibility, event calendar, gift card, audio, SEO and AEO-style question queries.
-=======
-# official-website
-Accelerator Commerce Official Website
->>>>>>> 63de60cdfa52bbcd5f923c9f4fb31110bf3dfbf2
+
