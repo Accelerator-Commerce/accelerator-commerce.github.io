@@ -61,3 +61,16 @@ footer{padding:45px 0;border-top:1px solid var(--line);color:#777;font-size:14px
   .navlinks.open a{padding:13px 2px;border-bottom:1px solid var(--line);color:var(--ink);font-size:15px}
   .navlinks.open a:last-child{border-bottom:none}
 }
+
+/* --- 404 page --- */
+.notfound{padding:96px 0 80px;max-width:640px;text-align:center;margin:0 auto}
+.notfound .eyebrow{justify-content:center}
+.notfound h1{font-size:clamp(38px,6vw,58px);line-height:1.1;letter-spacing:-.03em;margin:14px 0 0}
+.notfound .lead{margin:18px auto 0;max-width:46ch}
+.notfound .actions{justify-content:center;margin-top:32px}
+.waveform{display:block;margin:36px auto 0}
+.wf-bar{transform-box:fill-box;transform-origin:50% 100%;animation:wf-bounce 1.1s ease-in-out infinite}
+@keyframes wf-bounce{0%,100%{transform:scaleY(1)}50%{transform:scaleY(1.7)}}
+@media(prefers-reduced-motion:reduce){.wf-bar{animation:none}}
+.notfound-links{display:flex;gap:10px;justify-content:center;margin-top:44px;color:var(--muted);font-size:14px}
+.notfound-links a{color:var(--muted)}.notfound-links a:hover{color:var(--ink)}
