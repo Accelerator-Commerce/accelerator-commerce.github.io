@@ -30,3 +30,13 @@ footer{padding:45px 0;border-top:1px solid var(--line);color:#777;font-size:14px
 .linklist li{margin:0 0 8px}
 .linklist a{color:var(--accent);font-size:14px}
 .linklist a:hover{text-decoration:underline}
+
+/* --- hero: two-column with highlighted headline --- */
+.hero{max-width:none;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:60px;align-items:center;padding:96px 0 84px}
+.hero-copy{max-width:640px}
+.hero h1{font-size:clamp(40px,5.4vw,68px);line-height:1.05;letter-spacing:-.035em;margin:16px 0 0}
+.hero .lead{margin-top:22px}
+.hl{color:var(--accent);background:var(--accent-soft);-webkit-box-decoration-break:clone;box-decoration-break:clone;padding:.02em .14em;border-radius:12px}
+.hero .btn:not(.secondary){background:var(--accent);border-color:var(--accent);color:#fff}
+.hero-art svg{width:100%;height:auto;display:block}
+@media(max-width:800px){.hero{grid-template-columns:1fr;gap:44px;padding:64px 0 56px}.hero-art{max-width:420px}}
