@@ -74,3 +74,5 @@ footer{padding:45px 0;border-top:1px solid var(--line);color:#777;font-size:14px
 @media(prefers-reduced-motion:reduce){.wf-bar{animation:none}}
 .notfound-links{display:flex;gap:10px;justify-content:center;margin-top:44px;color:var(--muted);font-size:14px}
 .notfound-links a{color:var(--muted)}.notfound-links a:hover{color:var(--ink)}
+
+.search-empty{margin-top:16px;font-size:14px;color:var(--muted)}.search-empty a{color:var(--accent)}
