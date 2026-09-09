@@ -37,7 +37,10 @@ footer{padding:45px 0;border-top:1px solid var(--line);color:#777;font-size:14px
 .hero h1{font-size:clamp(40px,5.4vw,68px);line-height:1.05;letter-spacing:-.035em;margin:16px 0 0}
 .hero .lead{margin-top:22px}
 .hl{color:var(--accent);background:var(--accent-soft);-webkit-box-decoration-break:clone;box-decoration-break:clone;padding:.02em .14em;border-radius:12px}
-.hero .btn:not(.secondary){background:var(--accent);border-color:var(--accent);color:#fff}
+/* primary CTA is brand blue site-wide; .band re-asserted below because it
+   sits on #111 and needs the white treatment (equal specificity, so order wins) */
+.btn:not(.secondary){background:var(--accent);border-color:var(--accent);color:#fff}
+.band .btn{background:#fff;color:#111;border-color:#fff}
 .hero-art svg{width:100%;height:auto;display:block}
 @media(max-width:800px){.hero{grid-template-columns:1fr;gap:44px;padding:64px 0 56px}.hero-art{max-width:420px}}
 
