@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon-16.png">
+<link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6FTVWGQBT4"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-6FTVWGQBT4');</script>
+    <title>Why Did My Shopify Audio Player Stop Working? — Accelerator Commerce</title>
+    <meta name="description"
+        content="Common reasons a Shopify audio player breaks — theme updates, Shopify API changes and app-embed misconfiguration — and how to fix and prevent each one.">
+    <link rel="canonical" href="https://www.acceleratorcommerce.com/blog/shopify-audio-player-not-working/">
+    <meta property="og:title" content="Why Did My Shopify Audio Player Stop Working? — Accelerator Commerce">
+    <meta property="og:description"
+        content="Common reasons a Shopify audio player breaks — theme updates, Shopify API changes and app-embed misconfiguration — and how to fix and prevent each one.">
+    <meta property="og:type" content="article">
+<meta property="og:image" content="https://www.acceleratorcommerce.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.acceleratorcommerce.com/assets/og-image.png">
+    <link rel="stylesheet" href="../../assets/styles.css">
+    <script
+        type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Accelerator Commerce", "url": "https://www.acceleratorcommerce.com/", "description": "Accelerator Commerce builds and supports Shopify apps."}</script>
+</head>
+
+<body>
+    <header>
+        <div class="wrap nav"><a class="brand" href="../">Accelerator Commerce</a>
+            <button class="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="navlinks"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M2 4.5h14M2 9h14M2 13.5h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button><nav class="navlinks" id="navlinks"><a href="/apps/">Apps</a><a href="/docs/">Docs</a><a href="/blog/">Blog</a><a href="/support.html">Support</a></nav>
+        </div>
+    </header>
+    <main>
+        <div class="wrap">
+            <section class="pagehero">
+                <div class="breadcrumbs"><a href="/blog/">Blog</a> / Why Did My Shopify Audio Player Stop Working?
+                </div>
+                <div class="eyebrow">Listen Now · 2026</div>
+            </section>
+            <article class="article">
+                <h1>Why Did My Shopify Audio Player Stop Working?</h1>
+                <div class="answer"><strong>Short answer:</strong> An audio player that worked yesterday and doesn't
+                    today is almost always caused by one of three things: a theme update that changed or removed the
+                    markup the player relied on, a Shopify platform change that affected how app embeds load, or an
+                    app-embed setting that got toggled off. All three are fixable, and none of them mean the app
+                    itself is broken.</div>
+                <h2>Theme updates are the most common cause</h2>
+                <p>Updating a Shopify theme — even a minor version bump — can change template structure, remove a
+                    section the player embed depended on, or alter how theme app extensions are loaded. If a player
+                    disappeared right after a theme update, that's the first place to look: check whether the app
+                    embed is still enabled in the theme editor under App embeds, since theme updates can sometimes
+                    reset that toggle.</p>
+                <h2>Shopify platform and API changes</h2>
+                <p>Less often, a break traces back to Shopify itself. Audio and embed-style apps that depend on
+                    specific storefront APIs can be affected when Shopify ships changes to how those APIs behave —
+                    this has happened publicly to other audio-player apps, where a platform-side change broke
+                    playback until the app was updated to match. When a player breaks for every merchant using an app
+                    at the same time, rather than for one store after a theme change, a platform-level change is the
+                    more likely cause, and the fix has to come from the app's side, not the merchant's theme.</p>
+                <h2>App-embed misconfiguration</h2>
+                <p>A player embed is usually an opt-in toggle inside the theme editor, separate from installing the
+                    app itself. It's easy to lose track of that toggle — a theme switch, a duplicated theme used for
+                    testing, or a collaborator adjusting embeds can all turn it off without anyone noticing until a
+                    customer reports the player is gone.</p>
+                <h2>A mobile-specific case worth knowing about</h2>
+                <p>Audio playback issues don't always affect every device the same way. A reported case of an audio
+                    player working on desktop but not starting on mobile product pages is a good reminder to always
+                    test playback on an actual phone, not just a resized desktop browser — mobile browsers handle
+                    autoplay and user-interaction requirements for audio differently, and a fix that works on desktop
+                    doesn't always carry over.</p>
+                <h2>A troubleshooting checklist</h2>
+                <ul>
+                    <li>Check Theme editor → App embeds and confirm the player embed is still switched on.</li>
+                    <li>Confirm the issue happens on the live theme, not just an unpublished draft theme.</li>
+                    <li>Test on both desktop and mobile — a mobile-only failure points to a different cause than a
+                        site-wide one.</li>
+                    <li>Check whether the issue started right after a theme update or theme change, which narrows the
+                        cause to theme markup rather than the app.</li>
+                    <li>If the app is up to date and the embed is enabled, but the issue is happening broadly, it may
+                        be a platform-side change — contact the app's support rather than continuing to troubleshoot
+                        theme settings.</li>
+                </ul>
+                <h2>How Listen Now approaches reliability</h2>
+                <p>Listen Now uses Shopify's theme app extension framework for its player embed rather than
+                    injecting markup directly into theme files, which keeps it more resilient to theme updates and
+                    gives merchants a single, visible on/off toggle in the theme editor to check first when something
+                    looks wrong.</p>
+                <h2>Frequently asked questions</h2>
+                <h3>My player disappeared after I changed themes. Is that expected?</h3>
+                <p>Yes — app embeds are enabled per theme, so switching to a new or duplicated theme requires
+                    re-enabling the player embed in that theme's editor.</p>
+                <h3>How do I tell if it's my theme or the app?</h3>
+                <p>If the issue affects only your store right after a theme change, suspect the theme. If it started
+                    for no local reason and affects playback broadly, suspect a platform-side change and reach out to
+                    the app's support.</p>
+                <section class="section">
+                    <div class="band">
+                        <h2>Need a Shopify app?</h2>
+                        <p>Explore Accelerator Commerce apps or browse the documentation.</p>
+                        <div class="actions"><a class="btn" href="/apps/">Explore apps</a><a class="btn secondary"
+                                href="/docs/">Documentation</a></div>
+                    </div>
+                </section>
+            </article>
+        </div>
+    </main>
+    <footer>
+        <div class="wrap footerrow">
+            <div>© 2019–2026 Accelerator Commerce</div>
+            <div class="footerlinks"><a href="/about.html">About</a><a href="/privacy.html">Privacy</a></div>
+        </div>
+    </footer>
+</body>
+
+</html>
