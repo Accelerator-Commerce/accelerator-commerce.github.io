@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon-16.png">
+<link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6FTVWGQBT4"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-6FTVWGQBT4');</script>
+    <title>Is Your Shopify Store an ADA Lawsuit Target? Audio Accessibility Checklist — Accelerator Commerce</title>
+    <meta name="description"
+        content="Shopify stores account for a large share of ADA web accessibility lawsuits, and audio features are a common cause. Here's the compliance checklist and how a user-controlled player fits it.">
+    <link rel="canonical"
+        href="https://www.acceleratorcommerce.com/blog/shopify-ada-audio-accessibility-lawsuit-checklist/">
+    <meta property="og:title" content="Is Your Shopify Store an ADA Lawsuit Target? Audio Accessibility Checklist — Accelerator Commerce">
+    <meta property="og:description"
+        content="Shopify stores account for a large share of ADA web accessibility lawsuits, and audio features are a common cause. Here's the compliance checklist and how a user-controlled player fits it.">
+    <meta property="og:type" content="article">
+<meta property="og:image" content="https://www.acceleratorcommerce.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.acceleratorcommerce.com/assets/og-image.png">
+    <link rel="stylesheet" href="../../assets/styles.css">
+    <script
+        type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Accelerator Commerce", "url": "https://www.acceleratorcommerce.com/", "description": "Accelerator Commerce builds and supports Shopify apps."}</script>
+</head>
+
+<body>
+    <header>
+        <div class="wrap nav"><a class="brand" href="../">Accelerator Commerce</a>
+            <button class="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="navlinks"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M2 4.5h14M2 9h14M2 13.5h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button><nav class="navlinks" id="navlinks"><a href="/apps/">Apps</a><a href="/docs/">Docs</a><a href="/blog/">Blog</a><a href="/support.html">Support</a></nav>
+        </div>
+    </header>
+    <main>
+        <div class="wrap">
+            <section class="pagehero">
+                <div class="breadcrumbs"><a href="/blog/">Blog</a> / Is Your Shopify Store an ADA Lawsuit Target?
+                    Audio Accessibility Checklist</div>
+                <div class="eyebrow">Listen Now · 2026</div>
+            </section>
+            <article class="article">
+                <h1>Is Your Shopify Store an ADA Lawsuit Target? Audio Accessibility Checklist</h1>
+                <div class="answer"><strong>Short answer:</strong> Shopify stores make up a large share of ADA web
+                    accessibility lawsuits, and settlements commonly run from a few thousand to tens of thousands of
+                    dollars. Audio that plays automatically with sound is a specific, well-documented trigger. The
+                    fix is straightforward: audio should be visitor-controlled, not autoplaying — which is also how a
+                    player like Listen Now already behaves.</div>
+                <h2>Why this matters right now</h2>
+                <p>ADA web accessibility lawsuits have kept climbing every year, and Shopify stores are
+                    disproportionately represented among the targets — reporting from accessibility vendors puts
+                    Shopify's share at around a third of all such lawsuits filed against ecommerce sites. Settlements
+                    for a first claim typically range from roughly $5,000 to $75,000, before legal fees, and that's
+                    before accounting for the cost of remediation or a repeat claim. Most merchants who get a demand
+                    letter have never had a professional accessibility audit and don't know which parts of their
+                    store are the actual risk.</p>
+                <h2>Where audio fits into that risk</h2>
+                <p>Audio is one of the more specific, checkable items in that risk, because the rule governing it is
+                    narrow and well established. The Web Content Accessibility Guidelines (WCAG) success criterion
+                    1.4.2, "Audio Control," requires that if audio plays automatically for more than three seconds,
+                    there must be a way to pause, stop, or control its volume independently of the system volume.
+                    Autoplaying background music, narration, or any sound a visitor didn't start is exactly the kind
+                    of concrete, easy-to-screenshot violation that shows up in demand letters, because it can be
+                    demonstrated in seconds by anyone loading the page with a screen reader running. A storefront that
+                    plays audio a visitor didn't ask for competes directly with the screen reader they rely on to
+                    navigate at all.</p>
+                <h2>The compliance checklist</h2>
+                <ul>
+                    <li><strong>No autoplay with sound.</strong> Nothing on the storefront should start making sound
+                        before a visitor chooses to start it — not background music, not narration, not a
+                        text-to-speech player.</li>
+                    <li><strong>Visible, reachable playback controls.</strong> A play/pause or stop control needs to
+                        be on screen and reachable the entire time audio is playing, not hidden behind a hover state
+                        or a settings menu.</li>
+                    <li><strong>Keyboard operability.</strong> Every audio control must work without a mouse or
+                        touchscreen — this is required for keyboard-only and switch-device users, and it's one of the
+                        first things an accessibility audit checks.</li>
+                    <li><strong>Independent volume control.</strong> Visitors need a way to mute or adjust an audio
+                        feature's volume that doesn't depend on their device's system volume.</li>
+                    <li><strong>Text stays available.</strong> If audio narrates written content, the text needs to
+                        remain on the page. Audio should add an option, not replace content a screen reader or search
+                        engine can already read.</li>
+                    <li><strong>Document what you did.</strong> Keep a simple record of when audio features were
+                        added and how they were configured — an actual accessibility audit or legal review can move
+                        much faster with this on hand, though it's not a substitute for either.</li>
+                </ul>
+                <h2>How Listen Now fits this checklist</h2>
+                <p>Listen Now's player is built around manual playback — a visitor sees a player and presses play,
+                    rather than audio starting on page load. That satisfies the core of WCAG 1.4.2 by construction:
+                    there's no autoplay to control in the first place. The player exposes a visible play/pause
+                    control and volume control, both operable by keyboard, and the underlying written content stays
+                    on the page whether or not a visitor uses the audio option. None of that makes a store immune to
+                    an accessibility claim on unrelated grounds, but it removes audio specifically as a source of
+                    risk.</p>
+                <h2>What this checklist doesn't cover</h2>
+                <p>Audio autoplay is one specific, checkable item — it is not the whole of ADA/WCAG compliance. Image
+                    alt text, color contrast, form labels, focus order, and dozens of other criteria are commonly
+                    cited in the same demand letters. If a store has never had an accessibility review, an audio fix
+                    alone won't close the gap. Treat this checklist as one piece of a broader review, not a
+                    replacement for one.</p>
+                <h2>Frequently asked questions</h2>
+                <h3>Does adding an audio player increase legal risk?</h3>
+                <p>Adding audio increases risk only if it autoplays or lacks accessible controls. A visitor-initiated
+                    player with visible, keyboard-operable controls doesn't add the risk that autoplaying audio does
+                    — it can actually support accessibility by giving visitors another way to consume content.</p>
+                <h3>Is a three-second autoplay window actually safe?</h3>
+                <p>WCAG 1.4.2 sets three seconds as the threshold for when a control becomes mandatory, but the
+                    safest and simplest approach for a storefront is no autoplay at all. Relying on a three-second
+                    window adds complexity and risk for no real benefit.</p>
+                <h3>Will this checklist guarantee I won't get an ADA demand letter?</h3>
+                <p>No single checklist can guarantee that. This addresses one well-documented, specific risk factor.
+                    A full accessibility audit from a qualified professional is the only way to assess overall
+                    exposure.</p>
+                <section class="section">
+                    <div class="band">
+                        <h2>Need a Shopify app?</h2>
+                        <p>Explore Accelerator Commerce apps or browse the documentation.</p>
+                        <div class="actions"><a class="btn" href="/apps/">Explore apps</a><a class="btn secondary"
+                                href="/docs/">Documentation</a></div>
+                    </div>
+                </section>
+            </article>
+        </div>
+    </main>
+    <footer>
+        <div class="wrap footerrow">
+            <div>© 2019–2026 Accelerator Commerce</div>
+            <div class="footerlinks"><a href="/about.html">About</a><a href="/privacy.html">Privacy</a></div>
+        </div>
+    </footer>
+</body>
+
+</html>
