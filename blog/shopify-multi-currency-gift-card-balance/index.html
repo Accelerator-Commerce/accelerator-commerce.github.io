@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon-16.png">
+<link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6FTVWGQBT4"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-6FTVWGQBT4');</script>
+    <title>What Happens to a Gift Card's Balance in a Multi-Currency Shopify Store? — Accelerator Commerce</title>
+    <meta name="description"
+        content="Selling in multiple currencies? Here's how Shopify handles gift card balances across currencies, and what a balance checker needs to show clearly.">
+    <link rel="canonical"
+        href="https://www.acceleratorcommerce.com/blog/shopify-multi-currency-gift-card-balance/">
+    <meta property="og:title" content="What Happens to a Gift Card's Balance in a Multi-Currency Shopify Store? — Accelerator Commerce">
+    <meta property="og:description"
+        content="Selling in multiple currencies? Here's how Shopify handles gift card balances across currencies, and what a balance checker needs to show clearly.">
+    <meta property="og:type" content="article">
+<meta property="og:image" content="https://www.acceleratorcommerce.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.acceleratorcommerce.com/assets/og-image.png">
+    <link rel="stylesheet" href="../../assets/styles.css">
+    <script
+        type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Accelerator Commerce", "url": "https://www.acceleratorcommerce.com/", "description": "Accelerator Commerce builds and supports Shopify apps."}</script>
+</head>
+
+<body>
+    <header>
+        <div class="wrap nav"><a class="brand" href="../">Accelerator Commerce</a>
+            <button class="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="navlinks"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M2 4.5h14M2 9h14M2 13.5h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button><nav class="navlinks" id="navlinks"><a href="/apps/">Apps</a><a href="/docs/">Docs</a><a href="/blog/">Blog</a><a href="/support.html">Support</a></nav>
+        </div>
+    </header>
+    <main>
+        <div class="wrap">
+            <section class="pagehero">
+                <div class="breadcrumbs"><a href="/blog/">Blog</a> / What Happens to a Gift Card's Balance in a
+                    Multi-Currency Shopify Store?</div>
+                <div class="eyebrow">Gift Check Pro · 2026</div>
+            </section>
+            <article class="article">
+                <h1>What Happens to a Gift Card's Balance in a Multi-Currency Shopify Store?</h1>
+                <div class="answer"><strong>Short answer:</strong> A Shopify gift card is issued in one currency, and
+                    its balance is tracked and reported in that same issuance currency. Whether it can be redeemed
+                    for a purchase in a different currency depends on a setting the merchant chooses — either the
+                    card stays fixed to its original currency, or it converts at checkout using the store's exchange
+                    rate. A balance checker needs to show the right currency clearly, or it just adds to the
+                    confusion.</div>
+                <h2>Why merchants keep asking about this</h2>
+                <p>Two separate, unresolved threads in the Shopify Community ask essentially the same question:
+                    how do gift cards actually work for a store selling in multiple currencies? That it's been asked
+                    more than once, months apart, with no clear answer either time, says this isn't a one-off
+                    confusion — it's a real gap for any international store that sells gift cards.</p>
+                <h2>How Shopify actually handles it</h2>
+                <p>A few mechanics matter here, and they don't always match what a merchant expects by default:</p>
+                <ul>
+                    <li><strong>A gift card is issued in a single currency</strong> — typically whatever currency the
+                        purchase that created it was made in. Its balance is held and reported in that currency, not
+                        automatically re-priced into whatever currency a shopper happens to be browsing in.</li>
+                    <li><strong>Redemption behavior is a merchant choice.</strong> Shopify lets a merchant decide
+                        whether a gift card is redeemable only in its original issuance currency (a fixed balance,
+                        no exchange-rate exposure) or convertible for use against a purchase in any currency the
+                        store sells in, using the store's live exchange rate at checkout.</li>
+                    <li><strong>These two settings produce very different shopper experiences.</strong> A
+                        fixed-currency card is simple but can feel restrictive to a shopper browsing in a different
+                        currency. A convertible card is more flexible but means the "balance" a shopper sees can
+                        shift slightly with exchange rates, which is worth explaining rather than leaving as a
+                        surprise.</li>
+                </ul>
+                <h2>What this means for balance checking specifically</h2>
+                <p>A balance-check tool that just displays a number without stating a currency is ambiguous the
+                    moment a store sells in more than one. A shopper checking a card issued in EUR while browsing a
+                    USD-denominated storefront needs to know unambiguously which currency that number is in — and,
+                    if the card is convertible, ideally understand that the converted amount can shift with exchange
+                    rates rather than being a fixed guarantee.</p>
+                <p>For staff-facing lookups — at POS or in support — the same clarity matters even more, since a
+                    misread currency on a gift card balance is a direct, real-money mistake at checkout, not just a
+                    display quirk.</p>
+                <h2>What a good multi-currency balance checker should do</h2>
+                <ul>
+                    <li><strong>Always label the currency</strong> next to the balance, not just the number.</li>
+                    <li><strong>Reflect the card's actual issuance currency</strong>, rather than silently
+                        converting it to the storefront's currently-selected currency.</li>
+                    <li><strong>Make fixed-vs-convertible behavior visible</strong> where the merchant has that
+                        setting enabled, so a shopper isn't caught off guard by a converted amount at checkout.</li>
+                    <li><strong>Work the same way at POS and online</strong>, so staff and shoppers aren't seeing two
+                        different, possibly conflicting, figures.</li>
+                </ul>
+                <h2>Where Gift Check Pro fits</h2>
+                <p>Gift Check Pro surfaces a gift card's balance exactly as Shopify tracks it, with the currency
+                    shown alongside the amount, so a shopper or staff member checking a balance on a multi-currency
+                    store sees an accurate, unambiguous figure rather than a bare number that assumes a single
+                    currency.</p>
+                <h2>Frequently asked questions</h2>
+                <h3>Can a gift card's balance change on its own due to exchange rates?</h3>
+                <p>No — the balance stored against the card doesn't fluctuate by itself. What can vary is how much of
+                    a purchase in a different currency that balance covers, if the merchant has enabled
+                    currency conversion at redemption.</p>
+                <h3>Does this apply to both digital and physical gift cards?</h3>
+                <p>Yes — the underlying currency and balance mechanics are the same regardless of how the card was
+                    delivered; what matters is which currency the card was issued in and how the merchant has
+                    configured redemption.</p>
+                <h3>Should I choose fixed-currency or convertible gift cards for my store?</h3>
+                <p>That depends on your customer base and how much cross-currency shopping you expect — a
+                    single-currency store has no need to think about this, while a store that regularly sees
+                    shoppers checking out in a different currency than a card's issuance currency should decide
+                    deliberately rather than leaving Shopify's default in place unexamined.</p>
+                <section class="section">
+                    <div class="band">
+                        <h2>Need a Shopify app?</h2>
+                        <p>Explore Accelerator Commerce apps or browse the documentation.</p>
+                        <div class="actions"><a class="btn" href="/apps/">Explore apps</a><a class="btn secondary"
+                                href="/docs/">Documentation</a></div>
+                    </div>
+                </section>
+            </article>
+        </div>
+    </main>
+    <footer>
+        <div class="wrap footerrow">
+            <div>© 2019–2026 Accelerator Commerce</div>
+            <div class="footerlinks"><a href="/about.html">About</a><a href="/privacy.html">Privacy</a></div>
+        </div>
+    </footer>
+</body>
+
+</html>
