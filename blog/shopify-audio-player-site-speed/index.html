@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon-16.png">
+<link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6FTVWGQBT4"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-6FTVWGQBT4');</script>
+    <title>Will an Audio Player Slow Down Your Shopify Store? — Accelerator Commerce</title>
+    <meta name="description"
+        content="Third-party apps cause most Shopify slowdowns, but audio players are rarely named as a culprit. Here's what actually makes an app slow and what to check before adding one.">
+    <link rel="canonical"
+        href="https://www.acceleratorcommerce.com/blog/shopify-audio-player-site-speed/">
+    <meta property="og:title" content="Will an Audio Player Slow Down Your Shopify Store? — Accelerator Commerce">
+    <meta property="og:description"
+        content="Third-party apps cause most Shopify slowdowns, but audio players are rarely named as a culprit. Here's what actually makes an app slow and what to check before adding one.">
+    <meta property="og:type" content="article">
+<meta property="og:image" content="https://www.acceleratorcommerce.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.acceleratorcommerce.com/assets/og-image.png">
+    <link rel="stylesheet" href="../../assets/styles.css">
+    <script
+        type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Accelerator Commerce", "url": "https://www.acceleratorcommerce.com/", "description": "Accelerator Commerce builds and supports Shopify apps."}</script>
+</head>
+
+<body>
+    <header>
+        <div class="wrap nav"><a class="brand" href="../">Accelerator Commerce</a>
+            <button class="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="navlinks"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M2 4.5h14M2 9h14M2 13.5h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button><nav class="navlinks" id="navlinks"><a href="/apps/">Apps</a><a href="/docs/">Docs</a><a href="/blog/">Blog</a><a href="/support.html">Support</a></nav>
+        </div>
+    </header>
+    <main>
+        <div class="wrap">
+            <section class="pagehero">
+                <div class="breadcrumbs"><a href="/blog/">Blog</a> / Will an Audio Player Slow Down Your Shopify
+                    Store?</div>
+                <div class="eyebrow">Listen Now · 2026</div>
+            </section>
+            <article class="article">
+                <h1>Will an Audio Player Slow Down Your Shopify Store?</h1>
+                <div class="answer"><strong>Short answer:</strong> It depends entirely on how the app is built, not
+                    on whether it plays audio. An audio player that loads its files only when a shopper presses play,
+                    and doesn't inject render-blocking scripts on every page, has a negligible speed footprint. One
+                    that preloads tracks sitewide or ships a heavy script bundle on every page load can genuinely hurt
+                    your store's speed score — the same as any other poorly-built app.</div>
+                <h2>Why this fear is so common</h2>
+                <p>There's a large and consistent body of content warning Shopify merchants that third-party apps are
+                    responsible for the majority of store slowdowns — some estimates put app scripts behind 60–80% of
+                    the render-blocking JavaScript on a typical slow Shopify storefront. Guides on auditing "which
+                    apps are slowing down your store" are a whole content genre at this point, and merchants
+                    routinely post in the Shopify Community asking how to balance adding functionality against
+                    keeping their site fast.</p>
+                <p>What's notable is that none of this content calls out audio, music, or text-to-speech apps
+                    specifically — good or bad. That leaves a real gap: if you're specifically evaluating an audio
+                    player app, there's nowhere that tells you what to actually check before installing one.</p>
+                <h2>What actually makes a Shopify app slow</h2>
+                <p>"App" isn't the real variable — implementation is. The apps that tank a Lighthouse score share a
+                    handful of specific habits:</p>
+                <ul>
+                    <li><strong>Render-blocking scripts.</strong> A script loaded synchronously in the document head,
+                        before the page can paint, delays everything a shopper sees — regardless of what the script
+                        actually does.</li>
+                    <li><strong>Preloading media the shopper hasn't asked for.</strong> Downloading full audio or
+                        video files before a visitor interacts with anything adds real weight to a page's initial
+                        load, especially on mobile connections.</li>
+                    <li><strong>Extra requests on every single page</strong>, even pages where the app's feature isn't
+                        actually used or visible.</li>
+                    <li><strong>Layout shift.</strong> An element that loads late and shoves the rest of the page
+                        around hurts Core Web Vitals independently of raw load time.</li>
+                </ul>
+                <p>An audio player app can do all four of these things badly, or none of them. The category itself
+                    isn't the risk — the specific build is.</p>
+                <h2>What to check before adding an audio player</h2>
+                <ul>
+                    <li><strong>Does the player load its audio file on page load, or only on play?</strong> An audio
+                        file that only starts downloading when a shopper presses play adds essentially nothing to
+                        initial page weight.</li>
+                    <li><strong>Is the script deferred or async?</strong> A script tag that doesn't block the page
+                        from rendering won't show up as a render-blocking resource in a speed audit.</li>
+                    <li><strong>Does it only load on pages where it's actually used?</strong> A blog-post audio
+                        player has no reason to load its script on your product or collection pages.</li>
+                    <li><strong>Does the player element reserve its own space?</strong> A player that renders into a
+                        fixed-size container avoids shifting content around as it loads, which protects your
+                        Cumulative Layout Shift score.</li>
+                    <li><strong>Autoplay is a genuine liability</strong> — not just for accessibility, but because an
+                        autoplaying track forces the browser to start fetching and decoding audio immediately,
+                        instead of deferring that work until a shopper actually wants it.</li>
+                </ul>
+                <h2>How Listen Now approaches this</h2>
+                <p>Listen Now loads its player script only where you've actually placed a player — a blog post, a
+                    product page, or wherever else you've added one — rather than injecting itself sitewide. Audio
+                    files load on play, not on page load, and playback is manual by design, which keeps the
+                    accessibility story and the performance story pointing the same direction: nothing downloads or
+                    decodes until a shopper chooses to listen.</p>
+                <h2>Frequently asked questions</h2>
+                <h3>Should I run a speed test before and after installing any app?</h3>
+                <p>Yes. A quick Lighthouse or PageSpeed Insights check before and after installing any app —
+                    audio-related or not — is the only reliable way to confirm its real-world impact on your specific
+                    theme and page setup.</p>
+                <h3>Does text-to-speech add more overhead than a simple audio file?</h3>
+                <p>Not meaningfully, as long as the generated audio is cached after the first playback rather than
+                    regenerated on every page view. The performance concern is the same either way: does the file
+                    load on demand, or does something try to preload it.</p>
+                <h3>Is autoplay ever worth the performance cost?</h3>
+                <p>Generally no — autoplay creates both an accessibility problem and an unnecessary early network
+                    request, with no corresponding benefit for most stores. Manual playback avoids both issues at
+                    once.</p>
+                <section class="section">
+                    <div class="band">
+                        <h2>Need a Shopify app?</h2>
+                        <p>Explore Accelerator Commerce apps or browse the documentation.</p>
+                        <div class="actions"><a class="btn" href="/apps/">Explore apps</a><a class="btn secondary"
+                                href="/docs/">Documentation</a></div>
+                    </div>
+                </section>
+            </article>
+        </div>
+    </main>
+    <footer>
+        <div class="wrap footerrow">
+            <div>© 2019–2026 Accelerator Commerce</div>
+            <div class="footerlinks"><a href="/about.html">About</a><a href="/privacy.html">Privacy</a></div>
+        </div>
+    </footer>
+</body>
+
+</html>
