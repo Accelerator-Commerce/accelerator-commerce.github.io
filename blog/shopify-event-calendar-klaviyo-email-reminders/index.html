@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon-16.png">
+<link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6FTVWGQBT4"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-6FTVWGQBT4');</script>
+    <title>How to Send Automatic Email Reminders for Shopify Events With Klaviyo — Accelerator Commerce</title>
+    <meta name="description"
+        content="A display calendar shows your events, but doesn't email anyone about them. Here's how to connect a Shopify event calendar to Klaviyo's date-triggered flows for reminder emails.">
+    <link rel="canonical"
+        href="https://www.acceleratorcommerce.com/blog/shopify-event-calendar-klaviyo-email-reminders/">
+    <meta property="og:title"
+        content="How to Send Automatic Email Reminders for Shopify Events With Klaviyo — Accelerator Commerce">
+    <meta property="og:description"
+        content="A display calendar shows your events, but doesn't email anyone about them. Here's how to connect a Shopify event calendar to Klaviyo's date-triggered flows for reminder emails.">
+    <meta property="og:type" content="article">
+<meta property="og:image" content="https://www.acceleratorcommerce.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.acceleratorcommerce.com/assets/og-image.png">
+    <link rel="stylesheet" href="../../assets/styles.css">
+    <script
+        type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Accelerator Commerce", "url": "https://www.acceleratorcommerce.com/", "description": "Accelerator Commerce builds and supports Shopify apps."}</script>
+</head>
+
+<body>
+    <header>
+        <div class="wrap nav"><a class="brand" href="../">Accelerator Commerce</a>
+            <button class="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="navlinks"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M2 4.5h14M2 9h14M2 13.5h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button><nav class="navlinks" id="navlinks"><a href="/apps/">Apps</a><a href="/docs/">Docs</a><a href="/blog/">Blog</a><a href="/support.html">Support</a></nav>
+        </div>
+    </header>
+    <main>
+        <div class="wrap">
+            <section class="pagehero">
+                <div class="breadcrumbs"><a href="/blog/">Blog</a> / How to Send Automatic Email Reminders for
+                    Shopify Events With Klaviyo</div>
+                <div class="eyebrow">Fresh Cal · 2026</div>
+            </section>
+            <article class="article">
+                <h1>How to Send Automatic Email Reminders for Shopify Events With Klaviyo</h1>
+                <div class="answer"><strong>Quick answer:</strong> A calendar app displays your event dates, but it
+                    doesn't send email. To get an automatic "your event is coming up" reminder, you connect your
+                    event dates to Klaviyo (or Shopify Flow) as a trigger for a date-based flow — a setup step, not a
+                    calendar app feature.</div>
+                <h2>The gap between "displaying" and "reminding"</h2>
+                <p>A merchant publishes a tour date, a class schedule, or a pop-up appearance on a Shopify event
+                    calendar, and shoppers can see it. What a calendar app doesn't do on its own is reach back out to
+                    someone who looked at that date and remind them it's coming up. That's a real, common request —
+                    and right now the path to actually doing it is scattered across developer documentation, not
+                    written up anywhere for a non-developer merchant.</p>
+                <h2>What Klaviyo can actually do here</h2>
+                <p>Klaviyo supports date-triggered flows: a flow that fires a set number of days before (or after) a
+                    date property on a profile or event, rather than only firing off a purchase or a signup. That
+                    means a flow can be configured to trigger seven days before an event date, then again the day
+                    before, without anyone manually sending each reminder. On Shopify Plus stores, Shopify Flow can
+                    also pass event or class date data along to Klaviyo or another ESP as part of that setup.</p>
+                <h2>What has to happen for this to work</h2>
+                <p>The trigger is a date property, so a date-triggered flow needs an actual date value to watch —
+                    either synced onto customer profiles who expressed interest in a specific event, or pushed to
+                    Klaviyo as its own event/date record when someone signs up or shows interest. The calendar app's
+                    job is displaying the schedule; getting a specific event's date into Klaviyo is the connecting
+                    step, usually done through Klaviyo's API, a Shopify Flow automation, or a sync tool depending on
+                    how your store is set up.</p>
+                <h2>A practical setup path</h2>
+                <ul>
+                    <li>Decide what should trigger interest in a specific event date — a signup form, a "notify me"
+                        click, or a newsletter segment tied to that event.</li>
+                    <li>Get that event's date onto the relevant Klaviyo profile or event property, either through a
+                        Shopify Flow automation (Shopify Plus) or a direct API call when the interest is captured.</li>
+                    <li>In Klaviyo, build a flow with a date-property trigger — for example, "7 days before Event
+                        Date" — rather than a standard list- or purchase-based trigger.</li>
+                    <li>Add the reminder email content and, if useful, a second flow branch for a day-of reminder.</li>
+                    <li>Test with a near-future date first, since date-triggered flows can take time to evaluate
+                        depending on how Klaviyo processes the property.</li>
+                </ul>
+                <h2>Where this makes the most sense</h2>
+                <p>This is most worth setting up for events people plan around in advance — a touring artist's city
+                    stop, a recurring class series, or a seasonal pop-up — where a reminder a week out and a day
+                    before genuinely changes attendance. A one-off, low-stakes appearance may not be worth the setup
+                    effort.</p>
+                <h2>Fresh Cal for Shopify</h2>
+                <p>Fresh Cal handles the display side — publishing a clean, mobile-friendly calendar of upcoming
+                    dates with SEO-ready event schema. Pairing that with a Klaviyo date-triggered flow, as described
+                    above, adds the reminder-email side without needing a different calendar or booking app.</p>
+                <h2>Frequently asked questions</h2>
+                <h3>Do I need Shopify Plus to do this?</h3>
+                <p>Shopify Flow's native Klaviyo/ESP actions are more built-out on Shopify Plus, but stores on other
+                    plans can still get event dates into Klaviyo through Klaviyo's own API or a sync integration —
+                    it just means more manual setup on the Klaviyo side.</p>
+                <h3>Can Klaviyo remind people about every event automatically, with no extra setup?</h3>
+                <p>No — Klaviyo needs an actual date value to trigger from. Without a step that gets each event's
+                    date onto a profile or event property, there's nothing for a date-triggered flow to watch.</p>
+                <section class="section">
+                    <div class="band">
+                        <h2>Need a Shopify app?</h2>
+                        <p>Explore Accelerator Commerce apps or browse the documentation.</p>
+                        <div class="actions"><a class="btn" href="/apps/">Explore apps</a><a class="btn secondary"
+                                href="/docs/">Documentation</a></div>
+                    </div>
+                </section>
+            </article>
+        </div>
+    </main>
+    <footer>
+        <div class="wrap footerrow">
+            <div>© 2019–2026 Accelerator Commerce</div>
+            <div class="footerlinks"><a href="/about.html">About</a><a href="/privacy.html">Privacy</a></div>
+        </div>
+    </footer>
+</body>
+
+</html>
