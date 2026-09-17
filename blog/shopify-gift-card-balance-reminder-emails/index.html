@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon-16.png">
+<link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6FTVWGQBT4"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-6FTVWGQBT4');</script>
+    <title>Can You Automate Gift Card Balance Reminder Emails on Shopify? The Native Limit, Explained — Accelerator Commerce</title>
+    <meta name="description"
+        content="Shopify Flow can't trigger gift card balance reminder emails natively — the Order API doesn't expose remaining balance. Here's why, and what actually works instead.">
+    <link rel="canonical" href="https://www.acceleratorcommerce.com/blog/shopify-gift-card-balance-reminder-emails/">
+    <meta property="og:title" content="Can You Automate Gift Card Balance Reminder Emails on Shopify? The Native Limit, Explained — Accelerator Commerce">
+    <meta property="og:description"
+        content="Shopify Flow can't trigger gift card balance reminder emails natively — the Order API doesn't expose remaining balance. Here's why, and what actually works instead.">
+    <meta property="og:type" content="article">
+<meta property="og:image" content="https://www.acceleratorcommerce.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.acceleratorcommerce.com/assets/og-image.png">
+    <link rel="stylesheet" href="../../assets/styles.css">
+    <script
+        type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Accelerator Commerce", "url": "https://www.acceleratorcommerce.com/", "description": "Accelerator Commerce builds and supports Shopify apps."}</script>
+</head>
+
+<body>
+    <header>
+        <div class="wrap nav"><a class="brand" href="../">Accelerator Commerce</a>
+            <button class="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="navlinks"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M2 4.5h14M2 9h14M2 13.5h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button><nav class="navlinks" id="navlinks"><a href="/apps/">Apps</a><a href="/docs/">Docs</a><a href="/blog/">Blog</a><a href="/support.html">Support</a></nav>
+        </div>
+    </header>
+    <main>
+        <div class="wrap">
+            <section class="pagehero">
+                <div class="breadcrumbs"><a href="/blog/">Blog</a> / Can You Automate Gift Card Balance Reminder
+                    Emails on Shopify? The Native Limit, Explained</div>
+                <div class="eyebrow">Gift Check Pro · 2026</div>
+            </section>
+            <article class="article">
+                <h1>Can You Automate Gift Card Balance Reminder Emails on Shopify? The Native Limit, Explained</h1>
+                <div class="answer"><strong>Quick answer:</strong> Not natively. Shopify's Order API doesn't expose a
+                    gift card's remaining balance after an order is placed, which means Shopify Flow has nothing to
+                    check against and can't trigger a reminder email when a balance is sitting unused. The practical
+                    workaround is making the balance easy for customers to check themselves, rather than trying to
+                    push a native automation that the platform doesn't support.</div>
+                <h2>A repeated ask with no native answer</h2>
+                <p>This isn't a one-off feature request. Three separate Shopify Community threads, spread out over
+                    time, ask for essentially the same thing: an automated way to remind customers they still have
+                    money sitting on a gift card. One merchant asked directly how to automate reminder emails for
+                    unused gift card balances. Another asked about sending a notification with a gift card's renewed
+                    balance through Flow. A third opened a thread simply titled "Gift Card Balance Reminder." Each
+                    thread is independent, which suggests this is a recurring, unmet need rather than a niche
+                    edge case.</p>
+                <h2>Why Shopify Flow can't do this on its own</h2>
+                <p>Shopify Flow can only act on data that's actually exposed through Shopify's APIs, and gift card
+                    balance is a gap: the Order API doesn't expose a gift card's remaining balance once an order has
+                    been placed. There's no trigger for "this gift card's balance changed" and no field Flow can
+                    read to know how much is left on a card at any given moment after issuance. Without that data,
+                    there's nothing for a Flow automation to check against, and no way to build the reminder logic
+                    merchants are asking for using Shopify's native tools alone.</p>
+                <h2>What that limitation actually rules out</h2>
+                <ul>
+                    <li><strong>A native "balance still available" trigger.</strong> There's no built-in event for a
+                        gift card sitting unused for a set number of days, because Shopify itself doesn't expose the
+                        current balance to act on.</li>
+                    <li><strong>A pure Flow-and-email solution.</strong> Because the underlying data isn't available
+                        through the API, no combination of Flow steps or email templates can fully close this gap
+                        without something else supplying the balance.</li>
+                    <li><strong>Doing it accurately at scale.</strong> Even a manual, spreadsheet-based approach runs
+                        into the same wall — someone still needs a reliable, current source of each card's balance to
+                        know who to remind and when.</li>
+                </ul>
+                <h2>What actually works instead</h2>
+                <p>Since the reminder can't be triggered automatically from a balance the platform won't expose, the
+                    practical alternative flips the problem around: instead of trying to push a notification to the
+                    customer, make checking the balance so easy that the customer doesn't need to be reminded — they
+                    can look it up themselves, any time, without emailing support or digging through order history.
+                    A visible, always-available, on-site balance checker turns "does anyone still have money on a
+                    card" from a notification problem into a self-service lookup, which sidesteps the native API gap
+                    entirely rather than trying to route around it with automation that Shopify doesn't currently
+                    support.</p>
+                <h2>Where Gift Check Pro fits</h2>
+                <p>Gift Check Pro gives customers a storefront balance checker they can use whenever they think of
+                    it, and gives staff the same lookup at the counter or in POS. It doesn't manufacture the missing
+                    Order API data needed for a true automated reminder — no app can conjure a field Shopify doesn't
+                    expose — but it does close the practical gap: a customer who can check their balance in a few
+                    seconds is far less likely to forget about it or need a nudge in the first place.</p>
+                <h2>Frequently asked questions</h2>
+                <h3>Is there any way to automate this fully today?</h3>
+                <p>Not through Shopify Flow alone — the Order API doesn't expose a gift card's remaining balance
+                    after checkout, so there's no data for a native trigger to act on.</p>
+                <h3>Could a third-party app work around the API limitation?</h3>
+                <p>Any solution still needs a reliable, current source of each card's balance to know who to notify.
+                    That's the same gap a manual process runs into, which is why an always-available self-serve
+                    checker is currently the more practical fix than trying to force an automated push notification.</p>
+                <h3>Does Gift Check Pro send balance reminder emails?</h3>
+                <p>Gift Check Pro's focus is instant, self-serve balance checking on your storefront and at the
+                    counter — it makes the balance easy to find on demand rather than pushing proactive reminders,
+                    which sidesteps the native data limitation described above.</p>
+                <section class="section">
+                    <div class="band">
+                        <h2>Need a Shopify app?</h2>
+                        <p>Explore Accelerator Commerce apps or browse the documentation.</p>
+                        <div class="actions"><a class="btn" href="/apps/">Explore apps</a><a class="btn secondary"
+                                href="/docs/">Documentation</a></div>
+                    </div>
+                </section>
+            </article>
+        </div>
+    </main>
+    <footer>
+        <div class="wrap footerrow">
+            <div>© 2019–2026 Accelerator Commerce</div>
+            <div class="footerlinks"><a href="/about.html">About</a><a href="/privacy.html">Privacy</a></div>
+        </div>
+    </footer>
+</body>
+
+</html>
