@@ -76,3 +76,5 @@ footer{padding:45px 0;border-top:1px solid var(--line);color:#777;font-size:14px
 .notfound-links a{color:var(--muted)}.notfound-links a:hover{color:var(--ink)}
 
 .search-empty{margin-top:16px;font-size:14px;color:var(--muted)}.search-empty a{color:var(--accent)}
+
+.doc code{font-size:.9em;background:var(--accent-soft);color:var(--ink);padding:2px 7px;border-radius:6px;word-break:break-word}
