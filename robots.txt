@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://www.acceleratorcommerce.com/sitemap.xml
+Sitemap: https://acceleratorcommerce.com/sitemap.xml
