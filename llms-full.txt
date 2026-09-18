@@ -1,0 +1,632 @@
+# Listen Now! documentation — Accelerator Commerce
+
+> Complete documentation for Listen Now!, a Shopify app that adds an audio player and text-to-speech to storefronts and blogs. Each section below is one documentation page; its canonical URL is on the `Source:` line. Index of the whole site: https://acceleratorcommerce.com/llms.txt
+
+
+---
+
+# Welcome to Listen Now!
+
+Source: https://acceleratorcommerce.com/docs/listen-now/
+
+Listen Now! adds sound to your Shopify store — no coding required.
+
+Use it to:
+
+- Play background music or sound clips on a product page
+- Turn a blog post into something customers can listen to (text-to-speech)
+- Share podcast episodes or audiobook chapters right on your site
+
+Upload a file, pick where it should play, and turn on the player. That's the whole process.
+
+**New here?** Start with [Quickstart](https://acceleratorcommerce.com/docs/listen-now/quickstart/).
+
+**Need help?** Email us any time at [help@acceleratorcommerce.com](mailto:help@acceleratorcommerce.com).
+
+## Getting Started
+
+- [Overview](https://acceleratorcommerce.com/docs/listen-now/overview/) — The two ways to add audio to your store.
+- [Quickstart](https://acceleratorcommerce.com/docs/listen-now/quickstart/) — The fastest way to get audio playing on your store.
+- [FAQ](https://acceleratorcommerce.com/docs/listen-now/faq/) — Common questions, answered.
+
+## Basics
+
+- [Uploading Audio](https://acceleratorcommerce.com/docs/listen-now/uploading-audio/) — File uploads, URLs, and format limits.
+- [Managing Your Audio](https://acceleratorcommerce.com/docs/listen-now/managing-your-audio/) — Track Details, playlists, and assignments.
+- [Turning On the Player](https://acceleratorcommerce.com/docs/listen-now/turning-on-the-player/) — Installing the app block in your theme.
+- [Text-to-Speech (TTS)](https://acceleratorcommerce.com/docs/listen-now/text-to-speech/) — Turn written content into spoken audio.
+
+## Advanced
+
+- [Bulk Upload](https://acceleratorcommerce.com/docs/listen-now/bulk-upload/) — Upload many files at once.
+- [Bulk Edit](https://acceleratorcommerce.com/docs/listen-now/bulk-edit/) — Update many tracks at once.
+- [Analytics](https://acceleratorcommerce.com/docs/listen-now/analytics/) — Plays, completion rate, and drop-off.
+- [How Analytics Works](https://acceleratorcommerce.com/docs/listen-now/analytics-reference/) — What gets recorded when a track plays, and how each number is worked out.
+- [RSS Feed (Podcasts)](https://acceleratorcommerce.com/docs/listen-now/rss-feed/) — Import an existing podcast feed.
+
+## Plans & Billing
+
+- [Pricing Plans](https://acceleratorcommerce.com/docs/listen-now/pricing-plans/) — Free, Starter, and Pro compared.
+- [My Account](https://acceleratorcommerce.com/docs/listen-now/my-account/) — Billing and cancellation.
+
+## Integrations
+
+- [Shopify](https://acceleratorcommerce.com/docs/listen-now/shopify/) — How Listen Now connects to your store.
+- [SoundCloud & Other Embeds](https://acceleratorcommerce.com/docs/listen-now/soundcloud/) — Embed content from other platforms.
+
+## Contact Us
+
+- [Getting Help](https://acceleratorcommerce.com/docs/listen-now/getting-help/) — Email, in-app support, and reviews.
+
+## Guides
+
+- [How to Add Music to Shopify](https://acceleratorcommerce.com/docs/listen-now/add-music/) — A step-by-step music upload guide.
+- [How to Upload a Podcast to Shopify](https://acceleratorcommerce.com/docs/listen-now/upload-podcast/) — Episode-by-episode or full-feed import.
+- [Adding Audio to Shopify: Common Questions](https://acceleratorcommerce.com/docs/listen-now/audio-on-shopify-faq/) — Common questions about MP3s, background music, podcasts, product pages and file limits.
+
+
+---
+
+# Overview
+
+Source: https://acceleratorcommerce.com/docs/listen-now/overview/
+
+Listen Now! lets you add an audio player to your Shopify store. There are two ways to give customers something to listen to:
+
+1. **Upload your own audio** — music, a podcast episode, a voiceover, whatever you have as an MP3 or WAV file.
+2. **Text-to-speech** — Listen Now! reads your blog posts or product descriptions out loud automatically, so you don't need a recording at all.
+
+## Getting started
+
+After you install the app from the Shopify App Store, you'll be asked to pick a plan (see [Pricing Plans](https://acceleratorcommerce.com/docs/listen-now/pricing-plans/)). If your store is a development or Partner store, you're dropped straight into a free developer mode instead — no plan needed while you're testing.
+
+From there, the Dashboard walks you through a short setup checklist: add the player to your theme, upload a track, assign it to a page, and preview it live.
+
+Ready to dive in? Head to [Quickstart](https://acceleratorcommerce.com/docs/listen-now/quickstart/).
+
+
+---
+
+# Quickstart
+
+Source: https://acceleratorcommerce.com/docs/listen-now/quickstart/
+
+Here's the fastest way to get audio playing on your store.
+
+## 1. Open the Upload Track wizard
+
+From the **Dashboard** or **Library**, click **Upload Track**. This opens a short, 4-step wizard.
+
+## 2. Choose where the player shows up
+
+Pick one:
+
+- **All Pages** — a floating player that follows customers around your whole site
+- **Homepage**
+- **Product** — pick the specific product
+- **General Page** — pick the specific page
+- **Blog Post** — pick the specific post
+
+## 3. Add your track
+
+Three ways to add audio:
+
+- **Upload files** — drag and drop an MP3 or WAV, up to 50 MB
+- **URL** — paste a link to an audio file and we'll fetch it
+- **Library** — reuse a track you've already uploaded
+
+You can trim the clip right in the wizard if you only want part of the file to play.
+
+## 4. Turn on the player
+
+Click through to the Shopify **Theme Editor** — the wizard deep-links you straight to the right page — and turn on the app block. That's it, it's live.
+
+## 5. You're done
+
+The last step confirms everything is set up, with a link back to your **Dashboard**.
+
+Your progress is saved automatically, so if you get pulled away mid-setup, you can pick up right where you left off.
+
+
+---
+
+# FAQ
+
+Source: https://acceleratorcommerce.com/docs/listen-now/faq/
+
+What does Listen Now! do?It adds an audio player to your Shopify storefront, tied to a custom app block in your theme — no code needed.
+
+Who is it for?Any Shopify merchant, from one track to thousands. Common uses: podcasts, music samples, audiobooks, customer testimonials, product sounds, and blog narration via text-to-speech.
+
+Can I manage lots of tracks at once?Yes — see [Bulk Upload](https://acceleratorcommerce.com/docs/listen-now/bulk-upload/) and [Bulk Edit](https://acceleratorcommerce.com/docs/listen-now/bulk-edit/) (Pro plan).
+
+Can I group tracks into a playlist?Yes, see [Playlists](https://acceleratorcommerce.com/docs/listen-now/managing-your-audio/).
+
+Does it work on product pages?Yes. You can assign a track (or a playlist) to a specific product, and the text-to-speech widget also works on product pages. See [Turning On the Player](https://acceleratorcommerce.com/docs/listen-now/turning-on-the-player/).
+
+What file types and sizes are supported?MP3, WAV, AAC, OGG, and M4A, up to 20 MB when uploading directly in the app (the Upload Track wizard allows up to 50 MB).
+
+What if my theme doesn't support it?The app needs a theme built on Shopify's modern app-block system (Online Store 2.0). Most current themes qualify. If yours doesn't, the app block won't be available in your Theme Editor.
+
+Can I see how many people played a track?Yes, on the Starter and Pro plans — see [Analytics](https://acceleratorcommerce.com/docs/listen-now/analytics/).
+
+How do I cancel or change my plan?See [My Account](https://acceleratorcommerce.com/docs/listen-now/my-account/).
+
+I have another question.Email us at [help@acceleratorcommerce.com](mailto:help@acceleratorcommerce.com) — real humans, no bots.
+
+More questions about adding audio to Shopify? See [Adding Audio to Shopify: Common Questions](https://acceleratorcommerce.com/docs/listen-now/audio-on-shopify-faq/).
+
+
+---
+
+# Uploading Audio
+
+Source: https://acceleratorcommerce.com/docs/listen-now/uploading-audio/
+
+You can add audio to Listen Now! in a few ways:
+
+- **Upload a file** — drag and drop or browse for a file (MP3, WAV, AAC, OGG, or M4A). Up to 20 MB through most upload screens, or up to 50 MB in the Upload Track wizard.
+- **Paste a URL** — if your audio already lives somewhere online, paste the link in the Upload Track wizard and we'll fetch it for you.
+- **Use something already in Shopify** — if you've uploaded audio through Shopify's own Content > Files section, you can pick it from there too.
+
+Everything you upload is stored securely with Shopify, and you can see or manage it any time under **Content > Files** in Shopify Admin.
+
+## Before you upload
+
+Make sure you have the rights to use the audio — music, voice recordings, sound effects, all of it. Listen Now! isn't responsible for content you upload without permission to use it.
+
+## Need a different file format?
+
+Email us at [help@acceleratorcommerce.com](mailto:help@acceleratorcommerce.com) and let us know what you need.
+
+More questions about adding audio to Shopify? See [Adding Audio to Shopify: Common Questions](https://acceleratorcommerce.com/docs/listen-now/audio-on-shopify-faq/).
+
+
+---
+
+# Managing Your Audio
+
+Source: https://acceleratorcommerce.com/docs/listen-now/managing-your-audio/
+
+Everything you upload lives in the **Library**. From there you can preview tracks, see where each one is playing, and make changes.
+
+## Track Details
+
+Click any track to open its **Track Details** page. Here you can:
+
+- **See stats** — plays, completion rate, and where in the track people tend to stop listening (Starter and Pro plans)
+- **See where it's assigned** — every page or location currently using this track
+- **Assign or unassign** it to a page
+- **Create or edit a clip** — trim the track down to a shorter preview
+- **Rename** or **delete** the track
+
+## One track per spot
+
+Each location (a specific page, or "site wide") can only play one track at a time. If you assign a new track somewhere that already has one, the new track replaces the old one — it doesn't add a second track or create a playlist automatically.
+
+## Playlists
+
+Want more than one track in a spot? Create a **Playlist** (**Library > Playlists**) to group several tracks together, then assign the whole playlist to a page instead of a single track.
+
+## Audio on product pages
+
+You can assign a track to a specific product. In the Upload Track wizard, choose **Product** and pick the product; the player then appears on that product's page. Each product can have its own audio. The text-to-speech widget is also available on product pages. See [Text-to-Speech](https://acceleratorcommerce.com/docs/listen-now/text-to-speech/).
+
+
+---
+
+# Turning On the Player
+
+Source: https://acceleratorcommerce.com/docs/listen-now/turning-on-the-player/
+
+Once you've uploaded and assigned a track, you need to turn on the player in your theme so customers actually see it.
+
+## How it works
+
+Listen Now! adds an app block to your Shopify theme — no code editing needed. There are two kinds of blocks:
+
+- **Audio Player** — plays an uploaded audio file. Available for **All Pages** (a small player floating in the corner), your **Homepage**, **Product** pages, **General pages** and **Blog posts**, plus a block for collection pages.
+- **Text-to-Speech** — reads content out loud. Available on **Blog article**, **Page** and **Product** templates.
+
+## Turning it on
+
+1. Go to **Settings** in Listen Now! and click **Enable** on the widget you want.
+2. This opens Shopify's **Theme Editor** to the right template automatically.
+3. Drag the block into place, position it where you'd like, and adjust the look (colors, size) to match your theme.
+4. Save.
+
+## Good to know
+
+- Your theme needs to support Shopify's modern app-block system (Online Store 2.0). Most current themes do. If yours doesn't, the block won't show up as an option in the Theme Editor, and there's currently no manual/code-based workaround.
+- The player only appears once a track is actually assigned to that spot — adding the empty block won't show anything on its own.
+
+More questions about adding audio to Shopify? See [Adding Audio to Shopify: Common Questions](https://acceleratorcommerce.com/docs/listen-now/audio-on-shopify-faq/).
+
+
+---
+
+# Text-to-Speech (TTS)
+
+Source: https://acceleratorcommerce.com/docs/listen-now/text-to-speech/
+
+Don't have a recording? Listen Now! can read your content out loud for you.
+
+## Blog posts
+
+Turn on the Text-to-Speech widget on a blog article template, and it will automatically read the post's title and body. You can customize:
+
+- **Look** — "Classic" or "Modern" style, plus your own colors for background, buttons, and text
+- **Voice** — choose the language and voice
+- **Speed** — adjust how fast it speaks
+- **Author name** — optionally have it announce who wrote the post
+
+## Product pages
+
+On product pages, the Text-to-Speech widget plays a single audio file using your browser's built-in audio player, so it works everywhere without extra plugins.
+
+## Setting it up
+
+1. Go to **Settings > Text To Speech** and click **Enable** (or start from **Upload Track** and choose text-to-speech as your source).
+2. This opens the Theme Editor to the right template.
+3. Drag the widget into place and adjust the voice, speed, and styling.
+
+As with the regular audio player, the widget only appears once it has content to play — an empty widget stays hidden.
+
+
+---
+
+# Bulk Upload
+
+Source: https://acceleratorcommerce.com/docs/listen-now/bulk-upload/
+
+Got a lot of audio files to add at once? Use **Library > Bulk Upload** instead of adding tracks one at a time.
+
+1. Drag in up to 250 files at a time (or select them from your computer).
+2. Fill in details for each file — like its name or description — before saving.
+3. Save, and all the tracks land in your Library, ready to assign to pages.
+
+Bulk Upload is available on the **Pro plan**.
+
+
+---
+
+# Bulk Edit
+
+Source: https://acceleratorcommerce.com/docs/listen-now/bulk-edit/
+
+Need to update details on a lot of tracks at once? Use **Library > Bulk Edit**.
+
+1. Search for and select the tracks you want to change.
+2. Edit their details together instead of opening each one individually.
+3. Save to apply the changes to every selected track.
+
+Bulk Edit is available on the **Pro plan**.
+
+
+---
+
+# Analytics
+
+Source: https://acceleratorcommerce.com/docs/listen-now/analytics/
+
+*Available on the Starter and Pro plans.*
+
+See how customers are actually listening. Go to **Analytics** in the main menu for:
+
+- **Total plays** — how many times your tracks have been played
+- **Avg. completion** — how much of a track people listen to, on average
+- **Unique tracks played** — how many different tracks got at least one play
+
+Click into any track for its own breakdown, including **plays**, **completion rate**, and **drop-off** — where in the track listeners tend to stop. The same stats also show up on that track's [Track Details](https://acceleratorcommerce.com/docs/listen-now/managing-your-audio/) page.
+
+Analytics are collected straight from your storefront as customers listen, so numbers may take a short while to appear after a play happens.
+
+Want the exact detail — what gets recorded and how each number is worked out? See [How Analytics Works](https://acceleratorcommerce.com/docs/listen-now/analytics-reference/).
+
+
+---
+
+# How Analytics Works
+
+Source: https://acceleratorcommerce.com/docs/listen-now/analytics-reference/
+
+*Applies to: Starter and Pro. Date ranges: 7 / 30 / 90 days. Personal data recorded: none.*
+
+This page explains exactly what Listen Now! records when someone plays a track on your store, and how the numbers on your Analytics page are worked out from it. You don't need any of this to use Analytics — it's here for when you want to check a specific number.
+
+## What gets recorded
+
+Every time a shopper's browser starts, stops, or finishes a track, the player sends one event. There are exactly three kinds.
+
+| Event | Sent when | Notes |
+|---|---|---|
+| played | Playback starts — a fresh track, or a resume after a pause. | Sent every time, so one continuous listen can send more than one. |
+| paused | The shopper pauses before the track ends. | Not sent when a track ends on its own — that's completed. |
+| completed | The track plays all the way to the end. | Only sent on a full, natural finish. |
+
+## What each event carries
+
+Every event carries the same details — enough to tie a play to a track or playlist and place it in time, and nothing about the shopper.
+
+| Detail | What it is |
+|---|---|
+| Track | Which track played, by name and ID. |
+| Playlist | Which playlist it played from, if any. |
+| Session | Ties one continuous listen together — see below. |
+| Position | How many seconds into the track. On a pause, where they stopped. |
+| Duration | The track's total length, in seconds. |
+| Time | Set by our server when the event arrives, not by the shopper's device clock. |
+
+## One listening session
+
+A session is started once, when a track loads, and stays the same through any pause and resume — until the player loads a new track. That's what lets us tell "paused, then came back and finished" apart from "paused and gave up."
+
+A single listen might send four events: **played** (track loads, starts at 0:00), **paused** (shopper stops at 0:07), **played** (resumes minutes later), **completed** (plays through to the end). All four belong to one session, and it counts as **one** finished session toward Completion rate — not as two separate plays where only one finished.
+
+## How the numbers are worked out
+
+Your Analytics page never shows raw events. Every number is worked out fresh from them for the date range you pick.
+
+| Number | What it means | How it's worked out |
+|---|---|---|
+| Total plays | Raw volume — how often playback started at all. | Every played event, counted. A resume after a pause counts again. |
+| Unique tracks played | Reach — how much of your library got heard. | The number of different tracks with at least one play. |
+| Completion rate | Of the listens that started, the share that finished. | Sessions that finished / sessions that started — so a resume-then-finish counts as one success, not a half. |
+| Avg. completion (per item) | The same completion maths, for one track or playlist. | That item's finished sessions / its started sessions. |
+| Drop-off (per item) | Where in the track listeners tend to give up. | The average position of the last pause in sessions that never came back to finish. A pause that gets resumed and finished isn't counted. |
+
+## Good to know
+
+**Consent.** Events are only recorded from shoppers who've given analytics consent, in regions where consent is required. Shopify enforces this before the tracker runs — nothing is collected around a shopper's preference.
+
+**Privacy.** Nothing recorded identifies a shopper. No customer ID, name, email, or IP address — only which track played and when.
+
+**Small numbers.** These formulas are built for volume. On a single test play or a handful of listens, Completion rate and Drop-off can look skewed — they settle down with real traffic.
+
+**By design.** Total plays deliberately isn't de-duplicated by session — it's meant to show raw playback volume. Completion rate is the number built to answer "did people actually finish?"
+
+
+---
+
+# RSS Feed (Podcasts)
+
+Source: https://acceleratorcommerce.com/docs/listen-now/rss-feed/
+
+Already run a podcast with an RSS feed? Import it straight into your store instead of uploading episodes one by one.
+
+1. Go to **Settings > RSS Feed** and click **Configure**.
+2. Paste in your feed URL.
+3. Listen Now! pulls in your episodes and adds them to your store's blog, one post per episode.
+
+You can check on past imports and see logs any time from the RSS setup page.
+
+RSS Feed is available on the **Pro plan** and imports your full feed, with no item cap.
+
+
+---
+
+# Pricing Plans
+
+Source: https://acceleratorcommerce.com/docs/listen-now/pricing-plans/
+
+|   | Free | Starter | Pro |
+|---|---|---|---|
+| Price | $0 | $5/mo (or $45/yr) | $9/mo (or $89/yr) |
+| Free trial | — | 7 days | 7 days |
+| Tracks | Up to 5 | Unlimited | Unlimited |
+| Player | Basic, no-code install | Customizable | Customizable |
+| Analytics | — | Yes | Yes |
+| Bulk Upload / Bulk Edit | — | — | Yes |
+| RSS feed import | — | — | Yes |
+
+Paying annually saves 25% on Starter ($45 instead of $60 a year) and about 18% on Pro ($89 instead of $108).
+
+## Changing plans
+
+Go to **My Account** or click **Upgrade** in the top bar to see plans and switch any time.
+
+## Development stores
+
+If your store is a Shopify Partner or development store, you get free access to test the app — no plan required while you're in that mode.
+
+
+---
+
+# My Account
+
+Source: https://acceleratorcommerce.com/docs/listen-now/my-account/
+
+Go to **My Account** to see:
+
+- **Store Details** — your store name and contact email
+- **Plan Details** — your current plan and what it includes
+- **Billing Details** — how you're billed
+
+## Billing
+
+You're billed through Shopify, alongside your other app charges — Listen Now! doesn't charge your card directly.
+
+## Cancelling
+
+To cancel, uninstall the app from your Shopify Admin. There's no separate cancel button inside Listen Now!
+
+
+---
+
+# Shopify
+
+Source: https://acceleratorcommerce.com/docs/listen-now/shopify/
+
+Listen Now! is built for Shopify from the ground up and works on every Shopify plan. You install it straight from the Shopify App Store, and it connects to your store automatically — no separate account or extra setup needed.
+
+
+---
+
+# SoundCloud & Other Embeds
+
+Source: https://acceleratorcommerce.com/docs/listen-now/soundcloud/
+
+Want to embed content from SoundCloud, YouTube, Bandsintown, or another site? You can add any embed code directly through the Theme Editor.
+
+1. Open the Listen Now! app block or embed section in your Theme Editor.
+2. Scroll past the Advanced Configuration section to the **Embed iframes** field.
+3. Paste in your embed code.
+4. Save — the embed shows up right away.
+
+This works on the site-wide widget, homepage blocks, individual pages, blog posts, and product pages.
+
+
+---
+
+# Getting Help
+
+Source: https://acceleratorcommerce.com/docs/listen-now/getting-help/
+
+**Email us:** [help@acceleratorcommerce.com](mailto:help@acceleratorcommerce.com) — a real person will get back to you.
+
+**In the app:** open the main menu and choose **Contact Us & Feedback** under Get Help. It sends us a message along with some basic details about your store, so we can help faster.
+
+**Leave a review:** if Listen Now! is working well for you, choosing **Review App** from the same menu takes you to Shopify's review prompt — it helps other merchants find us.
+
+
+---
+
+# How to Add Music to Shopify
+
+Source: https://acceleratorcommerce.com/docs/listen-now/add-music/
+
+Shopify lets you upload audio files under Content > Files, but on its own it won't play them for customers — you'd need to build your own player. That's a lot of coding for something that should be simple.
+
+Listen Now! handles the whole thing:
+
+1. Upload your music file (MP3, WAV, AAC, OGG, or M4A — up to 20 MB, or 50 MB through the Upload Track wizard).
+2. Choose where it should play — your homepage, a specific product, a page, or site-wide.
+3. Turn on the player in your Theme Editor. No code required.
+
+That's it — your music is live on your store. See [Quickstart](https://acceleratorcommerce.com/docs/listen-now/quickstart/) for the full walkthrough.
+
+Questions? Email [help@acceleratorcommerce.com](mailto:help@acceleratorcommerce.com).
+
+More questions about adding audio to Shopify? See [Adding Audio to Shopify: Common Questions](https://acceleratorcommerce.com/docs/listen-now/audio-on-shopify-faq/).
+
+
+---
+
+# How to Upload a Podcast to Shopify
+
+Source: https://acceleratorcommerce.com/docs/listen-now/upload-podcast/
+
+Shopify's built-in file storage will hold your audio, but it won't play it for visitors — you'd need to build a player yourself. Listen Now! gives you that player, no coding involved.
+
+## Option 1: Upload episodes one at a time
+
+Great for a new or small podcast:
+
+1. Upload each episode (MP3, WAV, AAC, OGG, or M4A, up to 20 MB or 50 MB via the Upload Track wizard).
+2. Assign it to a blog post — most merchants create one post per episode.
+3. Turn on the player for that post.
+
+## Option 2: Import your whole feed
+
+Already have an RSS feed? See [RSS Feed](https://acceleratorcommerce.com/docs/listen-now/rss-feed/) to import your episodes automatically instead of uploading them one by one. (RSS import is available on the Pro plan.)
+
+Questions? Email [help@acceleratorcommerce.com](mailto:help@acceleratorcommerce.com).
+
+More questions about adding audio to Shopify? See [Adding Audio to Shopify: Common Questions](https://acceleratorcommerce.com/docs/listen-now/audio-on-shopify-faq/).
+
+
+---
+
+# Adding Audio to Shopify: Common Questions
+
+Source: https://acceleratorcommerce.com/docs/listen-now/audio-on-shopify-faq/
+
+Where a step uses Listen Now!, it says so. Everything else applies to any Shopify store.
+
+## Should I use background music, a podcast player, or text-to-speech?
+
+They solve different problems, so choose by what you want visitors to experience:
+
+- **Background music or ambience** — a player that sits in the corner of every page. In Listen Now!, choose **All Pages** when you add a track.
+- **Podcast episodes, audiobook chapters, samples or testimonials** — audio attached to a specific blog post, page or product, so it appears exactly where it's relevant.
+- **Text-to-speech** — reads your written content aloud with no recording needed. Useful for long blog posts and for visitors who prefer to listen.
+
+You can combine them, for example a sitewide music player plus text-to-speech on your blog. See the [Overview](https://acceleratorcommerce.com/docs/listen-now/overview/).
+
+## How do I add audio to my Shopify store?
+
+With Listen Now! it takes four steps and no code: open **Library → Upload Track**, choose where the player should appear, add your track, then turn the player on in the Shopify theme editor.
+
+You can put audio on every page, your homepage, a specific product, a general page, or a blog post. The [Quickstart](https://acceleratorcommerce.com/docs/listen-now/quickstart/) walks through each step.
+
+## How do I add an MP3 to a Shopify blog post?
+
+The simplest way is Listen Now!: in the Upload Track wizard choose **Blog Post**, pick the post, add your track, and turn on the block. No HTML needed, and you get a styled player. For a series of episodes, see [How to Upload a Podcast to Shopify](https://acceleratorcommerce.com/docs/listen-now/upload-podcast/).
+
+**Without an app:** upload the MP3 in your Shopify admin under **Content → Files** and copy the file's URL. Then open the blog post, switch the editor to HTML view (the `<>` button) and paste:
+
+``
+
+That gives visitors the browser's basic built-in player. A dedicated player adds playlists, styling, and the ability to assign different audio to different pages.
+
+## How do I add background music to my Shopify store?
+
+In the Upload Track wizard, choose **All Pages**. A small player floats in the corner of every page of your online store, and visitors press play to start the music.
+
+Music won't start by itself. Web browsers block audio that plays automatically before a visitor has interacted with the page ([MDN explains the policy](https://developer.mozilla.org/en-US/docs/Web/Media/Guides/Autoplay)), so background music on any website starts when the visitor presses play. See [the autoplay question below](https://acceleratorcommerce.com/docs/listen-now/audio-on-shopify-faq/#does-the-listen-now-player-autoplay).
+
+## Does the Listen Now! player play audio automatically?
+
+No. The player never starts on its own when a page loads. Playback begins when a visitor presses play, and in a playlist it then continues to the next track.
+
+That keeps visitors in control of when audio plays, and it matches how browsers behave anyway, since they block audible autoplay by default.
+
+## Can I add audio to a Shopify product page?
+
+Yes. In the Upload Track wizard choose **Product**, search for the product, and add your track. The player appears on that product's page, so each product can have its own audio, such as a sample, a demo, or a spoken description.
+
+To show product audio on your collection pages, Listen Now! also includes an **Audio Player (Collection)** block for your theme. The Text-to-Speech block is available on product pages too.
+
+## How do I add a podcast to my Shopify store?
+
+There are two ways. You can upload episodes one at a time and assign each to a blog post, or, on the Pro plan, import your podcast's RSS feed so episodes are added to your blog automatically.
+
+RSS import is available on the Pro plan and brings in your full feed. See [How to Upload a Podcast to Shopify](https://acceleratorcommerce.com/docs/listen-now/upload-podcast/) and [RSS Feed (Podcasts)](https://acceleratorcommerce.com/docs/listen-now/rss-feed/).
+
+## Can I add text-to-speech to my Shopify blog?
+
+Yes. Turn on Listen Now!'s Text-to-Speech widget on your blog article template and it reads the post's title and content aloud, with no recordings needed. You can choose a Classic or Modern look, set the colors, and adjust the voice and speed.
+
+See [Text-to-Speech (TTS)](https://acceleratorcommerce.com/docs/listen-now/text-to-speech/) for setup.
+
+## What audio file types and sizes can I upload to Shopify?
+
+Shopify stores audio as a generic file under **Content → Files**. According to [Shopify's file requirements](https://help.shopify.com/en/manual/shopify-admin/productivity-tools/file-uploads), generic files can be any format except HTML, up to **20 MB** each.
+
+Plan matters: on a paid plan you can upload any of those formats, but on a trial plan Shopify only allows a short list (JS, CSS, GIF, JPEG, PNG, JSON, CSV, PDF, WebP and HEIC). MP3 uploads aren't available until you move off the trial plan.
+
+In Listen Now!, the Upload Track wizard accepts **MP3 and WAV**, and Bulk Upload also accepts M4A, OGG and AAC. The wizard allows files up to 50 MB, but to stay within Shopify's documented limit, keep each track under 20 MB. At 128 kbps that's roughly 20 minutes of MP3 audio. For longer recordings, lower the bitrate or split them into chapters.
+
+## Why won't my audio play on mobile?
+
+Mobile browsers only let audio play after the visitor taps something, so a player that tries to start by itself stays silent. Listen Now! waits for a tap on the play button, which is the reliable way to start audio on a phone.
+
+If a track still won't play:
+
+- Use MP3, the most widely supported audio format across browsers.
+- Try a smaller, compressed version of the file. Very large files can be slow on a mobile connection.
+- Open the same page in a second browser to rule out a browser-specific issue.
+- Play the track inside the Listen Now! Library to confirm the file itself is fine.
+
+## Why can't I see the audio player on my Shopify store?
+
+Work through this checklist:
+
+- **Theme support.** App blocks need an Online Store 2.0 theme. If the Listen Now! block isn't listed in your theme editor, your theme likely doesn't support them.
+- **Block added and saved.** Add the block to the right template in the theme editor and click **Save**. The wizard's **Turn on the player** step checks the page and tells you whether the player is live.
+- **A track is assigned.** The player stays hidden until a track is assigned to that page. On product pages, tracks are assigned per product.
+- **The right page.** A block on the product template only shows on products that have a track assigned.
+
+Still not showing? Email [help@acceleratorcommerce.com](mailto:help@acceleratorcommerce.com) with your store URL and the page you expected it on.
+
+Have a question that isn't covered here? Email [help@acceleratorcommerce.com](mailto:help@acceleratorcommerce.com).

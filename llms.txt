@@ -1,0 +1,56 @@
+# Accelerator Commerce
+
+> Accelerator Commerce builds and supports Shopify apps: Listen Now! (an audio player and text-to-speech for storefronts and blogs), Gift Check Pro (gift card balance checking on POS and storefronts) and Fresh Cal (an event calendar). This site hosts the apps' product pages, documentation and how-to articles.
+
+Listen Now! documentation is complete and current, including answers to common questions about adding audio to a Shopify store. Gift Check Pro and Fresh Cal documentation is still being written. All three apps are sold through the Shopify App Store.
+
+## Apps
+
+- [Listen Now!](https://acceleratorcommerce.com/apps/listen-now.html): Listen Now makes audio easy to add, manage and play across a Shopify store.
+- [Gift Check Pro](https://acceleratorcommerce.com/apps/gift-check-pro.html): Gift Check Pro helps merchants give customers a simple way to check remaining gift card balances.
+- [Fresh Cal](https://acceleratorcommerce.com/apps/fresh-cal.html): Fresh Cal lets merchants publish tour dates, live performances, workshops, pop-ups, classes and other events in a clean, mobile-friendly list.
+
+## Listen Now! documentation
+
+- [Welcome to Listen Now!](https://acceleratorcommerce.com/docs/listen-now/): What Listen Now does and how to get started.
+- [Overview](https://acceleratorcommerce.com/docs/listen-now/overview/): The two ways to add audio to your store.
+- [Quickstart](https://acceleratorcommerce.com/docs/listen-now/quickstart/): The fastest way to get audio playing on your store.
+- [FAQ](https://acceleratorcommerce.com/docs/listen-now/faq/): Common questions, answered.
+- [Uploading Audio](https://acceleratorcommerce.com/docs/listen-now/uploading-audio/): File uploads, URLs, and format limits.
+- [Managing Your Audio](https://acceleratorcommerce.com/docs/listen-now/managing-your-audio/): Track Details, playlists, and assignments.
+- [Turning On the Player](https://acceleratorcommerce.com/docs/listen-now/turning-on-the-player/): Installing the app block in your theme.
+- [Text-to-Speech (TTS)](https://acceleratorcommerce.com/docs/listen-now/text-to-speech/): Turn written content into spoken audio.
+- [Bulk Upload](https://acceleratorcommerce.com/docs/listen-now/bulk-upload/): Upload many files at once.
+- [Bulk Edit](https://acceleratorcommerce.com/docs/listen-now/bulk-edit/): Update many tracks at once.
+- [Analytics](https://acceleratorcommerce.com/docs/listen-now/analytics/): Plays, completion rate, and drop-off.
+- [How Analytics Works](https://acceleratorcommerce.com/docs/listen-now/analytics-reference/): What gets recorded when a track plays, and how each number is worked out.
+- [RSS Feed (Podcasts)](https://acceleratorcommerce.com/docs/listen-now/rss-feed/): Import an existing podcast feed.
+- [Pricing Plans](https://acceleratorcommerce.com/docs/listen-now/pricing-plans/): Free, Starter, and Pro compared.
+- [My Account](https://acceleratorcommerce.com/docs/listen-now/my-account/): Billing and cancellation.
+- [Shopify](https://acceleratorcommerce.com/docs/listen-now/shopify/): How Listen Now connects to your store.
+- [SoundCloud & Other Embeds](https://acceleratorcommerce.com/docs/listen-now/soundcloud/): Embed content from other platforms.
+- [Getting Help](https://acceleratorcommerce.com/docs/listen-now/getting-help/): Email, in-app support, and reviews.
+- [How to Add Music to Shopify](https://acceleratorcommerce.com/docs/listen-now/add-music/): A step-by-step music upload guide.
+- [How to Upload a Podcast to Shopify](https://acceleratorcommerce.com/docs/listen-now/upload-podcast/): Episode-by-episode or full-feed import.
+- [Adding Audio to Shopify: Common Questions](https://acceleratorcommerce.com/docs/listen-now/audio-on-shopify-faq/): Answers to common questions about adding audio to a Shopify store: MP3 files, background music, podcasts, product pages, text-to-speech and file limits.
+
+## Articles
+
+- [Does Text-to-Speech Improve SEO?](https://acceleratorcommerce.com/blog/does-text-to-speech-improve-seo/): Does text-to-speech improve SEO? Learn how audio can support accessibility, engagement and a better content experience on Shopify.
+- [How to Add Text-to-Speech to Your Shopify Blog](https://acceleratorcommerce.com/blog/how-to-add-text-to-speech-to-your-shopify-blog/): A practical guide to adding text-to-speech audio to Shopify blog posts with Listen Now.
+- [Shopify Plus: What Merchants Should Know](https://acceleratorcommerce.com/blog/shopify-plus-guide/): An updated overview of Shopify Plus, how it differs from standard Shopify plans, and when enterprise capabilities matter.
+- [Best Text-to-Speech Apps for Shopify Stores](https://acceleratorcommerce.com/blog/best-text-to-speech-apps-for-shopify/): What to look for in a Shopify text-to-speech app, including accessibility, content support, controls and merchant setup.
+- [How to Add an Audio Player to Shopify Blog Posts](https://acceleratorcommerce.com/blog/shopify-audio-player-for-blog-posts/): Learn why merchants add audio players to Shopify blog posts and what makes a good listenable content experience.
+- [How to Publish Tour Dates on Shopify](https://acceleratorcommerce.com/blog/shopify-event-calendar-for-tour-dates/): How artists, performers, speakers and event-based businesses can publish tour dates and upcoming appearances on Shopify.
+- [What Is a Shopify Event Calendar App?](https://acceleratorcommerce.com/blog/shopify-event-calendar-app/): A practical guide to Shopify event calendar apps and how merchants can use them for events, classes, performances and appearances.
+- [How to Let Customers Check a Gift Card Balance on Shopify](https://acceleratorcommerce.com/blog/how-to-show-gift-card-balance-on-shopify/): Learn how Shopify gift card balance checking works and how a dedicated storefront experience can make it easier for customers.
+- [Shopify Gift Card Balance Checker: What to Know](https://acceleratorcommerce.com/blog/shopify-gift-card-balance-checker/): A guide to Shopify gift card balance checkers, customer self-service and gift card UX.
+- [Shopify Apps for Accessibility: Where Apps Can Help](https://acceleratorcommerce.com/blog/shopify-apps-for-accessibility/): A practical look at accessibility features Shopify merchants can add with apps, including audio and text-to-speech experiences.
+- [Shopify Event Schema: Why Event Structured Data Matters](https://acceleratorcommerce.com/blog/shopify-event-schema-seo/): Understand event structured data, how search engines use event information, and what Shopify merchants should know.
+
+## Optional
+
+- [Full Listen Now! documentation as one file](https://acceleratorcommerce.com/llms-full.txt): every documentation page above as plain markdown
+- [Support](https://acceleratorcommerce.com/support.html): how to contact Accelerator Commerce support
+- [About](https://acceleratorcommerce.com/about.html): about Accelerator Commerce
+- [Privacy policy](https://acceleratorcommerce.com/privacy.html): how Accelerator Commerce handles personal information
