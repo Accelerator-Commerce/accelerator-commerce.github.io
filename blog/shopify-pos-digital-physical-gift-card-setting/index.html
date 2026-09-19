@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon-16.png">
+<link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6FTVWGQBT4"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-6FTVWGQBT4');</script>
+    <title>The One POS Setting That Breaks Physical Gift Cards on Shopify — Accelerator Commerce</title>
+    <meta name="description"
+        content="Shopify POS defaults to digital-only gift cards. If you're trying to sell a physical card and it won't work, here's the exact setting to check and change.">
+    <link rel="canonical"
+        href="https://www.acceleratorcommerce.com/blog/shopify-pos-digital-physical-gift-card-setting/">
+    <meta property="og:title"
+        content="The One POS Setting That Breaks Physical Gift Cards on Shopify — Accelerator Commerce">
+    <meta property="og:description"
+        content="Shopify POS defaults to digital-only gift cards. If you're trying to sell a physical card and it won't work, here's the exact setting to check and change.">
+    <meta property="og:type" content="article">
+<meta property="og:image" content="https://www.acceleratorcommerce.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.acceleratorcommerce.com/assets/og-image.png">
+    <link rel="stylesheet" href="../../assets/styles.css">
+    <script
+        type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Accelerator Commerce", "url": "https://www.acceleratorcommerce.com/", "description": "Accelerator Commerce builds and supports Shopify apps."}</script>
+</head>
+
+<body>
+    <header>
+        <div class="wrap nav"><a class="brand" href="../">Accelerator Commerce</a>
+            <button class="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="navlinks"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M2 4.5h14M2 9h14M2 13.5h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button><nav class="navlinks" id="navlinks"><a href="/apps/">Apps</a><a href="/docs/">Docs</a><a href="/blog/">Blog</a><a href="/support.html">Support</a></nav>
+        </div>
+    </header>
+    <main>
+        <div class="wrap">
+            <section class="pagehero">
+                <div class="breadcrumbs"><a href="/blog/">Blog</a> / The One POS Setting That Breaks Physical Gift
+                    Cards on Shopify</div>
+                <div class="eyebrow">Gift Check Pro · 2026</div>
+            </section>
+            <article class="article">
+                <h1>The One POS Setting That Breaks Physical Gift Cards on Shopify</h1>
+                <div class="answer"><strong>Quick answer:</strong> Shopify POS has a setting under
+                    <strong>Settings &gt; Gift Cards &gt; Issue digital or physical gift cards</strong> that defaults
+                    to digital-only. If staff can't sell a custom-amount physical gift card at the register, this is
+                    almost always why — flip it to include physical cards and the option reappears.</div>
+                <h2>A setup trap that looks like a bug</h2>
+                <p>If you've stocked physical gift cards, tried to ring one up at custom value on Shopify POS, and
+                    the option simply isn't there, the instinct is to assume something's broken — a theme issue, an
+                    app conflict, a POS glitch. It isn't. It's a single toggle in POS settings that defaults to
+                    digital-only gift cards, and nothing in Shopify's own onboarding flags it when you're setting up
+                    gift cards for the first time.</p>
+                <h2>Where the setting actually lives</h2>
+                <p>In the Shopify admin, go to <strong>Settings &gt; Gift Cards</strong>. Look for the option to
+                    issue digital or physical gift cards — depending on your POS version this may be phrased as a
+                    toggle or a dropdown choosing which format staff can sell. If it's set to digital only, that's
+                    the entire explanation: POS will let staff sell pre-set digital gift card products, but the
+                    custom-amount physical card flow staff expect at the register won't appear until this is
+                    switched to include physical cards.</p>
+                <h2>Why this trips up so many merchants</h2>
+                <p>Most merchants think about gift cards as a product decision — do we stock physical cards, do we
+                    sell digital ones, do we do both — and don't expect a separate platform-level switch to gate
+                    that choice independently. Because the setting defaults to digital-only, any merchant who orders
+                    physical cards without knowing to check this first will hit a dead end at the register during a
+                    live sale, which is the worst possible time to discover a configuration gap.</p>
+                <h2>A related trap: migrated card balances don't carry over automatically</h2>
+                <p>If you're moving from another platform or a previous gift card program, know that Shopify POS
+                    only recognizes gift cards it issued itself — a physical card with a balance from a legacy
+                    system isn't something Shopify will honor out of the box. Merchants in this situation have had
+                    to use a separate bulk-import step just to bring existing card balances onto Shopify before POS
+                    will recognize them at all. Budget time for that migration step separately from the digital/physical
+                    toggle above — they're two different problems that happen to show up in the same part of the
+                    setup process.</p>
+                <h2>Checklist: setting up physical gift cards on POS</h2>
+                <ul>
+                    <li><strong>Check Settings &gt; Gift Cards</strong> and confirm physical gift cards are enabled,
+                        not just digital.</li>
+                    <li><strong>Test a custom-amount sale</strong> at the register before your physical cards go on
+                        display, not after a customer is already standing there with one.</li>
+                    <li><strong>If migrating legacy card balances,</strong> plan for a separate import step — Shopify
+                        won't recognize a balance it didn't issue.</li>
+                    <li><strong>Give staff a fast way to check a card's balance</strong> once it's sold, so a
+                        redemption doesn't turn into a manual admin lookup.</li>
+                </ul>
+                <h2>Where Gift Check Pro fits</h2>
+                <p>Once physical gift cards are actually selling correctly, the next friction point is usually
+                    balance checks at the counter — staff needing to confirm what's left on a card without digging
+                    through a customer profile or starting a sale first. Gift Check Pro gives staff a fast, direct
+                    lookup for exactly that moment. See our guide on <a
+                        href="/blog/shopify-pos-gift-card-balance-check/">checking a gift card balance in POS without
+                        starting a sale</a> for the next step after setup.</p>
+                <h2>Frequently asked questions</h2>
+                <h3>Why don't I see the option to sell a custom-amount physical gift card on POS?</h3>
+                <p>Check Settings &gt; Gift Cards for the digital/physical issuance setting — it defaults to
+                    digital-only, which hides the physical, custom-amount option at the register until it's changed.</p>
+                <h3>Does changing this setting affect gift cards I've already sold?</h3>
+                <p>No — it only controls what staff can sell going forward. Cards already issued, digital or
+                    physical, keep working as they were.</p>
+                <h3>Can I sell both digital and physical gift cards at the same time?</h3>
+                <p>Yes, once the setting includes physical cards, staff can offer either format at the register —
+                    it's not an either/or choice for the store, just a gate that has to be opened first.</p>
+                <section class="section">
+                    <div class="band">
+                        <h2>Need a Shopify app?</h2>
+                        <p>Explore Accelerator Commerce apps or browse the documentation.</p>
+                        <div class="actions"><a class="btn" href="/apps/">Explore apps</a><a class="btn secondary"
+                                href="/docs/">Documentation</a></div>
+                    </div>
+                </section>
+            </article>
+        </div>
+    </main>
+    <footer>
+        <div class="wrap footerrow">
+            <div>© 2019–2026 Accelerator Commerce</div>
+            <div class="footerlinks"><a href="/about.html">About</a><a href="/privacy.html">Privacy</a></div>
+        </div>
+    </footer>
+</body>
+
+</html>
