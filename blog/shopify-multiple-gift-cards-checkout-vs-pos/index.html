@@ -1,1 +1,138 @@
-__FILE__:post1
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon-16.png">
+<link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6FTVWGQBT4"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-6FTVWGQBT4');</script>
+    <title>Why Can't I Use Two Gift Cards on One Shopify Order? — Accelerator Commerce</title>
+    <meta name="description"
+        content="Shopify checkout technically supports stacking gift card codes, but a UX bug hides the second entry field — and POS Pro caps out at one gift card per transaction. Here's what to actually expect.">
+    <link rel="canonical" href="https://www.acceleratorcommerce.com/blog/shopify-multiple-gift-cards-checkout-vs-pos/">
+    <meta property="og:title" content="Why Can't I Use Two Gift Cards on One Shopify Order? — Accelerator Commerce">
+    <meta property="og:description"
+        content="Shopify checkout technically supports stacking gift card codes, but a UX bug hides the second entry field — and POS Pro caps out at one gift card per transaction. Here's what to actually expect.">
+    <meta property="og:type" content="article">
+<meta property="og:image" content="https://www.acceleratorcommerce.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.acceleratorcommerce.com/assets/og-image.png">
+    <link rel="stylesheet" href="../../assets/styles.css">
+    <script
+        type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Accelerator Commerce", "url": "https://www.acceleratorcommerce.com/", "description": "Accelerator Commerce builds and supports Shopify apps."}</script>
+</head>
+
+<body>
+    <header>
+        <div class="wrap nav"><a class="brand" href="../">Accelerator Commerce</a>
+            <button class="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="navlinks"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M2 4.5h14M2 9h14M2 13.5h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button><nav class="navlinks" id="navlinks"><a href="/apps/">Apps</a><a href="/docs/">Docs</a><a href="/blog/">Blog</a><a href="/support.html">Support</a></nav>
+        </div>
+    </header>
+    <main>
+        <div class="wrap">
+            <section class="pagehero">
+                <div class="breadcrumbs"><a href="/blog/">Blog</a> / Why Can't I Use Two Gift Cards on One Shopify
+                    Order?</div>
+                <div class="eyebrow">Gift Check Pro · 2026</div>
+            </section>
+            <article class="article">
+                <h1>Why Can't I Use Two Gift Cards on One Shopify Order? Checkout vs. POS, Explained</h1>
+                <div class="answer"><strong>Short answer:</strong> Shopify's online checkout is built to accept more
+                    than one gift card code per order, but a longstanding interface issue hides the second code
+                    field after the first card is applied, which makes it look unsupported even when it isn't.
+                    Shopify POS is more restrictive by design — POS Pro only allows one gift card to be redeemed per
+                    transaction, full stop. The two channels behave differently, and nothing in either checkout flow
+                    explains that to the person standing there holding two cards.</div>
+                <h2>Online checkout: it should work, but the second field goes missing</h2>
+                <p>On a standard Shopify online checkout, gift cards are entered as a code in a dedicated field, and
+                    the platform is designed to let a shopper apply more than one to the same order. In practice,
+                    multiple Shopify Community reports describe the same confusing symptom: after the first gift
+                    card code is entered and applied, the field to enter a second code simply isn't there anymore, or
+                    isn't obviously there. Shoppers and merchants have separately asked whether a second card can be
+                    applied at all, because the checkout doesn't make it clear how — or whether it's even possible in
+                    that moment.</p>
+                <p>The underlying capability is real. The confusion is a discoverability problem, not a missing
+                    feature: the interface doesn't surface an obvious "add another gift card" affordance once one
+                    is already applied, so plenty of shoppers assume the answer is no and give up.</p>
+                <h2>Shopify POS: one gift card, one transaction, no exceptions</h2>
+                <p>In person, the rules are simpler and stricter. Shopify POS Pro currently allows exactly one gift
+                    card to be redeemed per transaction — not a display bug, not a setting to toggle, just a hard
+                    limit on how many gift cards a single sale can apply. A customer at the register with two gift
+                    cards and a purchase that exceeds either card's balance can't simply hand over both and have the
+                    difference split between them in one transaction.</p>
+                <p>This is a real, live pain point for staff and customers alike, and it's a completely separate
+                    limitation from the online checkout confusion above — a merchant who's only ever sold online
+                    might not know POS behaves differently at all, and vice versa.</p>
+                <h2>What to actually do if you have two gift cards</h2>
+                <ul>
+                    <li><strong>Online:</strong> apply the first gift card code, then check the order summary — some
+                        themes and checkout versions do still surface a way to add a second code, even if it isn't
+                        obvious. If a second field genuinely never appears, the order will need to be split, or the
+                        remaining balance covered by another payment method.</li>
+                    <li><strong>At a physical register (POS):</strong> since only one gift card can be redeemed per
+                        transaction, staff generally need to either split the purchase into two separate
+                        transactions — one per card — or apply one gift card and cover the rest with another payment
+                        method.</li>
+                    <li><strong>Either way, check both balances first.</strong> Knowing exactly what's left on each
+                        card before you're at checkout avoids the awkward moment of discovering a shortfall mid-sale
+                        — see our guide on <a href="/blog/is-it-safe-to-check-gift-card-balance-online/">checking a
+                            gift card balance safely online</a>.</li>
+                </ul>
+                <h2>Why staff need to know this before a customer does</h2>
+                <p>A shopper holding two gift cards at checkout has already decided how they want to pay — the worst
+                    time to discover a platform limitation is in front of them, mid-transaction, with a line forming.
+                    Staff who know in advance that POS caps out at one gift card per sale can set expectations before
+                    ringing anything up, rather than troubleshooting live. The same applies online: a support team
+                    that knows about the missing second-field issue can proactively explain the workaround instead of
+                    escalating what looks like a broken checkout.</p>
+                <h2>Where a balance checker fits in</h2>
+                <p>None of this is really about balance checking on its own, but it's the step that makes the rest of
+                    it manageable. A customer who already knows both card balances before they start checking out —
+                    rather than finding out mid-transaction — can decide in advance whether to split the purchase,
+                    which card to use first, or whether one card alone will cover it. Gift Check Pro is built for
+                    exactly that: a fast, self-serve way to check a balance before it becomes a checkout-line
+                    problem.</p>
+                <h2>Frequently asked questions</h2>
+                <h3>Is this a bug that Shopify is going to fix?</h3>
+                <p>The online checkout issue behaves like a UX/discoverability gap rather than a documented, fixed
+                    limitation — Community reports describe it, but there's no confirmed timeline for a change. The
+                    POS one-gift-card-per-transaction limit is a stated behavior of POS Pro, not a bug, so it
+                    shouldn't be expected to change without an explicit platform update.</p>
+                <h3>Can a customer use a gift card and a discount code together?</h3>
+                <p>Yes — gift cards and discount codes are handled separately by Shopify's checkout and generally
+                    don't conflict with each other. The limitation covered here is specifically about combining
+                    multiple gift cards, not about combining a gift card with a discount.</p>
+                <h3>Does this affect Shopify Plus stores differently?</h3>
+                <p>The core platform behavior is the same across plans — the gap is in the standard checkout and POS
+                    flows, not something tied to a specific plan tier. A Plus merchant with a heavily customized
+                    checkout could theoretically change the presentation, but the underlying POS transaction limit
+                    isn't something checkout customization affects.</p>
+                <h3>What should staff do if a customer insists on using both cards in one sale at POS?</h3>
+                <p>Since POS Pro only redeems one gift card per transaction, the practical options are splitting the
+                    purchase into two transactions (one per card) or applying one card and using a different payment
+                    method for the remainder — there isn't a setting that allows both in a single sale.</p>
+                <section class="section">
+                    <div class="band">
+                        <h2>Need a Shopify app?</h2>
+                        <p>Explore Accelerator Commerce apps or browse the documentation.</p>
+                        <div class="actions"><a class="btn" href="/apps/">Explore apps</a><a class="btn secondary"
+                                href="/docs/">Documentation</a></div>
+                    </div>
+                </section>
+            </article>
+        </div>
+    </main>
+    <footer>
+        <div class="wrap footerrow">
+            <div>© 2019–2026 Accelerator Commerce</div>
+            <div class="footerlinks"><a href="/about.html">About</a><a href="/privacy.html">Privacy</a></div>
+        </div>
+    </footer>
+</body>
+
+</html>
