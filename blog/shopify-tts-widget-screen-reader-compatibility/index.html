@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon-16.png">
+<link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6FTVWGQBT4"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-6FTVWGQBT4');</script>
+    <title>Is Your Shopify Text-to-Speech Widget Actually Compatible With Screen Readers? — Accelerator Commerce</title>
+    <meta name="description"
+        content="A read-aloud button and a screen reader solve different problems, and an overlay-style widget can sit on top of a page without helping — or even interfering with — genuine assistive technology.">
+    <link rel="canonical"
+        href="https://www.acceleratorcommerce.com/blog/shopify-tts-widget-screen-reader-compatibility/">
+    <meta property="og:title"
+        content="Is Your Shopify Text-to-Speech Widget Actually Compatible With Screen Readers? — Accelerator Commerce">
+    <meta property="og:description"
+        content="A read-aloud button and a screen reader solve different problems, and an overlay-style widget can sit on top of a page without helping — or even interfering with — genuine assistive technology.">
+    <meta property="og:type" content="article">
+<meta property="og:image" content="https://www.acceleratorcommerce.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.acceleratorcommerce.com/assets/og-image.png">
+    <link rel="stylesheet" href="../../assets/styles.css">
+    <script
+        type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Accelerator Commerce", "url": "https://www.acceleratorcommerce.com/", "description": "Accelerator Commerce builds and supports Shopify apps."}</script>
+</head>
+
+<body>
+    <header>
+        <div class="wrap nav"><a class="brand" href="../">Accelerator Commerce</a>
+            <button class="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="navlinks"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M2 4.5h14M2 9h14M2 13.5h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button><nav class="navlinks" id="navlinks"><a href="/apps/">Apps</a><a href="/docs/">Docs</a><a href="/blog/">Blog</a><a href="/support.html">Support</a></nav>
+        </div>
+    </header>
+    <main>
+        <div class="wrap">
+            <section class="pagehero">
+                <div class="breadcrumbs"><a href="/blog/">Blog</a> / Is Your Shopify Text-to-Speech Widget Actually
+                    Compatible With Screen Readers?</div>
+                <div class="eyebrow">Listen Now · 2026</div>
+            </section>
+            <article class="article">
+                <h1>Is Your Shopify Text-to-Speech Widget Actually Compatible With Screen Readers?</h1>
+                <div class="answer"><strong>Short answer:</strong> A text-to-speech "read aloud" button and a screen
+                    reader like VoiceOver, JAWS, or NVDA solve different problems. A read-aloud feature is a
+                    convenience for sighted visitors who'd rather listen than read; it isn't a substitute for real
+                    assistive technology, and a poorly built overlay-style widget can sit on top of a page without
+                    actually helping — or even getting in the way of — someone who's already using a screen reader.</div>
+                <h2>Why this distinction gets blurred</h2>
+                <p>It's an easy mental shortcut: audio helps accessibility, a screen reader is an accessibility tool,
+                    so a "listen to this page" button must be doing screen-reader-adjacent work. In practice, the two
+                    are unrelated pieces of technology solving different problems for different audiences, and
+                    marketing a TTS widget as an accessibility feature without being precise about what it actually
+                    does can create a false sense of coverage.</p>
+                <h2>How a screen reader actually works</h2>
+                <p>A screen reader like VoiceOver, JAWS, or NVDA runs on the visitor's own device and reads the page's
+                    underlying structure — headings, labels, landmarks, alt text — directly from the DOM as the page
+                    loads. It's the visitor's own assistive technology, already running before any script on your
+                    page executes, and it works whether or not your store has a "read aloud" button at all.</p>
+                <h2>Where an overlay-style widget can fall short</h2>
+                <p>Many read-aloud and accessibility-widget implementations are overlays: a script that loads after
+                    the rest of the page, then injects a button and, sometimes, additional markup or controls on top
+                    of the existing DOM. Because a screen reader has typically already parsed the raw page by the
+                    time an overlay script runs, a widget built this way doesn't retroactively fix anything about how
+                    a screen-reader user already experiences the store — it's a separate, parallel feature for a
+                    different visitor, not an enhancement to the assistive technology already in use. In poorly built
+                    cases, an injected overlay can even introduce new, unlabeled interactive elements that a screen
+                    reader has to contend with, adding noise rather than removing it.</p>
+                <h2>What this means in practice</h2>
+                <ul>
+                    <li><strong>Don't market a read-aloud button as a screen-reader fix.</strong> It's a listening
+                        convenience for people who can already see the page but prefer audio — a genuinely useful
+                        feature on its own, but not equivalent to accessibility support.</li>
+                    <li><strong>Keep the underlying text in the page's structure, not hidden behind the audio
+                        feature.</strong> A screen reader should be able to read the same content a sighted visitor
+                        sees, independent of whether a TTS button is present at all.</li>
+                    <li><strong>Don't let a widget intercept keyboard focus or add unlabeled controls.</strong> Any
+                        button your player adds needs a clear label and normal keyboard operability, so it's just
+                        one more well-behaved control on the page rather than an obstacle.</li>
+                    <li><strong>Placement matters on mobile.</strong> A persistent player docked somewhere that
+                        blocks content or sits inside the thumb-reach zone can be its own usability problem,
+                        separate from screen-reader compatibility.</li>
+                </ul>
+                <h2>How this is different from the ADA/legal-risk angle</h2>
+                <p>This isn't the same question as whether autoplaying audio creates legal exposure — that's a
+                    specific, checkable WCAG criterion covered in <a
+                        href="/blog/shopify-ada-audio-accessibility-lawsuit-checklist/">our ADA audio accessibility
+                        checklist</a>. This is a separate, more basic question: does the feature actually do what its
+                    name implies, for the audience it implies. A player can be fully compliant on autoplay and
+                    controls and still be marketed in a way that overstates what it does for screen-reader users
+                    specifically.</p>
+                <h2>Where Listen Now fits</h2>
+                <p>Listen Now's read-aloud player is a listening convenience layered on top of your existing content
+                    — the written text stays on the page exactly as a screen reader would already encounter it,
+                    whether or not a visitor chooses to press play. It's positioned as an additional way to consume
+                    content, not a replacement for, or an upgrade to, a visitor's own assistive technology.</p>
+                <h2>Frequently asked questions</h2>
+                <h3>Does adding a text-to-speech player help screen-reader users?</h3>
+                <p>Not directly. Screen-reader users already have their own assistive technology reading your page's
+                    structure. A TTS player is a separate convenience feature for visitors who want to listen instead
+                    of read — the real accessibility work is making sure your page's underlying content, headings,
+                    and labels are well-structured regardless of whether a TTS feature exists.</p>
+                <h3>Can a badly built accessibility widget actually make things worse?</h3>
+                <p>Yes, in some documented cases. An overlay that injects extra unlabeled controls or interferes with
+                    normal page structure can add friction for a screen-reader user rather than removing any, even
+                    while being marketed as an accessibility improvement.</p>
+                <h3>Should I stop calling a read-aloud feature an "accessibility" feature?</h3>
+                <p>It's reasonable to keep calling it accessibility-adjacent — it does help some visitors, including
+                    people with dyslexia or attention difficulties — but be precise that it's not a screen-reader
+                    replacement, so customers and your own compliance expectations stay realistic.</p>
+                <section class="section">
+                    <div class="band">
+                        <h2>Need a Shopify app?</h2>
+                        <p>Explore Accelerator Commerce apps or browse the documentation.</p>
+                        <div class="actions"><a class="btn" href="/apps/">Explore apps</a><a class="btn secondary"
+                                href="/docs/">Documentation</a></div>
+                    </div>
+                </section>
+            </article>
+        </div>
+    </main>
+    <footer>
+        <div class="wrap footerrow">
+            <div>© 2019–2026 Accelerator Commerce</div>
+            <div class="footerlinks"><a href="/about.html">About</a><a href="/privacy.html">Privacy</a></div>
+        </div>
+    </footer>
+</body>
+
+</html>
