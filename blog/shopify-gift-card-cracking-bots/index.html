@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon-16.png">
+<link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6FTVWGQBT4"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-6FTVWGQBT4');</script>
+    <title>Is Your Shopify Gift Card Balance Checker a Target for "Gift Card Cracking" Bots? — Accelerator Commerce</title>
+    <meta name="description"
+        content="Bots hammer gift card balance-check pages at millions of guesses per hour looking for codes with value left. Here's how the attack works and what actually stops it.">
+    <link rel="canonical"
+        href="https://www.acceleratorcommerce.com/blog/shopify-gift-card-cracking-bots/">
+    <meta property="og:title" content="Is Your Shopify Gift Card Balance Checker a Target for &quot;Gift Card Cracking&quot; Bots? — Accelerator Commerce">
+    <meta property="og:description"
+        content="Bots hammer gift card balance-check pages at millions of guesses per hour looking for codes with value left. Here's how the attack works and what actually stops it.">
+    <meta property="og:type" content="article">
+<meta property="og:image" content="https://www.acceleratorcommerce.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.acceleratorcommerce.com/assets/og-image.png">
+    <link rel="stylesheet" href="../../assets/styles.css">
+    <script
+        type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Accelerator Commerce", "url": "https://www.acceleratorcommerce.com/", "description": "Accelerator Commerce builds and supports Shopify apps."}</script>
+</head>
+
+<body>
+    <header>
+        <div class="wrap nav"><a class="brand" href="../">Accelerator Commerce</a>
+            <button class="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="navlinks"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M2 4.5h14M2 9h14M2 13.5h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button><nav class="navlinks" id="navlinks"><a href="/apps/">Apps</a><a href="/docs/">Docs</a><a href="/blog/">Blog</a><a href="/support.html">Support</a></nav>
+        </div>
+    </header>
+    <main>
+        <div class="wrap">
+            <section class="pagehero">
+                <div class="breadcrumbs"><a href="/blog/">Blog</a> / Is Your Shopify Gift Card Balance Checker a
+                    Target for "Gift Card Cracking" Bots?</div>
+                <div class="eyebrow">Gift Check Pro · 2026</div>
+            </section>
+            <article class="article">
+                <h1>Is Your Shopify Gift Card Balance Checker a Target for "Gift Card Cracking" Bots?</h1>
+                <div class="answer"><strong>Short answer:</strong> Yes, by design — any storefront page that lets a
+                    shopper check a gift card balance without logging in is a viable target for automated
+                    "gift card cracking" bots that guess card numbers and PINs at massive scale until they find one
+                    with value. This is a distinct attack from stolen-card resale fraud, and the fix is on the
+                    balance-check endpoint itself: randomized codes, rate limiting, and bot detection.</div>
+                <h2>A different fraud pattern than "the card was already stolen"</h2>
+                <p>Most gift card fraud content — including an earlier post on this site — covers what happens after a
+                    card is already compromised: a stolen code gets drained and resold before the rightful owner
+                    notices. Gift card cracking is upstream of that. Instead of already having a valid code, an
+                    attacker's bot systematically guesses combinations of card numbers and PINs against a public
+                    balance-check page, the same way a bot might brute-force a login form, until it lands on a
+                    combination that still has money on it.</p>
+                <h2>How the attack actually works</h2>
+                <p>The pattern has a name in the security industry — botnets like GiftGhostBot were documented pinging
+                    retailer balance-check endpoints at up to 1.7 to 4 million guesses per hour, testing sequential or
+                    predictable card-number and PIN combinations. Because gift card numbers are often issued in
+                    predictable ranges or with short, guessable PINs, a bot doesn't need to breach anything — it just
+                    needs an endpoint that will answer "valid, $47.32 remaining" or "invalid" fast enough, at high
+                    enough volume, without getting blocked.</p>
+                <ul>
+                    <li><strong>The target isn't a person, it's the endpoint.</strong> A shopper-facing balance-check
+                        page or API that returns a clear valid/invalid signal is exactly what a cracking bot needs —
+                        it doesn't matter whose card it eventually finds.</li>
+                    <li><strong>Success looks like a normal-looking lookup.</strong> A hit doesn't trigger a chargeback
+                        or a password-reset email the way a stolen-login attempt might. The first sign is often just a
+                        balance disappearing before the actual gift recipient uses it.</li>
+                    <li><strong>Volume is the tell.</strong> No legitimate shopper checks a balance thousands of times
+                        a minute from the same session pattern. That volume signature is what bot-detection tooling is
+                        built to catch.</li>
+                </ul>
+                <h2>What actually mitigates it</h2>
+                <p>Security guidance on gift card cracking is consistent across the industry, and none of it involves
+                    hiding the balance-check feature from real customers:</p>
+                <ul>
+                    <li><strong>Randomized, non-sequential card numbers and PINs.</strong> Predictable code ranges are
+                        what make brute-forcing tractable in the first place. Random generation forces an attacker
+                        back to a true guessing game against a much larger keyspace.</li>
+                    <li><strong>Rate limiting on the check endpoint.</strong> Capping how many lookups a single
+                        session, IP, or device can attempt in a given window doesn't affect a real shopper checking
+                        their own card once or twice, but it makes high-volume guessing impractical.</li>
+                    <li><strong>Bot detection, not just CAPTCHAs.</strong> Behavioral and traffic-pattern detection
+                        catches the volume and timing signature of automated requests, which is a more durable defense
+                        than a one-time CAPTCHA a bot can be built to solve.</li>
+                </ul>
+                <h2>Why this matters for Gift Check Pro specifically</h2>
+                <p>A self-serve balance checker is exactly the kind of no-login-required lookup a cracking bot needs —
+                    that's true of any app in this category, not a flaw unique to one. The point isn't to avoid
+                    offering self-serve checking; a self-serve checker is genuinely better for legitimate shoppers than
+                    forcing a support ticket for every balance question. The point is that the endpoint doing the
+                    checking needs the same rate-limiting and abuse-detection posture as any other public lookup form,
+                    and that's a security question worth asking any gift card app — including this one — rather than
+                    assuming a balance-check feature is automatically safe just because it's convenient.</p>
+                <h2>Frequently asked questions</h2>
+                <h3>Is gift card cracking the same as someone stealing my gift card code?</h3>
+                <p>No. Stolen-card fraud starts with a code the attacker already has (through phishing, photographing
+                    a physical card in a store display, or a data breach). Cracking starts with no valid code at all —
+                    the bot is guessing combinations until one happens to work.</p>
+                <h3>Does adding a balance checker to my store make me a bigger target?</h3>
+                <p>It makes the specific endpoint a potential target, the same way any login or coupon-code form is.
+                    It doesn't make gift cards themselves riskier to sell — the mitigations (random codes, rate
+                    limiting, bot detection) are standard practice specifically because this attack pattern is well
+                    understood.</p>
+                <h3>Can a shopper tell if their card was drained by a cracking bot versus normal use?</h3>
+                <p>Not definitively from the balance alone, but a card that shows a reduced or zero balance before the
+                    intended recipient has ever redeemed it is a signal worth raising with support rather than
+                    assuming a system error.</p>
+                <section class="section">
+                    <div class="band">
+                        <h2>Need a Shopify app?</h2>
+                        <p>Explore Accelerator Commerce apps or browse the documentation.</p>
+                        <div class="actions"><a class="btn" href="/apps/">Explore apps</a><a class="btn secondary"
+                                href="/docs/">Documentation</a></div>
+                    </div>
+                </section>
+            </article>
+        </div>
+    </main>
+    <footer>
+        <div class="wrap footerrow">
+            <div>© 2019–2026 Accelerator Commerce</div>
+            <div class="footerlinks"><a href="/about.html">About</a><a href="/privacy.html">Privacy</a></div>
+        </div>
+    </footer>
+</body>
+
+</html>
