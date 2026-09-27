@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon-16.png">
+<link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6FTVWGQBT4"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-6FTVWGQBT4');</script>
+    <title>Why You Can't Just "Fix" a Shopify Gift Card's Balance (and What Happens on a Refund) — Accelerator Commerce</title>
+    <meta name="description"
+        content="Shopify won't let you manually adjust a gift card's balance, and automatic reload-on-refund only works if the original sale went through Shopify Payments. Here's what merchants keep discovering the hard way.">
+    <link rel="canonical"
+        href="https://www.acceleratorcommerce.com/blog/shopify-gift-card-balance-adjustment-refund/">
+    <meta property="og:title" content="Why You Can't Just &quot;Fix&quot; a Shopify Gift Card's Balance (and What Happens on a Refund) — Accelerator Commerce">
+    <meta property="og:description"
+        content="Shopify won't let you manually adjust a gift card's balance, and automatic reload-on-refund only works if the original sale went through Shopify Payments. Here's what merchants keep discovering the hard way.">
+    <meta property="og:type" content="article">
+<meta property="og:image" content="https://www.acceleratorcommerce.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.acceleratorcommerce.com/assets/og-image.png">
+    <link rel="stylesheet" href="../../assets/styles.css">
+    <script
+        type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Accelerator Commerce", "url": "https://www.acceleratorcommerce.com/", "description": "Accelerator Commerce builds and supports Shopify apps."}</script>
+</head>
+
+<body>
+    <header>
+        <div class="wrap nav"><a class="brand" href="../">Accelerator Commerce</a>
+            <button class="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="navlinks"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M2 4.5h14M2 9h14M2 13.5h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button><nav class="navlinks" id="navlinks"><a href="/apps/">Apps</a><a href="/docs/">Docs</a><a href="/blog/">Blog</a><a href="/support.html">Support</a></nav>
+        </div>
+    </header>
+    <main>
+        <div class="wrap">
+            <section class="pagehero">
+                <div class="breadcrumbs"><a href="/blog/">Blog</a> / Why You Can't Just "Fix" a Shopify Gift Card's
+                    Balance (and What Happens on a Refund)</div>
+                <div class="eyebrow">Gift Check Pro · 2026</div>
+            </section>
+            <article class="article">
+                <h1>Why You Can't Just "Fix" a Shopify Gift Card's Balance (and What Happens on a Refund)</h1>
+                <div class="answer"><strong>Short answer:</strong> Shopify doesn't support manually editing the
+                    balance of a gift card once it's issued — there's no admin action for it. And if a customer
+                    returns something they paid for with a gift card, Shopify can only reload the value back onto
+                    that same card automatically if the original sale went through Shopify Payments. If it didn't,
+                    the merchant has to issue a brand-new card for the refund amount instead.</div>
+                <h2>Two limitations that show up at the worst possible moment</h2>
+                <p>Both of these surface exactly when a merchant or customer expects a balance to just be "right":
+                    a support agent tries to correct a card that was issued with the wrong amount, or a customer
+                    returns an order and expects their gift card to simply show its money back. Neither situation
+                    has the clean fix people assume exists, and neither limitation is explained anywhere merchants
+                    are likely to find both of them together before they hit the wall.</p>
+                <h2>You can't manually adjust an issued gift card's balance</h2>
+                <p>A merchant asked plainly in the Shopify Community: "Is there a way to manually adjust the balance
+                    of a gift card?" The answer was direct — Shopify does not support updating the balance of a
+                    gift card once it has been issued. There's no admin field to type a new number into, no bulk
+                    correction tool, and no supported workaround that edits the original card in place. If a card
+                    was issued with the wrong amount, or a merchant wants to add a goodwill credit to an existing
+                    code, the only native path is a separate, new gift card — not a change to the one already
+                    issued.</p>
+                <h2>Refund-to-gift-card only auto-reloads under one condition</h2>
+                <p>The sharper, less-documented nuance shows up on returns. Shopify's own gift card guidance makes
+                    clear that automatically reloading a refund back onto the gift card a customer used to pay only
+                    works if the <em>original</em> transaction was processed through Shopify Payments. If the sale
+                    went through a different payment gateway, that automatic reload path isn't available — the
+                    merchant has to issue an entirely new gift card for the refund amount instead of topping up the
+                    one the customer already has. That's a gateway-level condition most merchants have no reason to
+                    know about until a return actually happens and the numbers don't behave the way they expected.</p>
+                <h2>Why this catches merchants off guard</h2>
+                <ul>
+                    <li><strong>It looks like a bug, not a policy.</strong> A support agent seeing a gift card with
+                        the "wrong" balance reasonably assumes there's a fix screen somewhere in the admin. There
+                        isn't — the balance is fixed at issuance and only moves through redemption or a scripted
+                        adjustment via app/API-level tooling built specifically for it.</li>
+                    <li><strong>The refund conditional is invisible until it matters.</strong> A merchant who's
+                        always used Shopify Payments will never notice this limitation exists. One who processes
+                        even a single sale through another gateway can hit it unexpectedly on the very first return
+                        against that order.</li>
+                    <li><strong>Customers don't distinguish between the two.</strong> From a shopper's point of
+                        view, "my balance is wrong" and "my refund didn't show up on my card" feel like the same
+                        problem. They're actually two different platform limitations with two different explanations
+                        — and two different things a support team needs to say.</li>
+                </ul>
+                <h2>What to actually do</h2>
+                <ul>
+                    <li><strong>Treat "adjust the balance" requests as "issue a new card" requests.</strong> Since
+                        there's no native edit path, build that into your support script from the start rather than
+                        searching for a setting that doesn't exist.</li>
+                    <li><strong>Check your payment gateway before promising an automatic refund-to-gift-card.</strong>
+                        If the original order wasn't processed through Shopify Payments, tell the customer up front
+                        that the refund will arrive as a new gift card rather than a reload of their existing one.</li>
+                    <li><strong>Document both limitations together in your own refund policy.</strong> Because they
+                        tend to surface at the same moment (a return involving a gift card), a single clear internal
+                        note covering both saves a support agent from re-discovering each one separately mid-ticket.</li>
+                </ul>
+                <h2>Where Gift Check Pro fits</h2>
+                <p>Gift Check Pro doesn't change how Shopify issues, adjusts, or reloads gift cards — those are
+                    platform-level rules an app can't override. What it does is give both customers and staff a fast,
+                    accurate way to see exactly what a card's balance is right now, whether that card is an original
+                    purchase or a new one issued to replace a refund — so "why doesn't my balance match what I
+                    expected" turns into a quick lookup instead of a support ticket.</p>
+                <h2>Frequently asked questions</h2>
+                <h3>Can I manually change a Shopify gift card's balance in the admin?</h3>
+                <p>No. Shopify has no supported way to edit the balance of a card once it's issued. The only native
+                    option is issuing a separate, new gift card.</p>
+                <h3>Why didn't my customer's refund show up on their existing gift card?</h3>
+                <p>Automatic reload-on-refund back to the original gift card only works when the original sale was
+                    processed through Shopify Payments. If a different gateway processed the original order, the
+                    refund arrives as a new gift card instead.</p>
+                <h3>Does using a gift card affect my one-discount-code-per-order limit?</h3>
+                <p>No — a gift card is a payment method, not a discount, so it doesn't count against Shopify's
+                    one-discount-code limit. The stacking confusion merchants usually run into is about combining
+                    multiple discount codes with each other, which is a separate topic with its own dedicated apps.</p>
+                <h3>Are there apps that let me reload or adjust a gift card's balance?</h3>
+                <p>Reloading an existing card (rather than issuing a new one) is a different, related limitation —
+                    see our guide on <a href="/blog/shopify-gift-card-reload-top-up/">reloading a Shopify gift
+                    card</a> for what actually works there. Some store-credit apps built on a separate
+                    account-balance model support true top-ups; that's a different product category from Shopify's
+                    native gift cards.</p>
+                <section class="section">
+                    <div class="band">
+                        <h2>Need a Shopify app?</h2>
+                        <p>Explore Accelerator Commerce apps or browse the documentation.</p>
+                        <div class="actions"><a class="btn" href="/apps/">Explore apps</a><a class="btn secondary"
+                                href="/docs/">Documentation</a></div>
+                    </div>
+                </section>
+            </article>
+        </div>
+    </main>
+    <footer>
+        <div class="wrap footerrow">
+            <div>© 2019–2026 Accelerator Commerce</div>
+            <div class="footerlinks"><a href="/about.html">About</a><a href="/privacy.html">Privacy</a></div>
+        </div>
+    </footer>
+</body>
+
+</html>
