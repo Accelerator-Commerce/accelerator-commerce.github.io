@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon-16.png">
+<link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6FTVWGQBT4"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-6FTVWGQBT4');</script>
+    <title>Is Shopify Building Native Audio Support? Inside the "Shop Sounds" Hack Days Prototype — Accelerator Commerce</title>
+    <meta name="description"
+        content="Shopify's own engineering team prototyped native audio-as-product-media during an internal Hack Days event. It's not shipping — but here's what it would mean, and why a dedicated audio app would still matter.">
+    <link rel="canonical"
+        href="https://www.acceleratorcommerce.com/blog/shopify-shop-sounds-native-audio-hack-days/">
+    <meta property="og:title" content="Is Shopify Building Native Audio Support? Inside the &quot;Shop Sounds&quot; Hack Days Prototype — Accelerator Commerce">
+    <meta property="og:description"
+        content="Shopify's own engineering team prototyped native audio-as-product-media during an internal Hack Days event. It's not shipping — but here's what it would mean, and why a dedicated audio app would still matter.">
+    <meta property="og:type" content="article">
+<meta property="og:image" content="https://www.acceleratorcommerce.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.acceleratorcommerce.com/assets/og-image.png">
+    <link rel="stylesheet" href="../../assets/styles.css">
+    <script
+        type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Accelerator Commerce", "url": "https://www.acceleratorcommerce.com/", "description": "Accelerator Commerce builds and supports Shopify apps."}</script>
+</head>
+
+<body>
+    <header>
+        <div class="wrap nav"><a class="brand" href="../">Accelerator Commerce</a>
+            <button class="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="navlinks"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M2 4.5h14M2 9h14M2 13.5h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button><nav class="navlinks" id="navlinks"><a href="/apps/">Apps</a><a href="/docs/">Docs</a><a href="/blog/">Blog</a><a href="/support.html">Support</a></nav>
+        </div>
+    </header>
+    <main>
+        <div class="wrap">
+            <section class="pagehero">
+                <div class="breadcrumbs"><a href="/blog/">Blog</a> / Is Shopify Building Native Audio Support?
+                    Inside the "Shop Sounds" Hack Days Prototype</div>
+                <div class="eyebrow">Listen Now · 2026</div>
+            </section>
+            <article class="article">
+                <h1>Is Shopify Building Native Audio Support? Inside the "Shop Sounds" Hack Days Prototype</h1>
+                <div class="answer"><strong>Short answer:</strong> Not yet, and not officially — but Shopify's own
+                    engineering team has already prototyped it. A Hack Days project called "Shop Sounds" added a new
+                    <code>audios</code> database table, a <code>Merchandising::Audio</code> model, and a Liquid
+                    <code>media_tag</code> that renders a built-in audio player for an uploaded file, the same way
+                    Shopify already renders 3D models today. It's a proof-of-concept, not a shipped feature or an
+                    announced roadmap item — but it's a real signal worth knowing about if you're evaluating an audio
+                    app for your store.</div>
+                <h2>Where this comes from</h2>
+                <p>Shopify Engineering's own blog documents internal Hack Days projects, and one recent writeup
+                    describes an engineer building "Shop Sounds" — a proof-of-concept for treating audio as a
+                    first-class type of product media, architected the same way Shopify already treats images, video,
+                    and 3D models. The article is explicit that "Shop Sounds isn't a live product today" and gives no
+                    shipping timeline. This is internal experimentation surfaced publicly, not a product announcement
+                    — the distinction matters for anyone deciding what to do based on it.</p>
+                <h2>What Shop Sounds actually is, technically</h2>
+                <ul>
+                    <li><strong>A new <code>audios</code> database table.</strong> A dedicated storage layer for
+                        audio files as their own media type, rather than treating audio as a generic file
+                        attachment.</li>
+                    <li><strong>A <code>Merchandising::Audio</code> model with upload handling.</strong> Built to
+                        slot into Shopify's existing product-media pipeline alongside images, video, and 3D
+                        models.</li>
+                    <li><strong>A <code>{{ product.media | media_tag }}</code> Liquid tag that renders a built-in
+                        player.</strong> The same tag theme developers already use to render a 3D model viewer would,
+                        in this prototype, automatically render an audio player for an uploaded audio file — no
+                        theme-side audio-player code required.</li>
+                </ul>
+                <p>In other words, the prototype treats an audio file the way Shopify already treats a product photo
+                    or a 3D model: upload it as media, and the storefront renders the right player automatically.
+                    That's architecturally different from how audio reaches a Shopify storefront today, which relies
+                    entirely on third-party apps injecting a player.</p>
+                <h2>What it would (and wouldn't) replace</h2>
+                <p>Even in its prototype form, Shop Sounds is scoped narrowly: it's a player for an audio file you've
+                    already uploaded as product media — a music sample, a voice memo, a sound effect. It says
+                    nothing about converting existing written content (a blog post, a product description) to speech.
+                    That's the core job a text-to-speech app like Listen Now does, and it's a fundamentally different
+                    problem: generating audio from text you already wrote, not playing back an audio file you upload
+                    separately. If Shop Sounds ever ships, it would most likely compete with (or reduce the need for)
+                    apps that exist purely to embed an uploaded-audio player — not with read-aloud/TTS functionality
+                    at all.</p>
+                <h2>Why this is worth writing about now</h2>
+                <p>No competitor or audio-app content currently mentions Shop Sounds — it's a fresh, primary-sourced
+                    signal straight from Shopify's own engineering team, not a rumor or a feature-request thread.
+                    A merchant who searches "will Shopify add native audio support" today finds nothing. That makes
+                    this a timely, defensible piece of content precisely because it's speculative: it explains what's
+                    known, what isn't, and why the answer doesn't change what a store needs right now.</p>
+                <h2>What to do today</h2>
+                <ul>
+                    <li><strong>Don't wait on it.</strong> There's no shipping timeline, and Hack Days prototypes
+                        frequently never ship at all — that's the nature of an internal hackathon project.</li>
+                    <li><strong>Understand it wouldn't cover read-aloud content anyway.</strong> Even a shipped
+                        version of Shop Sounds addresses uploaded audio files as media, not converting your existing
+                        blog and product copy to speech — that's a separate problem a dedicated app still needs to
+                        solve.</li>
+                    <li><strong>Watch for an official announcement, not just this internal writeup.</strong> A Hack
+                        Days project graduating into an actual Shopify feature would typically show up in Shopify's
+                        changelog or a merchant-facing announcement first.</li>
+                </ul>
+                <h2>Where Listen Now fits</h2>
+                <p>Listen Now solves the problem Shop Sounds doesn't touch: turning the blog posts and product
+                    descriptions you've already written into audio, automatically, without requiring you to record or
+                    upload a separate audio file for every piece of content. Even if Shopify eventually ships native
+                    support for playing an uploaded audio file, that's additive to — not a replacement for — a
+                    text-to-speech tool that generates audio from your existing written content.</p>
+                <h2>Frequently asked questions</h2>
+                <h3>Is Shop Sounds an announced Shopify feature?</h3>
+                <p>No. It's an internal Hack Days prototype documented on Shopify's engineering blog, explicitly
+                    described as not being a live product, with no announced release timeline.</p>
+                <h3>Would Shop Sounds replace a text-to-speech app like Listen Now?</h3>
+                <p>No. Shop Sounds, as prototyped, plays back an audio file you've already uploaded as product media
+                    — it doesn't convert written blog or product content into speech, which is what a TTS app
+                    actually does.</p>
+                <h3>Should I hold off on installing an audio app while I wait to see what Shopify does?</h3>
+                <p>There's no indication Shop Sounds is close to shipping, and even if it does, it solves a
+                    different problem than read-aloud text-to-speech. Waiting on it wouldn't get you the accessibility
+                    or content-engagement benefits a TTS app provides today.</p>
+                <section class="section">
+                    <div class="band">
+                        <h2>Need a Shopify app?</h2>
+                        <p>Explore Accelerator Commerce apps or browse the documentation.</p>
+                        <div class="actions"><a class="btn" href="/apps/">Explore apps</a><a class="btn secondary"
+                                href="/docs/">Documentation</a></div>
+                    </div>
+                </section>
+            </article>
+        </div>
+    </main>
+    <footer>
+        <div class="wrap footerrow">
+            <div>© 2019–2026 Accelerator Commerce</div>
+            <div class="footerlinks"><a href="/about.html">About</a><a href="/privacy.html">Privacy</a></div>
+        </div>
+    </footer>
+</body>
+
+</html>
