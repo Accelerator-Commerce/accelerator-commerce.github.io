@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon-16.png">
+<link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6FTVWGQBT4"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-6FTVWGQBT4');</script>
+    <title>Does Your Gift Card Balance Checker Only See Its Own Cards? — Accelerator Commerce</title>
+    <meta name="description"
+        content="Merchants running more than one gift card source — Shopify-native cards plus a returns app or a loyalty platform — keep hitting the same wall: no single page shows every balance. Here's the gap, and what actually solves it.">
+    <link rel="canonical"
+        href="https://www.acceleratorcommerce.com/blog/shopify-gift-card-balance-multiple-sources/">
+    <meta property="og:title"
+        content="Does Your Gift Card Balance Checker Only See Its Own Cards? — Accelerator Commerce">
+    <meta property="og:description"
+        content="Merchants running more than one gift card source — Shopify-native cards plus a returns app or a loyalty platform — keep hitting the same wall: no single page shows every balance. Here's the gap, and what actually solves it.">
+    <meta property="og:type" content="article">
+<meta property="og:image" content="https://www.acceleratorcommerce.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.acceleratorcommerce.com/assets/og-image.png">
+    <link rel="stylesheet" href="../../assets/styles.css">
+    <script
+        type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Accelerator Commerce", "url": "https://www.acceleratorcommerce.com/", "description": "Accelerator Commerce builds and supports Shopify apps."}</script>
+</head>
+
+<body>
+    <header>
+        <div class="wrap nav"><a class="brand" href="../">Accelerator Commerce</a>
+            <button class="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="navlinks"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M2 4.5h14M2 9h14M2 13.5h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button><nav class="navlinks" id="navlinks"><a href="/apps/">Apps</a><a href="/docs/">Docs</a><a href="/blog/">Blog</a><a href="/support.html">Support</a></nav>
+        </div>
+    </header>
+    <main>
+        <div class="wrap">
+            <section class="pagehero">
+                <div class="breadcrumbs"><a href="/blog/">Blog</a> / Does Your Gift Card Balance Checker Only See
+                    Its Own Cards?</div>
+                <div class="eyebrow">Gift Check Pro · 2026</div>
+            </section>
+            <article class="article">
+                <h1>Does Your Gift Card Balance Checker Only See Its Own Cards?</h1>
+                <div class="answer"><strong>Short answer:</strong> If your store issues gift cards from more than
+                    one source — Shopify's own native gift cards plus a returns app, a loyalty platform, or a
+                    separately installed balance-check app — most balance checkers only look up the cards issued
+                    through their own system. There's no built-in Shopify feature that consolidates balances across
+                    sources, and the cleanest fix is standardizing on Shopify's own native gift card system and
+                    pointing every checker at that one source of truth.</div>
+                <h2>A real merchant hit this exact wall</h2>
+                <p>A merchant asked plainly in the Shopify Community for "a page to check balance of ALL gift
+                    certificates, from apps and Shopify" — explaining that gift cards issued manually through
+                    Shopify and through separate apps couldn't all be looked up in one place, because each app's
+                    balance checker only sees the cards it issued itself. The thread named the specific problem:
+                    a store using Shopify's native gift cards alongside cards from a returns app and a loyalty
+                    platform ended up with three disconnected balance systems and no single page that answered "how
+                    much is left on this card" regardless of where it came from.</p>
+                <h2>Why this happens</h2>
+                <p>Every gift card app that issues its own cards — rather than reading Shopify's native gift card
+                    records — keeps its own balance ledger. A returns app that issues store-credit-style gift cards
+                    for exchanges, a loyalty platform that issues reward gift cards, and Shopify's own native gift
+                    card system are three separate databases that don't talk to each other. A balance-check page
+                    built by any one of them can only query its own records. There's no Shopify-level API that
+                    merges balances across issuing sources, because there's no Shopify-level concept that ties them
+                    together in the first place — each app's gift cards are, technically, a different kind of object.</p>
+                <h2>What actually solves it (and what doesn't)</h2>
+                <ul>
+                    <li><strong>Standardize on one issuing source.</strong> The most durable fix isn't a smarter
+                        balance checker — it's reducing the number of places gift cards get issued from in the
+                        first place. If returns, promotions, and purchased gift cards can all route through
+                        Shopify's own native gift card system instead of a mix of app-specific ledgers, one balance
+                        checker pointed at Shopify's records covers everything.</li>
+                    <li><strong>A checker built on Shopify's native gift cards already covers every issuing path
+                        that uses them.</strong> Whether a native Shopify gift card was purchased at checkout,
+                        issued manually by staff, or generated by an app that creates real Shopify gift cards
+                        (rather than its own separate credit object), a balance checker built against Shopify's own
+                        gift card records sees all of it — because it's reading the same underlying data, not a
+                        second parallel ledger.</li>
+                    <li><strong>A custom-built consolidation page is possible but expensive to maintain.</strong>
+                        The merchant in the thread above ended up commissioning custom developer work to query
+                        multiple sources and merge the results. That works, but it's bespoke, breaks whenever any
+                        one app changes its API, and isn't something most stores can justify building and
+                        maintaining themselves.</li>
+                </ul>
+                <h2>The question to ask before adding another gift card source</h2>
+                <p>Before installing an app specifically because it issues its own gift cards or store credit,
+                    check whether it can instead work with Shopify's native gift cards. An app that reads and
+                    writes Shopify's own gift card records — rather than maintaining a separate balance system —
+                    keeps every card checkable from one place. An app that issues its own proprietary credit object
+                    is adding a second ledger a customer (and a support agent) will eventually have to keep straight
+                    from the first.</p>
+                <h2>Where Gift Check Pro fits</h2>
+                <p>Gift Check Pro checks the balance of Shopify's own native gift cards — the ones issued at
+                    checkout, by staff in the admin, or by any app that writes to Shopify's real gift card records
+                    — from one storefront page and one POS lookup. It doesn't solve the problem of a store
+                    deliberately running two or three unrelated credit systems side by side, but it does mean that
+                    every native Shopify gift card, regardless of which flow issued it, shows up in the same place.</p>
+                <h2>Frequently asked questions</h2>
+                <h3>Is there a native Shopify feature that checks balances across multiple gift card apps?</h3>
+                <p>No. Shopify has no built-in way to merge balance lookups across separate apps' gift card systems.
+                    Each app that issues its own cards keeps its own ledger.</p>
+                <h3>Will switching everything to Shopify's native gift cards fix this?</h3>
+                <p>In most cases, yes. If every issuing path — purchase, staff-issued, promotional, returns-driven —
+                    writes to Shopify's own gift card records rather than an app-specific credit object, one balance
+                    checker built against those records covers all of it.</p>
+                <h3>What if I already have gift cards issued across multiple systems?</h3>
+                <p>A one-time migration (several merchants use bulk import tools like Matrixify) can bring
+                    existing balances into Shopify's native gift card system going forward, even if it can't
+                    retroactively merge every historical ledger automatically.</p>
+                <section class="section">
+                    <div class="band">
+                        <h2>Need a Shopify app?</h2>
+                        <p>Explore Accelerator Commerce apps or browse the documentation.</p>
+                        <div class="actions"><a class="btn" href="/apps/">Explore apps</a><a class="btn secondary"
+                                href="/docs/">Documentation</a></div>
+                    </div>
+                </section>
+            </article>
+        </div>
+    </main>
+    <footer>
+        <div class="wrap footerrow">
+            <div>© 2019–2026 Accelerator Commerce</div>
+            <div class="footerlinks"><a href="/about.html">About</a><a href="/privacy.html">Privacy</a></div>
+        </div>
+    </footer>
+</body>
+
+</html>

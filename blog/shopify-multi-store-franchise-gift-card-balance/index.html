@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon-16.png">
+<link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6FTVWGQBT4"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-6FTVWGQBT4');</script>
+    <title>Can a Shopify Gift Card Be Used Across Multiple Stores? — Accelerator Commerce</title>
+    <meta name="description"
+        content="Shopify gift cards are tied to the store that issued them by default. Here's why a card from one location won't work at another, and what franchises and multi-brand sellers actually do about it.">
+    <link rel="canonical"
+        href="https://www.acceleratorcommerce.com/blog/shopify-multi-store-franchise-gift-card-balance/">
+    <meta property="og:title"
+        content="Can a Shopify Gift Card Be Used Across Multiple Stores? — Accelerator Commerce">
+    <meta property="og:description"
+        content="Shopify gift cards are tied to the store that issued them by default. Here's why a card from one location won't work at another, and what franchises and multi-brand sellers actually do about it.">
+    <meta property="og:type" content="article">
+<meta property="og:image" content="https://www.acceleratorcommerce.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.acceleratorcommerce.com/assets/og-image.png">
+    <link rel="stylesheet" href="../../assets/styles.css">
+    <script
+        type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Accelerator Commerce", "url": "https://www.acceleratorcommerce.com/", "description": "Accelerator Commerce builds and supports Shopify apps."}</script>
+</head>
+
+<body>
+    <header>
+        <div class="wrap nav"><a class="brand" href="../">Accelerator Commerce</a>
+            <button class="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="navlinks"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M2 4.5h14M2 9h14M2 13.5h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button><nav class="navlinks" id="navlinks"><a href="/apps/">Apps</a><a href="/docs/">Docs</a><a href="/blog/">Blog</a><a href="/support.html">Support</a></nav>
+        </div>
+    </header>
+    <main>
+        <div class="wrap">
+            <section class="pagehero">
+                <div class="breadcrumbs"><a href="/blog/">Blog</a> / Can a Shopify Gift Card Be Used Across Multiple
+                    Stores?</div>
+                <div class="eyebrow">Gift Check Pro · 2026</div>
+            </section>
+            <article class="article">
+                <h1>Can a Shopify Gift Card Be Used Across Multiple Stores?</h1>
+                <div class="answer"><strong>Short answer:</strong> No, not by default. A Shopify gift card is
+                    issued by, and only redeemable at, the specific Shopify store that created it. If you run a
+                    franchise, a multi-brand group, or several regional storefronts under one company, a gift card
+                    bought at one won't validate or show a balance at another unless you add a third-party sync
+                    layer or build custom integration between the stores.</div>
+                <h2>Why merchants assume it should "just work"</h2>
+                <p>To a customer, a gift card usually feels tied to the brand, not to a specific storefront's
+                    backend. If a company operates three Shopify stores for three regional markets, or a franchise
+                    group runs a separate Shopify instance per location, shoppers reasonably expect a gift card
+                    bought at one to work at any of them. Shopify doesn't share gift card records between separate
+                    store instances at all — each store is its own isolated database, and a gift card is a record
+                    inside that one store's data, not a brand-wide asset.</p>
+                <h2>What merchants have found when they hit this</h2>
+                <p>Several independent Shopify Community threads over the years ask versions of the same question:
+                    how to make a gift card work across multiple stores. One merchant running a Shopify Plus
+                    multi-store setup asked directly about sharing gift vouchers across storefronts. Another asked
+                    how to transfer gift cards between two separate stores after a business restructuring. A third
+                    asked about synchronizing gift card balances between two stores in real time. In every case, the
+                    answer was the same: Shopify has no native cross-store gift card feature, and merchants had to
+                    reach for one of a few workarounds.</p>
+                <h2>What actually works instead</h2>
+                <ul>
+                    <li><strong>A third-party sync layer.</strong> Some apps act as a shared "wallet" that sits on
+                        top of multiple connected Shopify stores, keeping a gift card's balance in sync across all
+                        of them in near real time. This is the closest thing to true cross-store gift cards, but it
+                        adds an ongoing app dependency and cost.</li>
+                    <li><strong>Custom API-level integration.</strong> A developer can build a middleware layer
+                        that intercepts gift card redemption and balance-check requests and routes them to whichever
+                        store actually holds the record. This gives the most control but requires ongoing
+                        maintenance as each store's app stack changes.</li>
+                    <li><strong>One-time CSV migration.</strong> For a one-off situation — consolidating stores, or
+                        migrating a customer base — bulk-import tools can move existing gift card balances from one
+                        store into another. This isn't live sync; it's a snapshot migration, useful for a
+                        one-time event rather than ongoing multi-store operation.</li>
+                    <li><strong>Consolidate to one store.</strong> Where the business structure allows it, some
+                        multi-location or multi-brand sellers run a single Shopify store with markets, currencies,
+                        or a B2B channel handling regional differences, rather than separate store instances — which
+                        sidesteps the gift card problem entirely because there's only one store's worth of records.</li>
+                </ul>
+                <h2>Franchises specifically</h2>
+                <p>Franchise setups are the sharpest version of this problem, because franchise owners often expect
+                    (and are sometimes told to expect, by the franchisor) that a gift card is a brand-wide
+                    instrument regardless of which location a customer bought it from or is redeeming it at. If each
+                    location runs its own Shopify store rather than being a location within one shared store, that
+                    expectation needs a sync layer or explicit franchise-wide gift card policy built on top of
+                    Shopify — it isn't something Shopify provides out of the box.</p>
+                <h2>Where Gift Check Pro fits</h2>
+                <p>Gift Check Pro checks the balance of gift cards issued by the Shopify store it's installed on.
+                    It doesn't create cross-store sharing on its own — no app changes the fact that Shopify stores
+                    are isolated data instances — but for a single store (or for each store in a multi-store group
+                    running its own balance checker), it gives customers and staff a fast, accurate way to see
+                    exactly what's left on a card issued there.</p>
+                <h2>Frequently asked questions</h2>
+                <h3>Does Shopify have a native setting to share gift cards between stores?</h3>
+                <p>No. Each Shopify store's gift cards are isolated to that store. There's no admin setting or
+                    native API that shares gift card balances across separate store instances.</p>
+                <h3>What's the simplest fix for a small multi-location business?</h3>
+                <p>If the locations can operate as one Shopify store (using markets, POS locations, or a B2B
+                    channel for regional differences) rather than separate store instances, gift cards work
+                    store-wide automatically, since there's only one store's data to begin with.</p>
+                <h3>Is there an app that syncs gift card balances across stores in real time?</h3>
+                <p>Yes — some apps position themselves specifically as a shared balance "wallet" layer across
+                    connected Shopify stores. Evaluate them on how quickly balances sync and what happens if one
+                    store is temporarily unreachable, since a lag or sync failure can let a card be over-redeemed.</p>
+                <section class="section">
+                    <div class="band">
+                        <h2>Need a Shopify app?</h2>
+                        <p>Explore Accelerator Commerce apps or browse the documentation.</p>
+                        <div class="actions"><a class="btn" href="/apps/">Explore apps</a><a class="btn secondary"
+                                href="/docs/">Documentation</a></div>
+                    </div>
+                </section>
+            </article>
+        </div>
+    </main>
+    <footer>
+        <div class="wrap footerrow">
+            <div>© 2019–2026 Accelerator Commerce</div>
+            <div class="footerlinks"><a href="/about.html">About</a><a href="/privacy.html">Privacy</a></div>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon-16.png">
+<link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6FTVWGQBT4"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-6FTVWGQBT4');</script>
+    <title>Why Shopify Won't Let You Default Refunds to a Gift Card — Accelerator Commerce</title>
+    <meta name="description"
+        content="Shopify always defaults a refund to the customer's original payment method, with no setting to make gift card the default choice instead. Here's the workaround, and the opposite mistake to watch for.">
+    <link rel="canonical"
+        href="https://www.acceleratorcommerce.com/blog/shopify-refund-to-gift-card-default-setting/">
+    <meta property="og:title"
+        content="Why Shopify Won't Let You Default Refunds to a Gift Card — Accelerator Commerce">
+    <meta property="og:description"
+        content="Shopify always defaults a refund to the customer's original payment method, with no setting to make gift card the default choice instead. Here's the workaround, and the opposite mistake to watch for.">
+    <meta property="og:type" content="article">
+<meta property="og:image" content="https://www.acceleratorcommerce.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.acceleratorcommerce.com/assets/og-image.png">
+    <link rel="stylesheet" href="../../assets/styles.css">
+    <script
+        type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Accelerator Commerce", "url": "https://www.acceleratorcommerce.com/", "description": "Accelerator Commerce builds and supports Shopify apps."}</script>
+</head>
+
+<body>
+    <header>
+        <div class="wrap nav"><a class="brand" href="../">Accelerator Commerce</a>
+            <button class="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="navlinks"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M2 4.5h14M2 9h14M2 13.5h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button><nav class="navlinks" id="navlinks"><a href="/apps/">Apps</a><a href="/docs/">Docs</a><a href="/blog/">Blog</a><a href="/support.html">Support</a></nav>
+        </div>
+    </header>
+    <main>
+        <div class="wrap">
+            <section class="pagehero">
+                <div class="breadcrumbs"><a href="/blog/">Blog</a> / Why Shopify Won't Let You Default Refunds to a
+                    Gift Card</div>
+                <div class="eyebrow">Gift Check Pro · 2026</div>
+            </section>
+            <article class="article">
+                <h1>Why Shopify Won't Let You Default Refunds to a Gift Card</h1>
+                <div class="answer"><strong>Short answer:</strong> Shopify always defaults a refund to the
+                    customer's original payment method. There's no admin setting to make "refund to gift card" the
+                    default for every return, even for merchants running a strict store-credit-only return policy.
+                    Staff have to manually select gift card on every single refund, which creates two real risks
+                    running in opposite directions: forgetting to switch it, and accidentally switching it when you
+                    shouldn't.</div>
+                <h2>A real, unresolved request</h2>
+                <p>A merchant running a store-credit-only return policy asked directly in the Shopify Community
+                    whether "refund to Gift Card" could be set as the default choice for every return, instead of
+                    Shopify's built-in default of refunding to the original payment method. The answer confirmed
+                    what the merchant suspected: Shopify doesn't support this natively, out of the box. Every single
+                    refund starts pre-selected to the original payment method, and a staff member has to actively
+                    change that selection to gift card each time — there's no store-wide policy setting that flips
+                    the default.</p>
+                <h2>The two failure modes this creates</h2>
+                <ul>
+                    <li><strong>Forgetting to switch it.</strong> A store with a strict "returns are store credit
+                        only" policy is depending entirely on every staff member remembering, on every return, to
+                        manually change the refund destination away from Shopify's default. Miss it once, and a
+                        customer gets cash back on a return that was supposed to be store-credit-only — a policy
+                        violation and a real revenue leak if it happens repeatedly.</li>
+                    <li><strong>The opposite mistake: refunding to a gift card by accident.</strong> A separate,
+                        real Community thread shows the reverse failure — a merchant accidentally refunded to a
+                        gift card when they meant to refund the customer's original credit card. Because the refund
+                        screen presents payment-method options together, it's possible to select the wrong one under
+                        normal order-processing pressure, and the customer ends up with a gift card balance instead
+                        of money back on their card.</li>
+                </ul>
+                <p>Both mistakes point to the same root cause: Shopify's refund screen treats "which destination"
+                    as a per-transaction manual choice with no store-level policy override, so the outcome depends
+                    entirely on an individual staff member getting it right, every time, with no safety net.</p>
+                <h2>What merchants actually do about it</h2>
+                <ul>
+                    <li><strong>Build it into staff training and refund scripts explicitly.</strong> Since there's
+                        no system-level default to rely on, a written refund procedure that states "always select
+                        gift card, confirm before submitting" is the only real mitigation available natively.</li>
+                    <li><strong>Add a visible confirmation step before submitting a refund.</strong> Some stores
+                        add an internal checklist or a second-person confirmation for high-value refunds
+                        specifically to catch a wrong-destination selection before it's final.</li>
+                    <li><strong>Check the resulting gift card balance immediately after any refund.</strong>
+                        Whichever direction the mistake goes — cash back that should've been credit, or credit that
+                        should've been cash — the fastest way to catch it is confirming the actual outcome right
+                        after the refund is processed, rather than waiting for a customer to notice and report it.</li>
+                </ul>
+                <h2>Where Gift Check Pro fits</h2>
+                <p>Gift Check Pro doesn't change how Shopify's refund screen defaults — that's a platform-level
+                    behavior no app can override. What it does is make the "did the refund actually land as a gift
+                    card, and for how much" question a fast lookup instead of a support ticket, for both staff
+                    double-checking a refund they just processed and customers checking a balance that unexpectedly
+                    changed.</p>
+                <h2>Frequently asked questions</h2>
+                <h3>Can I set a store-wide default so refunds always go to a gift card?</h3>
+                <p>No. Shopify has no setting for this. Every refund defaults to the original payment method, and
+                    gift card has to be selected manually on each one.</p>
+                <h3>What happens if a refund is accidentally sent to a gift card instead of the original card?</h3>
+                <p>The customer ends up with a gift card balance instead of money back on their card. There's no
+                    automatic undo — a staff member would need to manually correct it, which may mean issuing a
+                    separate refund through the right channel and handling the gift card balance as a case-by-case
+                    exception.</p>
+                <h3>Is this related to Shopify not letting me manually adjust a gift card's balance?</h3>
+                <p>They're related but distinct limitations. This is about which payment method a refund defaults
+                    to; separately, Shopify also has no way to manually edit an already-issued gift card's balance.
+                    See our guide on <a href="/blog/shopify-gift-card-balance-adjustment-refund/">gift card balance
+                    adjustments and refund reloads</a> for that side of it.</p>
+                <section class="section">
+                    <div class="band">
+                        <h2>Need a Shopify app?</h2>
+                        <p>Explore Accelerator Commerce apps or browse the documentation.</p>
+                        <div class="actions"><a class="btn" href="/apps/">Explore apps</a><a class="btn secondary"
+                                href="/docs/">Documentation</a></div>
+                    </div>
+                </section>
+            </article>
+        </div>
+    </main>
+    <footer>
+        <div class="wrap footerrow">
+            <div>© 2019–2026 Accelerator Commerce</div>
+            <div class="footerlinks"><a href="/about.html">About</a><a href="/privacy.html">Privacy</a></div>
+        </div>
+    </footer>
+</body>
+
+</html>
