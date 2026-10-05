@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon-16.png">
+<link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6FTVWGQBT4"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-6FTVWGQBT4');</script>
+    <title>Can You Still Auto-Apply a Shopify Gift Card Code From a Link? What Changed in 2022 — Accelerator Commerce</title>
+    <meta name="description"
+        content="A discount-parameter trick once let a gift card code auto-apply at checkout from a link. It broke in October 2022. Here's what changed and how to set expectations for gifting links today.">
+    <link rel="canonical"
+        href="https://www.acceleratorcommerce.com/blog/shopify-gift-card-auto-apply-link-broken/">
+    <meta property="og:title"
+        content="Can You Still Auto-Apply a Shopify Gift Card Code From a Link? What Changed in 2022 — Accelerator Commerce">
+    <meta property="og:description"
+        content="A discount-parameter trick once let a gift card code auto-apply at checkout from a link. It broke in October 2022. Here's what changed and how to set expectations for gifting links today.">
+    <meta property="og:type" content="article">
+<meta property="og:image" content="https://www.acceleratorcommerce.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.acceleratorcommerce.com/assets/og-image.png">
+    <link rel="stylesheet" href="../../assets/styles.css">
+    <script
+        type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Accelerator Commerce", "url": "https://www.acceleratorcommerce.com/", "description": "Accelerator Commerce builds and supports Shopify apps."}</script>
+</head>
+
+<body>
+    <header>
+        <div class="wrap nav"><a class="brand" href="../">Accelerator Commerce</a>
+            <button class="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="navlinks"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M2 4.5h14M2 9h14M2 13.5h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button><nav class="navlinks" id="navlinks"><a href="/apps/">Apps</a><a href="/docs/">Docs</a><a href="/blog/">Blog</a><a href="/support.html">Support</a></nav>
+        </div>
+    </header>
+    <main>
+        <div class="wrap">
+            <section class="pagehero">
+                <div class="breadcrumbs"><a href="/blog/">Blog</a> / Can a Gift Card Code Still Auto-Apply From a
+                    Link?</div>
+                <div class="eyebrow">Gift Check Pro · 2026</div>
+            </section>
+            <article class="article">
+                <h1>Can You Still Auto-Apply a Shopify Gift Card Code From a Link? What Changed in 2022</h1>
+                <div class="answer"><strong>Short answer:</strong> No. A discount-parameter trick once let a gift
+                    card code be applied automatically at checkout from a link — useful for gifting emails or
+                    "redeem now" landing pages. It broke when Shopify changed how discount parameters work in
+                    October 2022, and the underlying parameter was later dropped entirely. A customer clicking a
+                    gift link today still has to manually paste the code at checkout.</div>
+                <h2>What used to work</h2>
+                <p>Before the change, a merchant could build a link that passed a gift card's code as a discount
+                    parameter in the URL, so that clicking the link carried the customer straight to checkout with
+                    the code already applied — no manual entry needed. That made a gifting flow feel seamless: a
+                    customer receives a gift email, clicks a "redeem now" button, and lands at checkout with the
+                    card's value already subtracted from their total.</p>
+                <h2>What changed, and when</h2>
+                <p>A Shopify Community thread, <a
+                        href="https://community.shopify.com/t/problem-with-the-auto-apply-discount-param-change-and-gift-cards/238200">Problem
+                        with the auto-apply discount param change and gift cards</a>, documents merchants running
+                    into this directly: Shopify changed how the discount parameter behaves at checkout in October
+                    2022, breaking the auto-apply trick for gift cards. There was a brief period where a patched
+                    workaround still functioned, but the underlying parameter needed for it was later removed for
+                    good. The capability isn't coming back through that mechanism — it's a platform-level change,
+                    not a bug waiting to be fixed.</p>
+                <h2>Why this still matters even though it's a few years old</h2>
+                <p>It's easy to assume an old platform change is no longer relevant, but the gap it left behind is
+                    still live today: any merchant building a gifting email, a promotional landing page, or a
+                    "send this as a gift" flow that assumes the code will auto-apply is setting up a customer for a
+                    confusing checkout moment. If the expectation was set that clicking a link means the discount
+                    is already handled, and instead the customer lands at a normal checkout with no code applied,
+                    that's a real point of friction and potential abandoned carts — not a cosmetic issue.</p>
+                <h2>What merchants can actually do instead</h2>
+                <ul>
+                    <li><strong>Set the right expectation in the gifting message itself.</strong> Rather than
+                        implying the code will apply automatically, tell the recipient plainly that they'll need to
+                        enter the code at checkout — and make the code easy to copy directly from the email or
+                        landing page.</li>
+                    <li><strong>Make the code visually prominent and copyable.</strong> A code buried in body text
+                        is easy to miss; a clearly formatted, tap-to-copy code reduces the friction of manual entry
+                        considerably.</li>
+                    <li><strong>Point customers to a balance checker before they're surprised at checkout.</strong>
+                        If a recipient wants to confirm a card's value before shopping, a visible, accurate balance
+                        lookup — the same thing covered in our <a
+                            href="/blog/how-to-show-gift-card-balance-on-shopify/">guide to showing gift card
+                            balance on Shopify</a> — sets a clear, trustworthy expectation up front rather than
+                        leaving them guessing.</li>
+                </ul>
+                <h2>A narrower problem than it first sounds</h2>
+                <p>It's worth being precise about what this is and isn't. This is specifically about automatically
+                    <em>applying</em> a gift card code at checkout from a link — not about checking a card's
+                    balance, which is a separate action that was never affected by this change. A customer can
+                    still look up a gift card's remaining value at any time; they just can't have the code itself
+                    pre-filled into checkout from a URL anymore.</p>
+                <h2>Frequently asked questions</h2>
+                <h3>Can a gift card code still be pre-applied at checkout from a link?</h3>
+                <p>No. The discount-parameter mechanism that made this possible changed in October 2022 and the
+                    underlying parameter was later removed. Customers now need to manually enter the code at
+                    checkout.</p>
+                <h3>Does this affect checking a gift card's balance?</h3>
+                <p>No — balance checking is unaffected and works the same way as always. This change only affects
+                    automatically applying the code itself at checkout.</p>
+                <h3>Is there a workaround to restore auto-apply for gift cards?</h3>
+                <p>Not through the original mechanism — Shopify removed the underlying parameter it relied on. The
+                    practical fix is setting clear expectations in gifting messages that the code needs to be
+                    entered manually, and making that code easy to find and copy.</p>
+                <section class="section">
+                    <div class="band">
+                        <h2>Need a Shopify app?</h2>
+                        <p>Explore Accelerator Commerce apps or browse the documentation.</p>
+                        <div class="actions"><a class="btn" href="/apps/">Explore apps</a><a class="btn secondary"
+                                href="/docs/">Documentation</a></div>
+                    </div>
+                </section>
+            </article>
+        </div>
+    </main>
+    <footer>
+        <div class="wrap footerrow">
+            <div>© 2019–2026 Accelerator Commerce</div>
+            <div class="footerlinks"><a href="/about.html">About</a><a href="/privacy.html">Privacy</a></div>
+        </div>
+    </footer>
+</body>
+
+</html>
