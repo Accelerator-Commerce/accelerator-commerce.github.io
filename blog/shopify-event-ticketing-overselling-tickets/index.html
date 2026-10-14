@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon-16.png">
+<link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6FTVWGQBT4"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-6FTVWGQBT4');</script>
+    <title>Why Shopify Event Ticketing Apps Oversell Tickets (and What to Check First) — Accelerator Commerce</title>
+    <meta name="description"
+        content="Many Shopify ticketing apps build 'capacity' on top of Shopify's shared product inventory, and it isn't bulletproof. Here's why events get oversold, and how to check before you trust one.">
+    <link rel="canonical"
+        href="https://www.acceleratorcommerce.com/blog/shopify-event-ticketing-overselling-tickets/">
+    <meta property="og:title" content="Why Shopify Event Ticketing Apps Oversell Tickets (and What to Check First) — Accelerator Commerce">
+    <meta property="og:description"
+        content="Many Shopify ticketing apps build 'capacity' on top of Shopify's shared product inventory, and it isn't bulletproof. Here's why events get oversold, and how to check before you trust one.">
+    <meta property="og:type" content="article">
+<meta property="og:image" content="https://www.acceleratorcommerce.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.acceleratorcommerce.com/assets/og-image.png">
+    <link rel="stylesheet" href="../../assets/styles.css">
+    <script
+        type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Accelerator Commerce", "url": "https://www.acceleratorcommerce.com/", "description": "Accelerator Commerce builds and supports Shopify apps."}</script>
+</head>
+
+<body>
+    <header>
+        <div class="wrap nav"><a class="brand" href="../">Accelerator Commerce</a>
+            <button class="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="navlinks"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M2 4.5h14M2 9h14M2 13.5h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button><nav class="navlinks" id="navlinks"><a href="/apps/">Apps</a><a href="/docs/">Docs</a><a href="/blog/">Blog</a><a href="/support.html">Support</a></nav>
+        </div>
+    </header>
+    <main>
+        <div class="wrap">
+            <section class="pagehero">
+                <div class="breadcrumbs"><a href="/blog/">Blog</a> / Why Shopify Event Ticketing Apps Oversell
+                    Tickets (and What to Check First)</div>
+                <div class="eyebrow">Fresh Cal · 2026</div>
+            </section>
+            <article class="article">
+                <h1>Why Shopify Event Ticketing Apps Oversell Tickets (and What to Check First)</h1>
+                <div class="answer"><strong>Short answer:</strong> A lot of Shopify ticketing apps don't track
+                    seat capacity as its own thing — they track it as product inventory, which Shopify shares
+                    across every sales channel and location. That shared-inventory shortcut is also how events end
+                    up oversold. Before you trust a ticketing app with a capacity-limited event, ask it directly
+                    how it enforces the cap.</div>
+                <h2>A real app, a real overselling incident</h2>
+                <p>This isn't a theoretical risk. A 2023 Shopify App Store review of a named event-ticketing app,
+                    Experiences: Events &amp; Tickets, reports an event oversold by roughly 40% — meaningfully more
+                    tickets sold than seats or spots actually available. The developer's 2025 reply to that review
+                    doesn't dispute the root cause; it describes manually restocking inventory as the workaround
+                    merchants are expected to use when a listing sells out faster than the app's capacity tracking
+                    can keep up. That's a telling admission: the fix is a merchant noticing and intervening, not
+                    the app enforcing a hard stop on its own.</p>
+                <h2>Why this keeps happening: capacity built on inventory</h2>
+                <p>Shopify's product inventory system was built to track stock for physical goods, not seats at an
+                    event. A ticketing app that represents "10 spots left" as "10 units in stock" inherits every
+                    quirk of that system along with the convenience of not building a separate capacity engine.
+                    Two of those quirks show up directly in merchant-facing documentation and reviews:</p>
+                <ul>
+                    <li><strong>Inventory is shared across locations and channels.</strong> Evey's own help
+                        content attributes overselling directly to Shopify's shared inventory spanning multiple
+                        locations — a ticket "location" can draw down the same inventory pool another sales
+                        channel is also drawing from, so two systems can both believe they're selling from a full
+                        pool right up until it's empty from both directions at once.</li>
+                    <li><strong>Dynamic checkout buttons can bypass the usual flow.</strong> Shop Pay's accelerated
+                        checkout and other dynamic buy buttons are built to get a shopper to checkout fast — which
+                        can skip the exact reservation or hold step a ticketing app relies on to keep its count
+                        accurate in the window between "added to cart" and "payment confirmed."</li>
+                    <li><strong>The app's own vendor admits it isn't bulletproof.</strong> GuestManager's
+                        documentation describes its shared-capacity mechanism in exactly those terms — not a bug
+                        report from a disgruntled user, but the vendor's own characterization of a known limitation
+                        in a competing product in the same category.</li>
+                </ul>
+                <h2>Where this actually bites merchants</h2>
+                <p>Overselling isn't just an awkward headcount. For a capacity-limited class, a small venue, a
+                    supper club, or a workshop with one instructor and a fixed number of seats, a 40%-oversold
+                    event means real people show up expecting a spot that doesn't exist — a refund conversation,
+                    reputational damage, and in some cases a fire-code or venue-contract problem that has nothing
+                    to do with the software that caused it.</p>
+                <h2>What to ask before you trust a ticketing app with a capacity-limited event</h2>
+                <ul>
+                    <li><strong>Does capacity track as its own concept, or as product inventory?</strong> Ask the
+                        vendor directly, not just the marketing page — "stock" and "capacity" sound similar but
+                        behave very differently once dynamic checkout and multi-location inventory are involved.</li>
+                    <li><strong>What happens during a traffic spike?</strong> A high-demand on-sale is exactly when
+                        a shared-inventory shortcut is most likely to let two near-simultaneous purchases both
+                        succeed against the last available spot.</li>
+                    <li><strong>Is there a hold or reservation step at checkout,</strong> or does a sale only
+                        decrement the count after payment confirms — a gap during which someone else could also be
+                        completing a purchase for the same spot?</li>
+                    <li><strong>What's the actual remediation path if it does oversell?</strong> "Manually restock
+                        and sort it out after the fact" is a materially different answer than a hard technical
+                        stop, and it's worth knowing which one you're getting before an event, not after.</li>
+                </ul>
+                <h2>Where a display calendar fits instead</h2>
+                <p>Not every event needs ticket-level capacity enforcement in the first place. If an event is free
+                    to attend with no admission to sell or scan, a dedicated ticketing app's capacity machinery —
+                    and its overselling risk along with it — isn't something you need to take on at all. See our
+                    piece on <a href="/blog/shopify-event-calendar-vs-ticketing-app/">calendar vs. ticketing apps</a>
+                    for how to tell which category your event actually needs. Fresh Cal is built for that free,
+                    unlimited-attendance side of the spectrum: a clean, publishable schedule with no capacity claim
+                    attached, so there's nothing to oversell in the first place. For events that genuinely do need
+                    paid, capacity-limited tickets, pair a Fresh Cal listing with a ticketing app — but go in with
+                    a clear answer to how that app actually enforces its cap.</p>
+                <h2>Frequently asked questions</h2>
+                <h3>Does Fresh Cal sell tickets or enforce capacity limits?</h3>
+                <p>No — Fresh Cal is a display calendar for publishing event dates and details, with no ticket
+                    sale or capacity tracking attached. That's also exactly why it has no overselling risk: there's
+                    no capacity claim being made in the first place. For paid, capacity-limited events, pair a
+                    Fresh Cal listing with a dedicated ticketing app.</p>
+                <h3>Is overselling only a risk for free event listings, or also paid ones?</h3>
+                <p>It's specifically a paid-ticketing risk. A free, unlimited-attendance event listed on a display
+                    calendar has no capacity cap to breach. The risk described here is for apps that sell a fixed
+                    number of paid admissions and rely on Shopify's shared product inventory to enforce that cap.</p>
+                <h3>Is this a Shopify platform bug, or an app-design choice?</h3>
+                <p>It's an app-design choice built on a genuine platform characteristic. Shopify's inventory system
+                    is shared across locations and channels by design — that's expected, documented behavior for
+                    stock. The overselling risk comes from individual ticketing apps choosing to represent seat
+                    capacity as that same shared inventory, rather than building a dedicated capacity-reservation
+                    layer that doesn't inherit those sharing behaviors.</p>
+                <section class="section">
+                    <div class="band">
+                        <h2>Need a Shopify app?</h2>
+                        <p>Explore Accelerator Commerce apps or browse the documentation.</p>
+                        <div class="actions"><a class="btn" href="/apps/">Explore apps</a><a class="btn secondary"
+                                href="/docs/">Documentation</a></div>
+                    </div>
+                </section>
+            </article>
+        </div>
+    </main>
+    <footer>
+        <div class="wrap footerrow">
+            <div>© 2019–2026 Accelerator Commerce</div>
+            <div class="footerlinks"><a href="/about.html">About</a><a href="/privacy.html">Privacy</a></div>
+        </div>
+    </footer>
+</body>
+
+</html>
