@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon-16.png">
+<link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6FTVWGQBT4"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-6FTVWGQBT4');</script>
+    <title>Re-Importing Your Shopify Gift Card List? Here's Why Balances Can Come Out Wrong — Accelerator Commerce</title>
+    <meta name="description"
+        content="Shopify's own gift card export only keeps the last four characters of a code, and some bulk-import tools overwrite a balance instead of adjusting it. Here's the mechanism behind a 'balance looks wrong after import' problem.">
+    <link rel="canonical"
+        href="https://www.acceleratorcommerce.com/blog/shopify-gift-card-csv-import-balance-wrong/">
+    <meta property="og:title"
+        content="Re-Importing Your Shopify Gift Card List? Here's Why Balances Can Come Out Wrong — Accelerator Commerce">
+    <meta property="og:description"
+        content="Shopify's own gift card export only keeps the last four characters of a code, and some bulk-import tools overwrite a balance instead of adjusting it. Here's the mechanism behind a 'balance looks wrong after import' problem.">
+    <meta property="og:type" content="article">
+<meta property="og:image" content="https://www.acceleratorcommerce.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.acceleratorcommerce.com/assets/og-image.png">
+    <link rel="stylesheet" href="../../assets/styles.css">
+    <script
+        type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Accelerator Commerce", "url": "https://www.acceleratorcommerce.com/", "description": "Accelerator Commerce builds and supports Shopify apps."}</script>
+</head>
+
+<body>
+    <header>
+        <div class="wrap nav"><a class="brand" href="../">Accelerator Commerce</a>
+            <button class="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="navlinks"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M2 4.5h14M2 9h14M2 13.5h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button><nav class="navlinks" id="navlinks"><a href="/apps/">Apps</a><a href="/docs/">Docs</a><a href="/blog/">Blog</a><a href="/support.html">Support</a></nav>
+        </div>
+    </header>
+    <main>
+        <div class="wrap">
+            <section class="pagehero">
+                <div class="breadcrumbs"><a href="/blog/">Blog</a> / Re-Importing Your Gift Card List? Here's Why
+                    Balances Can Come Out Wrong</div>
+                <div class="eyebrow">Gift Check Pro · 2026</div>
+            </section>
+            <article class="article">
+                <h1>Re-Importing Your Shopify Gift Card List? Here's Why Balances Can Come Out Wrong</h1>
+                <div class="answer"><strong>Short answer:</strong> Shopify's gift card export only keeps the last
+                    four characters of each code, and Shopify has no native way to re-import a CSV to create gift
+                    card products at all — that pushes merchants toward third-party bulk tools, and at least one
+                    of those tools documents that its "bulk update" <em>sets</em> a balance to whatever value is in
+                    the file rather than adding or subtracting from it. Re-import a file with stale numbers, and you
+                    can silently overwrite a correct, current balance with an old one.</div>
+                <h2>Who runs into this</h2>
+                <p>This usually shows up during a platform migration, a re-launch after a long gap, or when a
+                    merchant tries to clean up a messy gift card list by exporting it, editing it in a spreadsheet,
+                    and importing it back. It feels like routine data hygiene. The problem is that "routine" is
+                    doing a lot of work in that sentence — gift card balances are live, moving numbers, and a CSV
+                    round-trip treats them like static records.</p>
+                <h2>Why Shopify's own export isn't a safe round-trip source</h2>
+                <p>Shopify's gift card export exists mainly for record-keeping, not for re-import. Two limitations
+                    matter here:</p>
+                <ul>
+                    <li><strong>The exported code is truncated.</strong> Shopify's own export keeps only the
+                        <strong>last four characters</strong> of each gift card code, the same way a receipt masks
+                        most of a credit card number. That's enough to identify a card in a report, but not enough
+                        to safely re-create or re-match it programmatically.</li>
+                    <li><strong>There's no native CSV re-import for gift cards.</strong> Shopify doesn't offer a
+                        built-in way to take a gift card CSV and create or update gift card products from it. The
+                        Gift Card API that would let an app do this programmatically is <strong>Plus-only</strong> —
+                        standard-plan merchants who want bulk gift card tooling at all are pushed toward third-party
+                        apps.</li>
+                </ul>
+                <h2>Where the balance actually goes wrong</h2>
+                <p>Once a merchant is relying on a third-party app for bulk gift card work, the exact behavior of
+                    that app's "bulk update" feature matters a lot more than most merchants realize. At least one
+                    gift card app's own documentation states plainly that its Bulk Update action <strong>sets the
+                    balance to the exact value in the uploaded file</strong> — it does not add to or subtract from
+                    whatever balance is currently on record. That's a meaningful distinction:</p>
+                <ul>
+                    <li>An <strong>adjustment</strong> (add $20, subtract $5) is safe to apply against a balance
+                        that's been changing since you last exported it.</li>
+                    <li>An <strong>overwrite</strong> (set balance to $20) is only safe if the file you're uploading
+                        reflects the balance at this exact moment — not an hour ago, not yesterday, and not from
+                        before a customer spent part of the card.</li>
+                </ul>
+                <p>The failure mode is quiet rather than dramatic. A merchant exports a gift card list to clean up
+                    formatting or merge a legacy platform's data, a customer redeems part of a card's value in the
+                    meantime, and then the "cleaned up" file gets re-imported — resetting that card back to its
+                    pre-redemption balance. Nothing errors out. The balance is simply wrong again, and the first
+                    sign is usually a confused customer or a support ticket, not a visible failure in the import
+                    itself.</p>
+                <h2>Who this hits hardest</h2>
+                <ul>
+                    <li><strong>Platform migrations.</strong> Merchants moving a legacy gift card program onto
+                        Shopify, where a one-time CSV migration is often the only practical path.</li>
+                    <li><strong>Multi-source consolidation.</strong> Stores reconciling gift card records that
+                        exist across more than one system before standardizing on Shopify's native gift cards.</li>
+                    <li><strong>Bulk corporate issuance.</strong> Programs that issue many cards at once and later
+                        try to bulk-adjust or correct a batch of them in one pass.</li>
+                </ul>
+                <h2>How to avoid overwriting a correct balance</h2>
+                <ol>
+                    <li><strong>Check whether a bulk tool adjusts or overwrites</strong> before trusting it with a
+                        re-import — read the app's own documentation for the specific action you're about to run,
+                        not just its marketing page.</li>
+                    <li><strong>Export immediately before you import,</strong> not days earlier, so the file you're
+                        uploading reflects current balances rather than a stale snapshot.</li>
+                    <li><strong>Avoid re-importing a file that covers cards customers could have used in the
+                        meantime.</strong> If any time has passed, re-export fresh rather than reusing an older
+                        file, even a "small edit" of one.</li>
+                    <li><strong>Spot-check after the import,</strong> comparing a handful of balances against what
+                        they should be, before assuming the bulk action did what you expected.</li>
+                </ol>
+                <h2>Where Gift Check Pro fits</h2>
+                <p>Gift Check Pro reads a gift card's live balance directly rather than relying on anyone having
+                    re-synced a spreadsheet. Whatever happened during a migration or a bulk cleanup, giving
+                    customers and staff a real-time balance lookup means a stale-import mistake shows up as a
+                    quick, obvious mismatch to check and correct — instead of quietly shipping wrong numbers to
+                    shoppers who have no way to tell the difference. For merchants auditing gift cards issued in
+                    bulk for other reasons, see our guide on <a
+                        href="/blog/bulk-corporate-gift-card-balance-check-shopify/">checking balances across
+                        bulk-purchased corporate gift cards</a>, and on <a
+                        href="/blog/shopify-bulk-corporate-gift-card-plan-limits/">what Shopify's Plus-only Gift
+                        Card API actually gates for bulk issuance</a>.</p>
+                <h2>Frequently asked questions</h2>
+                <h3>Can I safely re-import Shopify's own gift card export file?</h3>
+                <p>Not as a balance-update mechanism. Shopify's export truncates each code to its last four
+                    characters and isn't designed to be re-imported to update gift cards. Any bulk update has to go
+                    through a third-party app, and you need to know whether that app's update action adjusts or
+                    overwrites a balance.</p>
+                <h3>Does Shopify have a native bulk gift card import feature?</h3>
+                <p>No. There's no built-in way to create or update gift cards in bulk from a CSV. The programmatic
+                    path — the Gift Card API — is restricted to Shopify Plus, which is why standard-plan merchants
+                    doing bulk gift card work rely on third-party apps instead.</p>
+                <h3>How do I know if a bulk-import tool will overwrite a balance instead of adjusting it?</h3>
+                <p>Check that specific app's own documentation for the exact action you're about to run — the
+                    terminology varies, but the distinction between "set this value" and "add or subtract this
+                    value" is the one that matters. When in doubt, test on a single card with a known balance
+                    before running a bulk action against your whole list.</p>
+                <section class="section">
+                    <div class="band">
+                        <h2>Need a Shopify app?</h2>
+                        <p>Explore Accelerator Commerce apps or browse the documentation.</p>
+                        <div class="actions"><a class="btn" href="/apps/">Explore apps</a><a class="btn secondary"
+                                href="/docs/">Documentation</a></div>
+                    </div>
+                </section>
+            </article>
+        </div>
+    </main>
+    <footer>
+        <div class="wrap footerrow">
+            <div>© 2019–2026 Accelerator Commerce</div>
+            <div class="footerlinks"><a href="/about.html">About</a><a href="/privacy.html">Privacy</a></div>
+        </div>
+    </footer>
+</body>
+
+</html>

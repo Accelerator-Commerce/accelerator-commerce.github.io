@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon-16.png">
+<link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6FTVWGQBT4"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-6FTVWGQBT4');</script>
+    <title>Running a CSA or Farm Box Through Shopify? How to Handle Pickup Scheduling Without Overbooking a Slot — Accelerator Commerce</title>
+    <meta name="description"
+        content="A CSA or farm box program needs recurring pickup-slot scheduling, not just a one-off event listing. Here's how to set up a pickup calendar that scales with members instead of overbooking a window.">
+    <link rel="canonical"
+        href="https://www.acceleratorcommerce.com/blog/shopify-csa-farmers-market-pickup-scheduling/">
+    <meta property="og:title"
+        content="Running a CSA or Farm Box Through Shopify? How to Handle Pickup Scheduling Without Overbooking a Slot — Accelerator Commerce">
+    <meta property="og:description"
+        content="A CSA or farm box program needs recurring pickup-slot scheduling, not just a one-off event listing. Here's how to set up a pickup calendar that scales with members instead of overbooking a window.">
+    <meta property="og:type" content="article">
+<meta property="og:image" content="https://www.acceleratorcommerce.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.acceleratorcommerce.com/assets/og-image.png">
+    <link rel="stylesheet" href="../../assets/styles.css">
+    <script
+        type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Accelerator Commerce", "url": "https://www.acceleratorcommerce.com/", "description": "Accelerator Commerce builds and supports Shopify apps."}</script>
+</head>
+
+<body>
+    <header>
+        <div class="wrap nav"><a class="brand" href="../">Accelerator Commerce</a>
+            <button class="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="navlinks"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M2 4.5h14M2 9h14M2 13.5h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button><nav class="navlinks" id="navlinks"><a href="/apps/">Apps</a><a href="/docs/">Docs</a><a href="/blog/">Blog</a><a href="/support.html">Support</a></nav>
+        </div>
+    </header>
+    <main>
+        <div class="wrap">
+            <section class="pagehero">
+                <div class="breadcrumbs"><a href="/blog/">Blog</a> / Running a CSA or Farm Box Through Shopify?
+                    Pickup Scheduling Without Overbooking a Slot</div>
+                <div class="eyebrow">Fresh Cal · 2026</div>
+            </section>
+            <article class="article">
+                <h1>Running a CSA or Farm Box Through Shopify? How to Handle Pickup Scheduling Without Overbooking
+                    a Slot</h1>
+                <div class="answer"><strong>Short answer:</strong> A CSA, farm box, or food-subscription program
+                    isn't a one-off event — it's a recurring pickup that repeats every week or season, with a real
+                    capacity limit on how many people can collect a box in the same window. A generic single-event
+                    calendar doesn't model that well. What works is a recurring pickup schedule with a defined
+                    window per slot and a clear capacity limit per window, so the calendar reflects what members can
+                    actually expect, not just when the farm happens to be open.</div>
+                <h2>Why this is a different scheduling problem than a typical event</h2>
+                <p>Most calendar use cases on Shopify are about a single date: a sale, a tour stop, a workshop. A
+                    CSA or farm box program is structurally different — it's the same pickup, repeating on a fixed
+                    cadence, for a membership list that's already paid in advance. The scheduling job isn't "when
+                    is this happening," it's "how many people can show up in the same 30-minute window before the
+                    line backs up, the cooler runs out of space, or the farmer runs out of hands to hand out
+                    boxes."</p>
+                <h2>A real app built around exactly this</h2>
+                <p>This isn't a hypothetical gap — there's a purpose-built Shopify app for it. <strong>Copia
+                    CSA</strong> is built specifically around CSA and farm box programs: members become Shopify
+                    customers, can self-manage their own holds and skips for weeks they'll miss, and get automated
+                    welcome, reminder, and box-preview emails tied to the subscription cycle. A reseller listing for
+                    the app adds that pickup locations can carry their own capacity limits, hours, and fees — a
+                    detail aimed squarely at the overbooking problem rather than at listing a date.</p>
+                <h2>What a real capacity limit looks like</h2>
+                <p>It's worth grounding this in a concrete number rather than an abstract concern. <strong>Evergreen
+                    Brick Works'</strong> farmers-market pre-order pickup system caps orders at <strong>25 per
+                    30-minute window</strong> — a live example of time-slot capacity management in exactly this
+                    kind of food-pickup setting. That's the shape of the problem a CSA or farm box program on
+                    Shopify needs to solve: not "is there a pickup today," but "how many 30-minute windows do we
+                    need, and how many members can each one actually hold."</p>
+                <h2>Setting up a recurring pickup calendar that doesn't overbook a window</h2>
+                <ol>
+                    <li><strong>Define the recurring cadence first.</strong> Weekly, biweekly, or seasonal — set
+                        the base pattern before worrying about any individual date, the same underlying mechanic
+                        covered in our <a href="/blog/shopify-recurring-weekly-event-schedule/">guide to setting up
+                            a recurring weekly event schedule</a>.</li>
+                    <li><strong>Break each pickup day into windows, not one long block.</strong> A single
+                        "pickup from 2–6pm" listing invites everyone to show up at the same time. Splitting it into
+                        30- or 60-minute windows spreads arrivals out and gives you a real unit to cap.</li>
+                    <li><strong>Set a per-window capacity based on your actual constraints</strong> — cooler space,
+                        parking, staff on hand — rather than an arbitrary round number. Evergreen Brick Works'
+                        25-per-window figure is a useful reference point, not a rule to copy blindly.</li>
+                    <li><strong>Let members manage their own holds and skips.</strong> A subscription member who
+                        knows they'll miss a week should be able to flag that themselves, rather than showing up as
+                        a no-show that quietly wastes a slot someone else could have used.</li>
+                    <li><strong>Publish the full upcoming schedule, not just the next date.</strong> Members
+                        planning around a weekly pickup benefit from seeing several weeks ahead at once, the same
+                        way a <a href="/blog/shopify-wine-tasting-restaurant-event-calendar/">recurring
+                            tasting-event schedule</a> benefits from showing its full run rather than one date at a
+                        time.</li>
+                </ol>
+                <h2>Where Fresh Cal fits</h2>
+                <p>Fresh Cal is a display calendar, not a reservation or capacity-enforcement system — it won't
+                    stop a window from being overbooked on its own. What it does well is give members a clear,
+                    always-current view of the recurring pickup schedule: which days, which windows, and what's
+                    coming up next, so the published schedule itself isn't the source of confusion. Pair that
+                    published schedule with whatever tool is actually enforcing your per-window capacity — a
+                    CSA-specific app like Copia CSA, or your own hold/skip process — so members see an accurate
+                    calendar and the capacity limit behind it is enforced somewhere that actually tracks it.</p>
+                <h2>Frequently asked questions</h2>
+                <h3>Can Fresh Cal enforce a capacity limit on a pickup window?</h3>
+                <p>No — Fresh Cal is a display calendar for publishing a schedule, not a reservation system with
+                    capacity enforcement. For a CSA or farm box program, pair a published Fresh Cal schedule with a
+                    dedicated subscription-management tool that actually tracks how many members are assigned to
+                    each pickup window.</p>
+                <h3>How is this different from the craft fair and vendor-circuit calendar use case?</h3>
+                <p>A craft fair or vendor-circuit calendar (see our <a
+                        href="/blog/shopify-craft-fair-vendor-circuit-calendar/">guide for makers working a
+                        recurring fair circuit</a>) is about telling existing fans where a vendor will physically be
+                    next. A CSA or farm box pickup calendar is the reverse: members already know where to go — the
+                    scheduling problem is how many of them can collect a box in the same narrow window without
+                    creating a bottleneck.</p>
+                <h3>How many pickup windows do we actually need?</h3>
+                <p>There's no universal number — it depends on your membership size and physical constraints
+                    (cooler space, parking, staff). Evergreen Brick Works' farmers-market pickup caps at 25 orders
+                    per 30-minute window as one real-world reference point, but the right number for your program
+                    comes from your own capacity, not a borrowed figure.</p>
+                <section class="section">
+                    <div class="band">
+                        <h2>Need a Shopify app?</h2>
+                        <p>Explore Accelerator Commerce apps or browse the documentation.</p>
+                        <div class="actions"><a class="btn" href="/apps/">Explore apps</a><a class="btn secondary"
+                                href="/docs/">Documentation</a></div>
+                    </div>
+                </section>
+            </article>
+        </div>
+    </main>
+    <footer>
+        <div class="wrap footerrow">
+            <div>© 2019–2026 Accelerator Commerce</div>
+            <div class="footerlinks"><a href="/about.html">About</a><a href="/privacy.html">Privacy</a></div>
+        </div>
+    </footer>
+</body>
+
+</html>
