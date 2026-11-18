@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon-16.png">
+<link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6FTVWGQBT4"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-6FTVWGQBT4');</script>
+    <title>Running a Loyalty App and a Gift Card Balance Checker? Here's Why the Numbers Don't Match — Accelerator Commerce</title>
+    <meta name="description"
+        content="Loyalty apps like Smile.io track store credit in their own ledger — separate from Shopify's native gift card balances. Here's why that causes confusion, and how to give customers one clear answer.">
+    <link rel="canonical"
+        href="https://www.acceleratorcommerce.com/blog/shopify-loyalty-app-store-credit-gift-card-balance-conflict/">
+    <meta property="og:title"
+        content="Running a Loyalty App and a Gift Card Balance Checker? Here's Why the Numbers Don't Match — Accelerator Commerce">
+    <meta property="og:description"
+        content="Loyalty apps like Smile.io track store credit in their own ledger — separate from Shopify's native gift card balances. Here's why that causes confusion, and how to give customers one clear answer.">
+    <meta property="og:type" content="article">
+<meta property="og:image" content="https://www.acceleratorcommerce.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.acceleratorcommerce.com/assets/og-image.png">
+    <link rel="stylesheet" href="../../assets/styles.css">
+    <script
+        type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Accelerator Commerce", "url": "https://www.acceleratorcommerce.com/", "description": "Accelerator Commerce builds and supports Shopify apps."}</script>
+</head>
+
+<body>
+    <header>
+        <div class="wrap nav"><a class="brand" href="../">Accelerator Commerce</a>
+            <button class="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="navlinks"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M2 4.5h14M2 9h14M2 13.5h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button><nav class="navlinks" id="navlinks"><a href="/apps/">Apps</a><a href="/docs/">Docs</a><a href="/blog/">Blog</a><a href="/support.html">Support</a></nav>
+        </div>
+    </header>
+    <main>
+        <div class="wrap">
+            <section class="pagehero">
+                <div class="breadcrumbs"><a href="/blog/">Blog</a> / Loyalty Apps vs. Gift Card Balance Checkers
+                </div>
+                <div class="eyebrow">Gift Check Pro · 2026</div>
+            </section>
+            <article class="article">
+                <h1>Running a Loyalty App and a Gift Card Balance Checker? Here's Why the Numbers Don't Match</h1>
+                <div class="answer"><strong>Short answer:</strong> A loyalty app like Smile.io and a gift-card
+                    balance checker aren't reading from the same place. Shopify itself holds and displays store
+                    credit balances; a loyalty app only logs when that credit gets redeemed. Run both, and a
+                    customer can end up looking at two different numbers that are each correct for a different
+                    thing.</div>
+                <h2>Two tools, two ledgers</h2>
+                <p>A gift card is a self-contained record with its own code — Gift Check Pro and apps like it read
+                    that balance directly from Shopify's native gift-card system. A loyalty program's store
+                    credit is a different mechanism entirely: points get earned, converted to a dollar value, and
+                    issued as account-level credit. According to Smile.io's own help documentation, that store
+                    credit balance is actually held and displayed by <em>Shopify</em>, not by Smile — Smile's role
+                    is to log that a reward was redeemed, not to be the system of record for what a customer has
+                    left to spend. Two tools can both be technically correct and still show a customer two
+                    different "balances," because they're answering two different questions.</p>
+                <h2>The legacy-account wrinkle that makes it worse</h2>
+                <p>Smile's store-credit rewards are built to display correctly on Shopify's newer customer account
+                    system. A cited Smile app-store review describes exactly the failure mode this creates: a
+                    points balance that simply doesn't render on a <em>legacy</em> customer-account page. For a
+                    store that hasn't moved to new customer accounts, that's not a loyalty-app bug a merchant can
+                    fix from the loyalty app's side — it's an account-system mismatch that makes the loyalty
+                    balance effectively invisible to the shopper, even though the credit itself is still there.</p>
+                <h2>What this looks like from a shopper's side</h2>
+                <p>A customer who's earned loyalty rewards and also holds a gift card has no reason to know these
+                    are two separate systems. They check a gift-card balance page expecting it to reflect their
+                    loyalty credit too, or they see a points total in the loyalty widget and assume it's spendable
+                    the same way a gift card code is — forgetting that gift cards are redeemed with a code at
+                    checkout, while store credit from a loyalty program typically applies automatically once
+                    they're logged in. See our <a href="/blog/shopify-gift-card-vs-store-credit-balance/">guide to
+                        telling a gift card and store credit apart</a> for that underlying distinction — this is
+                    the specific way it shows up when a loyalty app is the source of the store credit side.</p>
+                <h2>What merchants can actually do about it</h2>
+                <ul>
+                    <li><strong>Confirm you're on Shopify's new customer accounts.</strong> If store credit from a
+                        loyalty program isn't displaying for some customers, check the account system first —
+                        before assuming the loyalty app itself is broken.</li>
+                    <li><strong>Label each balance for what it actually is.</strong> "Gift card balance" and
+                        "loyalty store credit" are not interchangeable labels on a storefront, even if both spend
+                        like money at checkout. Vague wording like "your balance" invites exactly this confusion.</li>
+                    <li><strong>Point each tool at its own job.</strong> A gift-card balance checker should answer
+                        "what's left on this code," not attempt to also surface loyalty-program credit it was
+                        never built to read. Trying to merge the two into one number usually creates more
+                        confusion than it resolves.</li>
+                    <li><strong>Expect support tickets to name the wrong tool.</strong> A customer confused about a
+                        missing loyalty balance will often contact support about their "gift card" instead —
+                        train staff to ask which program the credit came from before troubleshooting.</li>
+                </ul>
+                <h2>Where Gift Check Pro fits</h2>
+                <p>Gift Check Pro is built to answer one question clearly: what's left on a specific Shopify
+                    native gift card, read straight from Shopify's own ledger. It isn't designed to merge in
+                    balances from a separate loyalty platform's store-credit system, and that's intentional — see
+                    our guide on <a href="/blog/shopify-gift-card-balance-multiple-sources/">checking gift card
+                        balances across multiple issuing sources</a> for the related, broader problem of trying to
+                    unify balances that live in genuinely different systems. The fix for the loyalty-vs-gift-card
+                    confusion isn't one tool pretending to cover both — it's clear labeling of which balance came
+                    from where.</p>
+                <h2>Frequently asked questions</h2>
+                <h3>Can I make my loyalty app and my gift card balance checker show one combined number?</h3>
+                <p>Not cleanly, and we wouldn't recommend trying. The two balances live in genuinely separate
+                    systems with different redemption mechanics — merging them into a single displayed figure
+                    tends to create new confusion (and new support tickets) rather than resolving the original
+                    one.</p>
+                <h3>Is this a bug in Smile.io or in Shopify's gift card system?</h3>
+                <p>Neither, strictly speaking — it's an architecture difference. Smile's own documentation
+                    describes this division of responsibility directly: Shopify holds and displays the store
+                    credit balance, and Smile logs the redemption event. The legacy-account display issue is a
+                    separate, specific bug pattern tied to which customer-account system a store is running.</p>
+                <h3>Does this affect every loyalty app, or just Smile.io?</h3>
+                <p>The underlying pattern — a loyalty platform issuing store credit that Shopify itself holds and
+                    displays — is common across loyalty apps built on Shopify's native store-credit feature, not
+                    unique to one vendor. Smile.io's documentation is simply the clearest public explanation of
+                    how that division works.</p>
+                <section class="section">
+                    <div class="band">
+                        <h2>Need a Shopify app?</h2>
+                        <p>Explore Accelerator Commerce apps or browse the documentation.</p>
+                        <div class="actions"><a class="btn" href="/apps/">Explore apps</a><a class="btn secondary"
+                                href="/docs/">Documentation</a></div>
+                    </div>
+                </section>
+            </article>
+        </div>
+    </main>
+    <footer>
+        <div class="wrap footerrow">
+            <div>© 2019–2026 Accelerator Commerce</div>
+            <div class="footerlinks"><a href="/about.html">About</a><a href="/privacy.html">Privacy</a></div>
+        </div>
+    </footer>
+</body>
+
+</html>
