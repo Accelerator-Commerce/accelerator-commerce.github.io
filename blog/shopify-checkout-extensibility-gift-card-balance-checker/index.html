@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon-16.png">
+<link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6FTVWGQBT4"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-6FTVWGQBT4');</script>
+    <title>Shopify Retired checkout.liquid and Scripts — Is Your Gift Card Balance Checker Still Working? — Accelerator Commerce</title>
+    <meta name="description"
+        content="Shopify's checkout.liquid and Scripts deadlines have now passed. Here's how to tell if a gift card balance checker built on the old checkout still works, and what to ask any vendor.">
+    <link rel="canonical"
+        href="https://www.acceleratorcommerce.com/blog/shopify-checkout-extensibility-gift-card-balance-checker/">
+    <meta property="og:title"
+        content="Shopify Retired checkout.liquid and Scripts — Is Your Gift Card Balance Checker Still Working? — Accelerator Commerce">
+    <meta property="og:description"
+        content="Shopify's checkout.liquid and Scripts deadlines have now passed. Here's how to tell if a gift card balance checker built on the old checkout still works, and what to ask any vendor.">
+    <meta property="og:type" content="article">
+<meta property="og:image" content="https://www.acceleratorcommerce.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.acceleratorcommerce.com/assets/og-image.png">
+    <link rel="stylesheet" href="../../assets/styles.css">
+    <script
+        type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Accelerator Commerce", "url": "https://www.acceleratorcommerce.com/", "description": "Accelerator Commerce builds and supports Shopify apps."}</script>
+</head>
+
+<body>
+    <header>
+        <div class="wrap nav"><a class="brand" href="../">Accelerator Commerce</a>
+            <button class="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="navlinks"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M2 4.5h14M2 9h14M2 13.5h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button><nav class="navlinks" id="navlinks"><a href="/apps/">Apps</a><a href="/docs/">Docs</a><a href="/blog/">Blog</a><a href="/support.html">Support</a></nav>
+        </div>
+    </header>
+    <main>
+        <div class="wrap">
+            <section class="pagehero">
+                <div class="breadcrumbs"><a href="/blog/">Blog</a> / Checkout Extensibility and Your Gift Card
+                    Balance Checker</div>
+                <div class="eyebrow">Gift Check Pro · 2026</div>
+            </section>
+            <article class="article">
+                <h1>Shopify Retired checkout.liquid and Scripts — Is Your Gift Card Balance Checker Still Working?
+                </h1>
+                <div class="answer"><strong>Short answer:</strong> If a gift-card or checkout tool you rely on was
+                    built on <code>checkout.liquid</code> or Shopify Scripts, its 2026 migration deadline has
+                    already passed. The fix isn't guesswork — test your own storefront right now, and ask any
+                    vendor a direct question about Checkout Extensibility support rather than assuming "it still
+                    shows up" means it still works correctly.</div>
+                <h2>What actually changed, and when</h2>
+                <p>Shopify spent 2026 forcing merchants off two older checkout customization methods:
+                    <code>checkout.liquid</code>, the old template-based way of editing the checkout page directly,
+                    and Shopify Scripts, the Plus-tier feature merchants used for custom discount, shipping, and
+                    payment logic at checkout. Coverage of the rollout cites deadlines ranging from June 30 to
+                    August 13, 2026 depending on the store and migration track, and all of them have now passed. On
+                    top of that, apps that relied on injecting script tags into checkout lost that ability
+                    entirely as of October 1, 2026, with full removal following on March 1, 2027.</p>
+                <p>The replacement is Checkout Extensibility: checkout customizations now run as sandboxed UI
+                    extensions built with Shopify's newer tooling, not as free-form code injected into a template.
+                    That's a real architecture change, not a rebrand — an app that worked by editing or injecting
+                    into the old checkout has to be rebuilt, not just updated, to keep working under the new
+                    model.</p>
+                <h2>Why this matters specifically for a gift-card balance checker</h2>
+                <p>Most gift-card balance-checker apps live on the storefront or account side — a dedicated page
+                    or widget where a shopper types in a code — not inside the checkout flow itself. But some
+                    older gift-card and checkout-customization apps did hook into checkout directly: a balance
+                    reminder injected via a checkout script tag, custom logic for combining multiple gift cards
+                    written as a Shopify Script, or a "redeem gift card" prompt added to the Thank You or order
+                    status page through the old template system. Any of that is exactly the kind of customization
+                    the 2026 deadlines targeted. Migration guides explicitly warn that some apps still on the
+                    Shopify App Store simply won't receive a Checkout Extensibility update at all, and merchants
+                    are told to ask each vendor directly rather than assume compatibility.</p>
+                <h2>Test your storefront right now</h2>
+                <ul>
+                    <li><strong>Walk through a real checkout with a gift card applied.</strong> Add a product to
+                        cart, apply a gift card code at checkout, and confirm the balance and remaining-balance
+                        math still display correctly on the order confirmation and Thank You page.</li>
+                    <li><strong>Check whether anything that used to appear at checkout has quietly vanished.</strong>
+                        A missing balance reminder or a broken "apply another gift card" prompt is a classic sign
+                        of lost script-tag functionality — it won't throw an error, it will just stop showing up.</li>
+                    <li><strong>Look for a Checkout Extensibility notice in your Shopify admin.</strong> Shopify
+                        flags apps and customizations still using deprecated checkout methods directly in admin
+                        notifications — don't rely on memory of what you installed months ago.</li>
+                    <li><strong>Test combining multiple gift cards on one order</strong> if your store allows it —
+                        this is exactly the kind of logic merchants built with Shopify Scripts, and a quiet
+                        regression here is easy to miss until a customer reports it.</li>
+                </ul>
+                <h2>What to ask any gift-card app vendor</h2>
+                <p>Don't ask "are you compatible with Checkout Extensibility?" — that's an easy yes to give without
+                    much behind it. Ask instead: does any part of your app's gift-card functionality run inside the
+                    checkout flow itself, and if so, has that specific piece been rebuilt as a Checkout UI
+                    extension, or was it removed? A vendor who can answer that precisely has actually done the
+                    migration work. One who can only point to a general compatibility statement may not have.</p>
+                <h2>Where Gift Check Pro fits</h2>
+                <p>Gift Check Pro's balance-checking widget runs on the storefront and account side through
+                    Shopify's supported app-embed approach — it was never built on <code>checkout.liquid</code> or
+                    Shopify Scripts, so none of the 2026 deprecation deadlines touch it. That's also a reason to be
+                    cautious before installing <em>any</em> checkout-adjacent app without checking its
+                    compatibility story first — see our <a href="/blog/shopify-gift-card-app-pricing-fine-print/">
+                        guide to what to check before installing a gift card app</a> for the broader pattern of
+                    questions worth asking before you commit.</p>
+                <h2>Frequently asked questions</h2>
+                <h3>Will Shopify just quietly fix this for me without any action on my part?</h3>
+                <p>Not reliably. Shopify's platform migration covers its own checkout infrastructure, but whether a
+                    specific third-party app's feature gets rebuilt for Checkout Extensibility is up to that app's
+                    developer — some apps have already been migrated, and migration guides warn plainly that
+                    others won't be.</p>
+                <h3>My gift card balance checker is on a dedicated page, not at checkout — does any of this affect
+                    me?</h3>
+                <p>Probably not directly. A storefront or account-page balance checker that never touched
+                    <code>checkout.liquid</code> or Shopify Scripts isn't affected by these specific deadlines. The
+                    risk is narrower and checkout-specific — but it's still worth confirming with your vendor if
+                    you're unsure which approach your app uses.</p>
+                <h3>What happens after the March 1, 2027 full-removal date?</h3>
+                <p>Script tags injected into checkout stop working entirely, with no fallback. Anything still
+                    depending on that mechanism by then needs to have already moved to a Checkout UI extension, or
+                    it simply disappears from the checkout experience.</p>
+                <section class="section">
+                    <div class="band">
+                        <h2>Need a Shopify app?</h2>
+                        <p>Explore Accelerator Commerce apps or browse the documentation.</p>
+                        <div class="actions"><a class="btn" href="/apps/">Explore apps</a><a class="btn secondary"
+                                href="/docs/">Documentation</a></div>
+                    </div>
+                </section>
+            </article>
+        </div>
+    </main>
+    <footer>
+        <div class="wrap footerrow">
+            <div>© 2019–2026 Accelerator Commerce</div>
+            <div class="footerlinks"><a href="/about.html">About</a><a href="/privacy.html">Privacy</a></div>
+        </div>
+    </footer>
+</body>
+
+</html>
